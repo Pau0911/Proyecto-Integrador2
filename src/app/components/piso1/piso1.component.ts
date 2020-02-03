@@ -13,13 +13,14 @@ export class Piso1Component implements OnInit {
 
   constructor(private _devicesService: DevicesService) { 
 
-    //console.log("Constructor");
+    
   }
 
   ngOnInit() {
-   this.devices=this._devicesService.getDevices();
-   console.log(this.devices)
-
+   this._devicesService.getDevices(this.devices).subscribe(resp => {
+     console.log(resp)
+   });
+   
   }
 
   alert(i:number){

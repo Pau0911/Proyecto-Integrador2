@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DevicesService {
 
+  private url ='https://thawing-chamber-47973.herokuapp.com';
+  
     private devices:Device[]=[
         {
           "idDevice": "001",
@@ -70,16 +75,15 @@ export class DevicesService {
         }
       ]
     
-    constructor(){
-        console.log("Servicio listo");
+    constructor(private http: HttpClient){
+  
+       
     }
 
+    getDevices(devices){
 
-    getDevices(){
-
-        return this.devices
+        return this.http.get('https://thawing-chamber-47973.herokuapp.com/cool-cars');
       }
-    
 }
  export interface Device{
     "idDevice": string,
