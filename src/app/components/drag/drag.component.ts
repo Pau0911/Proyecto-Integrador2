@@ -16,7 +16,6 @@ export class DragComponent implements OnInit {
     for(var v in this.devices){
       console.log("Devices",this.devices[v])
     }
- 
   }
 
 }

@@ -12,14 +12,11 @@ export class Piso1Component implements OnInit {
   devices:Device[]=[];
 
   constructor(private _devicesService: DevicesService) { 
-
-    
+  
   }
 
   ngOnInit() {
-   this._devicesService.getDevices(this.devices).subscribe(resp => {
-     console.log(resp)
-   });
+  
    
   }
 

@@ -1,3 +1,24 @@
-<button  type="button" *ngFor="let item of devices"  cdkDrag class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
-</button>
+<h1>Lista de dispositivos</h1>
+<hr>
+<div class="row">
+    <div class="col-4 offset-md">
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let device of devices" cdkDrag > 
+    {{device.name}} <button  type="button" class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+    </button>
+    </li>
+</ul>
+</div>
+<div class="row">
+<div class="col-md offset-md">
+    <img src="assets/img/planoBack.jpg" class="plano" >
+  </div>
+</div>
+</div>
+
+
+
+
+
+
 
