@@ -5,8 +5,6 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 //Servicios
 import { DevicesService } from './services/device.service';
 

@@ -4,9 +4,10 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DevicesService {
 
-  private url ='https://thawing-chamber-47973.herokuapp.com';
+  private url ='https://thawing-chamber-47973.herokuapp.com/cool-cars';
   
     private devices:Device[]=[
         {
@@ -80,9 +81,9 @@ export class DevicesService {
        
     }
 
-    getDevices(devices){
-
-        return this.http.get('https://thawing-chamber-47973.herokuapp.com/cool-cars');
+  getDevices(){
+    
+    return this.devices
       }
 }
  export interface Device{

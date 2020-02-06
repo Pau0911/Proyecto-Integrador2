@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DevicesService,Device } from '../../services/device.service';
 @Component({
   selector: 'app-drag',
   templateUrl: './drag.component.html',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DragComponent implements OnInit {
 
-  constructor() { }
+  devices:Device[]=[];
+
+  constructor(private _devicesService: DevicesService) { }
 
   ngOnInit() {
+    this.devices=this._devicesService.getDevices()
+    for(var v in this.devices){
+      console.log("Devices",this.devices[v])
+    }
+ 
   }
 
 }

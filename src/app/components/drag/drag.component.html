@@ -1,3 +1,3 @@
-<div class="container" cdkDrag  style="width: 50px; height: 50px;">Drag</div>
-<button  type="button" cdkDrag class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+<button  type="button" *ngFor="let item of devices"  cdkDrag class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
 </button>
+
