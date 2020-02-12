@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DevicesService,Device } from '../../services/device.service';
+import { DevicesService } from '../../services/device.service';
 
 @Component({
   selector: 'app-piso1',
@@ -9,15 +9,14 @@ import { DevicesService,Device } from '../../services/device.service';
 export class Piso1Component implements OnInit {
 
  
-  devices:Device[]=[];
+  devices:any=[];
 
   constructor(private _devicesService: DevicesService) { 
   
   }
-
   ngOnInit() {
+
   
-   
   }
 
   alert(i:number){

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -7,90 +8,42 @@ import { HttpClient } from '@angular/common/http';
 
 export class DevicesService {
 
-  private url ='https://thawing-chamber-47973.herokuapp.com/cool-cars';
-  
-    private devices:Device[]=[
-        {
-          "idDevice": "001",
-          "name": "Dispositivo 1",
-          "ubicacionName":"Zona lateral",
-          "img":"assets/img/plano1.png",
-          "alert":"Rojo",
-          "state":"Desativado"
-        },
-        {
-          "idDevice": "002",
-          "name": "Dispositivo 2",
-          "ubicacionName":"Zona superior",
-          "img":"assets/img/plano2.png",
-          "alert":"verde",
-          "state":"Desativado"
-        },
-        {
-          "idDevice": "003",
-          "name": "Dispositivo 3",
-          "ubicacionName":"Zona inferior",
-          "img":"assets/img/plano3.png",
-          "alert":"Rojo",
-          "state":"Activado"
-        },
-        {
-          "idDevice": "004",
-          "name": "Dispositivo 4",
-          "ubicacionName":"Zona lateral-izquierda",
-          "img":"assets/img/plano4.png",
-          "alert":"Rojo",
-          "state":"Desativado"
-        },
-        {
-          "idDevice": "005",
-          "name": "Dispositivo 5",
-          "ubicacionName":" lateral-derecha",
-          "img":"assets/img/plano5.png",
-          "alert":"Rojo",
-          "state":"Activado"
-        },
-        {
-          "idDevice": "006",
-          "name": "Dispositivo 6",
-          "ubicacionName":"Zona lateral",
-          "img":"assets/img/plano6.png",
-          "alert":"Rojo",
-          "state":"Activado"
-        },
-        {
-          "idDevice": "007",
-          "name": "Dispositivo 7",
-          "ubicacionName":"Zona inferior-izquierda",
-          "img":"assets/img/plano7.png",
-          "alert":"Verde",
-          "state":"Activado"
-        },
-        {
-          "idDevice": "008",
-          "name": "Dispositivo 8",
-          "ubicacionName":"Zona inferior-derecha",
-          "img":"assets/img/plano8.png",
-          "alert":"Verde",
-          "state":"Activo"
-        }
-      ]
-    
-    constructor(private http: HttpClient){
-  
-       
-    }
+  private url = 'ip';
+  date: any;
 
-  getDevices(){
-    
+  constructor(private http: HttpClient) {
+
+  }
+  getAllDevices(): Observable<any> {
+    return this.http.get(this.url + '/getDeviceNames');
+  }
+  get(deviceName: string) {
+    return this.http.get(this.url + '/currentStatus'+ '/' + deviceName);
+  }
+
+  private devices: any[] = [
+    {
+      "id": "1234",
+      "deviceName": "Dispositivo 1",
+      "date": "2020-02-08",
+      "noiseLevel": 2000,
+      "temperature": 23,
+      "humidity": 74,
+      "lighting": 100,
+      "status": "BAJO"
+    },
+    {
+      "id": "12345",
+      "deviceName": "Dispositivo 2",
+      "date": "2020-02-08",
+      "noiseLevel": 1000,
+      "temperature": 25,
+      "humidity": 76,
+      "lighting": 178,
+      "status": "ALTO"
+    }
+  ]
+  getDevices() {
     return this.devices
-      }
-}
- export interface Device{
-    "idDevice": string,
-    "name":string,
-    "ubicacionName":string,
-    "img":string,
-    "alert":string,
-    "state":string
+  }
 }
