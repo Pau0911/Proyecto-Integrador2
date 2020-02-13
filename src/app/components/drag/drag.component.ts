@@ -7,24 +7,30 @@ import { DevicesService} from '../../services/device.service';
 })
 export class DragComponent implements OnInit {
 
-  devices:any=[];
-
+  devices:any;
+  dev:any=[];
+  dataa:any;
   constructor(private _devicesService: DevicesService) { }
 
   ngOnInit() {
-    this.devices=this._devicesService.getDevices()
+    /*this.devices=this._devicesService.getDevices()
     for(var v in this.devices){
       console.log("Devices",this.devices[v])
-    }
+    }*/
     //Traer todos los nombres de dispositivos
-    /*this.devices=this._devicesService.getAllDevices().subscribe((data:any) =>{
+    
+    this._devicesService.getAllDevices().subscribe((data:any) =>{
       this.devices=data;
-      console.log("Devices"+data) 
+      this.dataa=data;
+      console.log(this.devices)
+ 
+    
     });
-    */
-    for(var v in this.devices){
-      console.log("Devices",this.devices[v])
-    }
-  }
+    
+    this.devices=this._devicesService.getNameDevice(this.dataa[1]).subscribe((dataa:any) =>{
+    this.dev=dataa;
+      console.log("Devices dentro"+dataa[1]) 
+  });
 
+  }
 }

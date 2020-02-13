@@ -8,17 +8,17 @@ import { Observable } from 'rxjs';
 
 export class DevicesService {
 
-  private url = 'ip';
+  private url = 'http://192.168.30.89:8080';
   date: any;
 
   constructor(private http: HttpClient) {
 
   }
   getAllDevices(): Observable<any> {
-    return this.http.get(this.url + '/getDeviceNames');
+    return this.http.get(this.url + '/iot/getDeviceNames');
   }
-  get(deviceName: string) {
-    return this.http.get(this.url + '/currentStatus'+ '/' + deviceName);
+  getNameDevice(deviceName: string):Observable<any> {
+    return this.http.get(this.url + '/iot/currentStatus'+'?deviceName=' + deviceName);
   }
 
   private devices: any[] = [

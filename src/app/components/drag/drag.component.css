@@ -1,6 +1,21 @@
 
 .plano{
     margin-right:70;
-    width:100%;
+    width:150%;
     height:100%;
+    position: relative;
 }
+
+.list{
+    margin-top: 20px;
+    position: relative;
+    z-index: 100;
+    width: 200px;
+    background-color: slategrey;
+}
+@media screen and (min-width: 768px) {
+
+    .custom-collapse .collapse{
+                display:block;
+          }  
+    }
