@@ -1,18 +1,17 @@
 <h1 class="below" style="font-family:Arial, Helvetica, sans-serif;">Dispositivos</h1>
-
 <div class="row row-cols-1 row-cols-md-3 ">
     <div class="col mb-4 animate fadeIn fast "  *ngFor="let device of devices; let i">
       <div class="card h-90 card border-secondary mb-3">
-        <img [src]="device.img" class="card-img-top" [alt]="device.name" style="max-width: inherit;">
+        <img [src]="device.img" class="card-img-top" [alt]="device.deviceName" style="max-width: inherit;">
         <hr> 
         <div class="card-body" >
-          <h5 class="card-title" >{{device.name}}</h5>
-          <p class="card-title">{{device.ubicacionName}}</p>
-          <p class="card-title">{{device.idDevice}}</p>
-          <p class="card-title">{{device.state}}</p>
-          <button *ngIf="device.alert=='Rojo'" (click)="alert(i)" type="button" class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+          <h5 class="card-title" >{{device.id}}</h5>
+          <p class="card-title">{{device.deviceName}}</p>
+          <p class="card-title">{{device.status}}</p>
+          <p class="card-title">{{devices.noiseLevel}}</p>
+          <button *ngIf="device.status=='BAJO'" (click)="alert(i)" type="button" class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
           </button>
-          <button  *ngIf="device.alert!='Rojo'" (click)="alert(i)" type="button" class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+          <button  *ngIf="device.status!='BAJO'" (click)="alert(i)" type="button" class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
           </button>
         
         </div>

@@ -29,5 +29,6 @@
     transform: translate3d(545px, -31px, 0px);
 }
 .div2{
-    transform: translate3d(255px, 44px, 0px);
+    transform: translate3d(253px, 69px, 0px);
+    position: static;
 }

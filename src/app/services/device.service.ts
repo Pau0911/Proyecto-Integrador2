@@ -22,6 +22,7 @@ export class DevicesService {
       "id": "1234",
       "deviceName": "Dispositivo 0",
       "date": "2020-02-08",
+      "img":"assets/img/plano2.png",
       "noiseLevel": 2000,
       "temperature": 23,
       "humidity": 74,
@@ -32,6 +33,7 @@ export class DevicesService {
     {
       "id": "12345",
       "deviceName": "Dispositivo 1",
+      "img":"assets/img/plano2.png",
       "date": "2020-02-08",
       "noiseLevel": 1000,
       "temperature": 25,
@@ -43,6 +45,7 @@ export class DevicesService {
     {
       "id": "1234",
       "deviceName": "Dispositivo 2",
+      "img":"assets/img/plano2.png",
       "date": "2020-02-08",
       "noiseLevel": 1000,
       "temperature": 25,
