@@ -8,39 +8,48 @@ import { Observable } from 'rxjs';
 
 export class DevicesService {
 
-  private url = 'http://192.168.30.89:8080';
+  private url = 'http://192.168.43.130:8080';
   date: any;
 
   constructor(private http: HttpClient) {
-
   }
   getAllDevices(): Observable<any> {
     return this.http.get(this.url + '/iot/getDeviceNames');
-  }
-  getNameDevice(deviceName: string):Observable<any> {
-    return this.http.get(this.url + '/iot/currentStatus'+'?deviceName=' + deviceName);
   }
 
   private devices: any[] = [
     {
       "id": "1234",
-      "deviceName": "Dispositivo 1",
+      "deviceName": "Dispositivo 0",
       "date": "2020-02-08",
       "noiseLevel": 2000,
       "temperature": 23,
       "humidity": 74,
       "lighting": 100,
-      "status": "BAJO"
+      "status": "BAJO",
+      "class":"div0"
     },
     {
       "id": "12345",
+      "deviceName": "Dispositivo 1",
+      "date": "2020-02-08",
+      "noiseLevel": 1000,
+      "temperature": 25,
+      "humidity": 76,
+      "lighting": 178,
+      "status": "ALTO",
+      "class":"div1"
+    },
+    {
+      "id": "1234",
       "deviceName": "Dispositivo 2",
       "date": "2020-02-08",
       "noiseLevel": 1000,
       "temperature": 25,
       "humidity": 76,
       "lighting": 178,
-      "status": "ALTO"
+      "status": "ALTO",
+      "class":"div2"
     }
   ]
   getDevices() {
