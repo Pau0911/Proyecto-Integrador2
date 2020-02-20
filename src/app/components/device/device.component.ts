@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DevicesService } from '../../services/device.service';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-device',
   templateUrl: './device.component.html',
@@ -7,21 +9,19 @@ import { DevicesService } from '../../services/device.service';
 })
 export class DeviceComponent implements OnInit {
 
-  devices:any=[];
-
-  constructor(private _devicesService: DevicesService) { 
+  device:any={};
+  id:any;
+  constructor(private activatedRoute:ActivatedRoute, private deviceService:DevicesService) { 
+    this.activatedRoute.params.subscribe(param => {
+      this.id= param['id'];
+      console.log(param['id']);
+      this.device=this.deviceService.getDevice(this.id);
+      console.log(this.device.deName)
+    });
+    
   
   }
-
   ngOnInit() {
-  this.devices=this._devicesService.getDevices()
-    for(var v in this.devices){
-      console.log("Devices",this.devices[v])
-    }
-  }
-
-  alert(i:number){
-    console.log(i);
 
   }
 

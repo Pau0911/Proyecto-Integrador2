@@ -1,1 +1,25 @@
-<p>device works!</p>
+<h1>{{device.deviceName}}</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="assets/img/plano1.png" class="img-fluid" [alt]="device.deviceName">
+        <br><br>
+        <button [routerLink]="['/piso2']" type="button" class="btn btn-primary">Regresar</button>
+    </div>
+    <div class="col-md-8">
+        <h3>Detalles</h3>
+        <hr>
+        <p>Nivel de sonido :  {{device.noiseLevel}}</p>
+        <p>Fecha :  {{device.date}}</p>
+        <p>Temperatura :  {{device.temperature}}</p>
+        <p>Humedad :  {{device.humidity}}</p>
+        <p>Estado :  {{device.status}}</p>
+
+        <div class="col-3 offset-md">
+            <button *ngIf="device.status=='BAJO'" type="button"  class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+            </button>
+            <button  *ngIf="device.status!='BAJO'" type="button"  class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DevicesService} from '../../services/device.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-drag',
   templateUrl: './drag.component.html',
@@ -11,7 +13,7 @@ export class DragComponent implements OnInit {
   dev:any=[];
   dataa:any;
   myDevice:string;
-  constructor(private _devicesService: DevicesService) { }
+  constructor(private _devicesService: DevicesService, private route:Router) { }
 
   ngOnInit() {
     this.devices=this._devicesService.getDevices()
@@ -28,20 +30,8 @@ export class DragComponent implements OnInit {
 */
   }
 
-  propiedades:Object={
-      background:true
-  }
-  classdevices(deviceName:any):string{
-    this.myDevice =deviceName;
-    if(deviceName=='dev0'){
-      console.log(deviceName)
-        return this.myDevice;
-    }
-    else{
-      console.log(deviceName)
-      return this.myDevice;
-    }
-
+  viewDevice(index:number){
+    this.route.navigate(['/device',index])
   }
   
 }

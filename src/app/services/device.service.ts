@@ -58,4 +58,8 @@ export class DevicesService {
   getDevices() {
     return this.devices
   }
+
+  getDevice(index:string){
+    return this.devices[index]
+  }
 }
