@@ -28,7 +28,7 @@ export class DevicesService {
       "humidity": 74,
       "lighting": 100,
       "status": "BAJO",
-      "class":"div0"
+      "class":"0"
     },
     {
       "id": "12345",
@@ -40,7 +40,7 @@ export class DevicesService {
       "humidity": 76,
       "lighting": 178,
       "status": "ALTO",
-      "class":"div1"
+      "class":"1"
     },
     {
       "id": "1234",
@@ -52,7 +52,7 @@ export class DevicesService {
       "humidity": 76,
       "lighting": 178,
       "status": "ALTO",
-      "class":"div2"
+      "class":"2"
     }
   ]
   getDevices() {

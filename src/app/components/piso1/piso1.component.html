@@ -9,9 +9,9 @@
           <p class="card-title">{{device.deviceName}}</p>
           <p class="card-title">{{device.status}}</p>
           <p class="card-title">{{devices.noiseLevel}}</p>
-          <button *ngIf="device.status=='BAJO'" (click)="alert(i)" type="button" class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+          <button *ngIf="device.status!='BAJO'"  type="button" class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
           </button>
-          <button  *ngIf="device.status!='BAJO'" (click)="alert(i)" type="button" class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
+          <button  *ngIf="device.status=='BAJO'" type="button" class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>
           </button>
         
         </div>

@@ -19,6 +19,7 @@ import { Piso3Component } from './components/piso3/piso3.component';
 import { ReporteComponent } from './components/reporte/reporte.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
+import { DeviceComponent } from './components/device/device.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DragComponent } from './components/drag/drag.component';
     Piso2Component,
     Piso3Component,
     ReporteComponent,
-    DragComponent
+    DragComponent,
+    DeviceComponent
     
   ],
   imports: [
