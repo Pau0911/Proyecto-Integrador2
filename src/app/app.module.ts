@@ -8,6 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 //Servicios
 import { DevicesService } from './services/device.service';
 
+//Graficas
+import { ChartsModule } from 'ng2-charts';
+import { GraficaComponent } from './components/grafica/grafica.component';
+
+
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -31,14 +36,16 @@ import { DeviceComponent } from './components/device/device.component';
     Piso3Component,
     ReporteComponent,
     DragComponent,
-    DeviceComponent
+    DeviceComponent,
+    GraficaComponent
     
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
     HttpClientModule,
-    DragDropModule
+    DragDropModule,
+    ChartsModule
   ],
   providers: [
     DevicesService,
