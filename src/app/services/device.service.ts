@@ -14,7 +14,8 @@ export class DevicesService {
   constructor(private http: HttpClient) {
   }
   getAllDevices(): Observable<any> {
-    return this.http.get(this.url + '/iot/getDeviceNames');
+    console.log(this.http.get(this.url + '/iot/currentStatus'))
+    return this.http.get(this.url + '/iot/currentStatus');
   }
 
   private devices: any[] = [
@@ -28,7 +29,7 @@ export class DevicesService {
       "humidity": 74,
       "lighting": 100,
       "status": "BAJO",
-      "class":"0"
+      "sala":"0"
     },
     {
       "id": "12345",
@@ -40,7 +41,7 @@ export class DevicesService {
       "humidity": 76,
       "lighting": 178,
       "status": "ALTO",
-      "class":"1"
+      "sala":"1"
     },
     {
       "id": "1234",
@@ -52,7 +53,7 @@ export class DevicesService {
       "humidity": 76,
       "lighting": 178,
       "status": "ALTO",
-      "class":"2"
+      "sala":"2"
     }
   ]
   getDevices() {

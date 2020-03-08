@@ -10,8 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 export class DeviceComponent implements OnInit {
 
   device:any={};
+  
   id:any;
+
   constructor(private activatedRoute:ActivatedRoute, private deviceService:DevicesService) { 
+    
     this.activatedRoute.params.subscribe(param => {
       this.id= param['id'];
       console.log(param['id']);
@@ -23,6 +26,11 @@ export class DeviceComponent implements OnInit {
   }
   ngOnInit() {
 
+      this.deviceService.getAllDevices().subscribe((data:any) =>{
+      this.device=data;
+      console.log(this.device)
+
+    }); 
   }
 
   

@@ -1,33 +1,40 @@
 
-.plano{
-    margin-right:70;
-    width:150%;
-    height:100%;
-    position: relative;
-}
 
-.list{
-    margin-top: 20px;
-    position: relative;
-    z-index: 100;
-    width: 200px;
-    background-color: slategrey;
+@media screen {
+    .plano {
+        vertical-align:center;
+        text-align: center;
+        display:block;
+        }
+    }
+@media screen{
+    .list{
+        position: relative;
+        z-index: 100;
+        width: 200px;
+        display:block;
+        background-color: slategrey;
+    }
 }
 @media screen and (min-width: 768px) {
-
     .custom-collapse .collapse{
                 display:block;
           }  
     }
-
 .salon0{
-    transform: translate3d(259px, 72px, 0px);
+    width: 40px;
+    height: 40px;
+    transform: translate3d(177px, -709px, 0px);
 
 }
 .salon1{
-    transform: translate3d(545px, -31px, 0px);
+    width: 40px;
+    height: 40px;
+    transform: translate3d(402px, -540px, 0px);
 }
 .salon2{
-    transform: translate3d(253px, 69px, 0px);
+    width: 40px;
+    height: 40px;
+    transform:translate3d(171px, -334px, 0px);
     
 }
