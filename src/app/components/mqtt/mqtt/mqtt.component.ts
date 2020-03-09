@@ -1,12 +1,13 @@
 import { Component, OnInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IMqttMessage, MqttService } from 'ngx-mqtt';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-mqtt',
+  templateUrl: './mqtt.component.html',
+  styleUrls: ['./mqtt.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class MqttComponent implements OnInit {
   private subscription: Subscription;
   topicname: any;
   msg: any;

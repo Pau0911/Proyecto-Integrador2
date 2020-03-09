@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 //Rutas
 import { APP_ROUTING } from './app.routes';
@@ -26,6 +27,16 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
 import { DeviceComponent } from './components/device/device.component';
 
+//mqtt
+import { MqttModule, IMqttServiceOptions } from "ngx-mqtt";
+import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
+
+
+export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
+  hostname: 'localhost',
+  port: 9001,
+  path: '/mqtt'
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,15 +48,19 @@ import { DeviceComponent } from './components/device/device.component';
     ReporteComponent,
     DragComponent,
     DeviceComponent,
-    GraficaComponent
+    GraficaComponent,
+    MqttComponent
     
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
+    FormsModule,
     HttpClientModule,
     DragDropModule,
-    ChartsModule
+    ChartsModule,
+    MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
+
   ],
   providers: [
     DevicesService,
