@@ -27,16 +27,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
 import { DeviceComponent } from './components/device/device.component';
 
-//mqtt
-import { MqttModule, IMqttServiceOptions } from "ngx-mqtt";
-import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
 
-
-export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: 'localhost',
-  port: 9001,
-  path: '/mqtt'
-}
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +40,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     DragComponent,
     DeviceComponent,
     GraficaComponent,
-    MqttComponent
+
     
   ],
   imports: [
@@ -59,7 +50,7 @@ export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     HttpClientModule,
     DragDropModule,
     ChartsModule,
-    MqttModule.forRoot(MQTT_SERVICE_OPTIONS)
+  
 
   ],
   providers: [
