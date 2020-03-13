@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@stomp/ng2-stompjs": "^7.2.0",
     "angular-material": "^1.1.21",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
