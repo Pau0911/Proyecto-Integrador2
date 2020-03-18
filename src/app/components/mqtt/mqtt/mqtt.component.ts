@@ -17,6 +17,7 @@ export class MqttComponent implements OnInit {
   constructor(private _stompService: StompService) { }
 
   ngOnInit() {
+    this.subscribe();
     this.subscribed = true;
   }
 
@@ -27,7 +28,7 @@ export class MqttComponent implements OnInit {
     }
     this.subscribed = true;
     // Stream of messages
-    this.messages = this._stompService.subscribe('/topic/la_cosa');
+    this.messages = this._stompService.subscribe('/topic/paula');
     // Subscribe a function to be run on_next message
     this.subscription = this.messages.subscribe(this.on_next);
 
@@ -48,6 +49,6 @@ public unsubscribe() {
 
   public on_next = (message: Message) => {
     const body = message.body;
-    console.log(body);
+    console.log("mensaje",body);
   }
 }
