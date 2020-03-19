@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {StompService, StompState} from '@stomp/ng2-stompjs';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {Message} from '@stomp/stompjs';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-mqtt',
   templateUrl: './mqtt.component.html',
@@ -10,19 +10,24 @@ import {Message} from '@stomp/stompjs';
 })
 export class MqttComponent implements OnInit {
 
+
+  
   public messages: Observable<Message>;
   public subscribed: boolean;
   private subscription: Subscription;
 
+
   constructor(private _stompService: StompService) { }
 
+  
   ngOnInit() {
     this.subscribe();
     this.subscribed = true;
   }
 
-  public subscribe() {
-    
+
+
+  public subscribe() { 
     if (this.subscribed) {
         return;
     }
@@ -49,6 +54,7 @@ public unsubscribe() {
 
   public on_next = (message: Message) => {
     const body = message.body;
+    Swal.fire('Nivel ALTO en:',body);
     console.log("mensaje",body);
   }
 }
