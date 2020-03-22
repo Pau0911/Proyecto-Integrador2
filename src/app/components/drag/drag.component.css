@@ -13,6 +13,7 @@
                 display:block;
           }  
     }
+
 .salon0{
     width: 40px;
     height: 40px;
@@ -29,3 +30,14 @@
     transform:translate3d(171px, -334px, 0px);
     
 }
+@media screen and (max-width: 800px) {
+    .title {
+        margin-top:30%;
+        }
+    }
+
+@media screen and (min-width:1024px) {
+    .title {
+        margin-top:10%;
+        }
+    }    

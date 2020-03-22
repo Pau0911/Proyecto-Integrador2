@@ -1,0 +1,10 @@
+@media screen and (max-width:500px) {
+.home{
+    margin-top: 40%;
+    }
+}
+@media screen and (min-width:1024px){ 
+    .home{
+        margin-top: 9%;
+        }
+    }
