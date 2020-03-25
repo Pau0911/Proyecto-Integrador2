@@ -15,6 +15,7 @@ import { GraficaComponent } from './components/grafica/grafica.component';
 
 //mqtt
 import {StompConfig, StompService} from '@stomp/ng2-stompjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 //Componentes
@@ -29,7 +30,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
 import { DeviceComponent } from './components/device/device.component';
 import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
-
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 const stompConfig: StompConfig = {
   // Which server?
@@ -78,7 +80,12 @@ const stompConfig: StompConfig = {
     HttpClientModule,
     DragDropModule,
     ChartsModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
   
+     }),
+     
 
   ],
   providers: [
@@ -89,9 +96,13 @@ const stompConfig: StompConfig = {
       provide: StompConfig,
       useValue: stompConfig
     }
+    
 
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,]
+  
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

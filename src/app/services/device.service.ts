@@ -8,59 +8,19 @@ import { Observable } from 'rxjs';
 
 export class DevicesService {
 
-  private url = 'http://192.168.43.130:8080';
+  private url = 'https://integrador-iot.herokuapp.com';
   date: any;
+
 
   constructor(private http: HttpClient) {
   }
   getAllDevices(): Observable<any> {
-    console.log(this.http.get(this.url + '/iot/currentStatus'))
     return this.http.get(this.url + '/iot/currentStatus');
   }
 
-  private devices: any[] = [
-    {
-      "id": "1234",
-      "deviceName": "Dispositivo 0",
-      "date": "2020-02-08",
-      "img":"assets/img/plano2.png",
-      "noiseLevel": 2000,
-      "temperature": 23,
-      "humidity": 74,
-      "lighting": 100,
-      "status": "BAJO",
-      "sala":"0"
-    },
-    {
-      "id": "12345",
-      "deviceName": "Dispositivo 1",
-      "img":"assets/img/plano2.png",
-      "date": "2020-02-08",
-      "noiseLevel": 1000,
-      "temperature": 25,
-      "humidity": 76,
-      "lighting": 178,
-      "status": "ALTO",
-      "sala":"1"
-    },
-    {
-      "id": "1234",
-      "deviceName": "Dispositivo 2",
-      "img":"assets/img/plano2.png",
-      "date": "2020-02-08",
-      "noiseLevel": 1000,
-      "temperature": 25,
-      "humidity": 76,
-      "lighting": 178,
-      "status": "ALTO",
-      "sala":"2"
-    }
-  ]
-  getDevices() {
-    return this.devices
-  }
+  
 
-  getDevice(index:string){
-    return this.devices[index]
-  }
+  // getDevice(index:string){
+  //   return this.devices[index]
+  // }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {StompService, StompState} from '@stomp/ng2-stompjs';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {Message} from '@stomp/stompjs';
+import { ToastrService,IndividualConfig } from 'ngx-toastr';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-mqtt',
@@ -15,14 +16,23 @@ export class MqttComponent implements OnInit {
   public messages: Observable<Message>;
   public subscribed: boolean;
   private subscription: Subscription;
+  private body;
+  options: IndividualConfig;
 
-
-  constructor(private _stompService: StompService) { }
+  constructor(private _stompService: StompService,private toastr: ToastrService) {
+    this.options = this.toastr.toastrConfig;
+    this.options.positionClass = 'toast-top-full-width';
+    this.options.timeOut = 150000;
+    this.options.progressAnimation='decreasing';
+    this.options.toastClass='toast-pink';
+    this.options.closeButton=true;
+   }
 
   
   ngOnInit() {
     this.subscribe();
     this.subscribed = true;
+    
   }
 
 
@@ -53,8 +63,22 @@ public unsubscribe() {
   }
 
   public on_next = (message: Message) => {
-    const body = message.body;
-    Swal.fire('Nivel ALTO en:',body);
-    console.log("mensaje",body);
+     this.body = message.body;
+    this.showSuccess();
+  
+    // Swal.fire('Nivel ALTO en:',body);
+    console.log("mensaje",this.body);
   }
-}
+  showSuccess() {
+
+    //this.toastr["warning"]("Device 1", "Nivel alto en:")
+
+
+    this.toastr.warning(this.body,'Nivel alto en :')
+    
+   
+    //this.toastr.warning( this.body,'Nivel alto en :');
+
+  
+    }
+  }

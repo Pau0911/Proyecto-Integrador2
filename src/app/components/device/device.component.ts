@@ -18,7 +18,7 @@ export class DeviceComponent implements OnInit {
     this.activatedRoute.params.subscribe(param => {
       this.id= param['id'];
       console.log(param['id']);
-      this.device=this.deviceService.getDevice(this.id);
+      //this.device=this.deviceService.getDevice(this.id);
       console.log(this.device.deName)
     });
     

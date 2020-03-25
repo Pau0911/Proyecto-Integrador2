@@ -11,29 +11,30 @@ export class DragComponent implements OnInit {
 
   devices:any;
   dev:any=[];
-  dataa:any;
+
   myDevice:string;
   constructor(private _devicesService: DevicesService, private route:Router) { }
 
   ngOnInit() {
      
-    this.devices=this._devicesService.getDevices()
-    for(var v in this.devices){
-      console.log("Devices",this.devices[v])
+    // this.devices=this._devicesService.getDevices()
+    // for(var v in this.devices){
+    //   console.log("Devices",this.devices[v])
     
-/*
-    //Traer todos los nombres de dispositivos
+    //Traer todos los dispositivos
     this._devicesService.getAllDevices().subscribe((data:any) =>{
       this.devices=data;
-      this.dataa=data;
-      for(let  device of this.devices){
+      for(let device of this.devices){
         //recorrer el array
       }
-      console.log(this.devices)
+      console.log("Devices del servicio",this.devices)
     }); 
-  }*/
-  }
-}
+    }
+
+    getDevices() {
+      return this.devices
+    }
+
 
   viewDevice(index:number){
     this.route.navigate(['/device',index])

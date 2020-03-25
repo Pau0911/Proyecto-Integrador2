@@ -15,11 +15,16 @@ export class Piso1Component implements OnInit {
   
   }
   ngOnInit() {
-  this.devices=this._devicesService.getDevices()
-    for(var v in this.devices){
-      console.log("Devices",this.devices[v])
+    this._devicesService.getAllDevices().subscribe((data:any) =>{
+      this.devices=data;
+      console.log("Data",data)
+      for(let  device of this.devices){
+        //recorrer el array
+      }
+    }); 
     }
-  }
+
+  
 
   alert(i:number){
     console.log(i);
