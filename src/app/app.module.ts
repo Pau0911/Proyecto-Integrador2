@@ -5,19 +5,15 @@ import { FormsModule } from "@angular/forms";
 //Rutas
 import { APP_ROUTING } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
-
-//Servicios
+//Servicio
 import { DevicesService } from './services/device.service';
-
 //Graficas
 import { ChartsModule } from 'ng2-charts';
 import { GraficaComponent } from './components/grafica/grafica.component';
-
-//mqtt
+//Mqtt
 import {StompConfig, StompService} from '@stomp/ng2-stompjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
 //Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -29,10 +25,11 @@ import { ReporteComponent } from './components/reporte/reporte.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
 import { DeviceComponent } from './components/device/device.component';
-import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
+//Mensajes (Para alertas)
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 
+//Configuración con Rabbitmq
 const stompConfig: StompConfig = {
   // Which server?
   url: 'ws://127.0.0.1:15674/ws',
@@ -46,16 +43,13 @@ const stompConfig: StompConfig = {
   // Interval in milliseconds, set to 0 to disable
   heartbeat_in: 0, // Typical value 0 - disabled
   heartbeat_out: 20000, // Typical value 20000 - every 20 seconds
-
   // Wait in milliseconds before attempting auto reconnect
   // Set to 0 to disable
   // Typical value 5000 (5 seconds)
   reconnect_delay: 5000,
-
   // Will log diagnostics on console
   debug: true
 };
-
 
 @NgModule({
   declarations: [
@@ -69,9 +63,7 @@ const stompConfig: StompConfig = {
     DragComponent,
     DeviceComponent,
     GraficaComponent,
-    MqttComponent,
-
-    
+    MqttComponent, 
   ],
   imports: [
     BrowserModule,
@@ -83,25 +75,17 @@ const stompConfig: StompConfig = {
     CommonModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
-  
      }),
-     
-
   ],
   providers: [
     DevicesService,
-
     StompService,
     {
       provide: StompConfig,
       useValue: stompConfig
     }
-    
-
-
   ],
   bootstrap: [AppComponent,]
-  
 })
 export class AppModule {
   

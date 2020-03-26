@@ -4,6 +4,7 @@ import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {Message} from '@stomp/stompjs';
 import { ToastrService,IndividualConfig } from 'ngx-toastr';
 import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-mqtt',
   templateUrl: './mqtt.component.html',
@@ -11,31 +12,32 @@ import Swal from 'sweetalert2';
 })
 export class MqttComponent implements OnInit {
 
-
-  
   public messages: Observable<Message>;
   public subscribed: boolean;
   private subscription: Subscription;
-  private body;
-  options: IndividualConfig;
+  private message;
+  //private options: IndividualConfig;
 
   constructor(private _stompService: StompService,private toastr: ToastrService) {
-    this.options = this.toastr.toastrConfig;
-    this.options.positionClass = 'toast-top-full-width';
-    this.options.timeOut = 150000;
-    this.options.progressAnimation='decreasing';
-    this.options.toastClass='toast-pink';
-    this.options.closeButton=true;
+    // this.options = this.toastr.toastrConfig;
+    // this.options.positionClass = 'toast-bottom-full-width';
+    // this.options.timeOut = 150000;
+    // this.options.progressAnimation='decreasing';
+    // this.options.closeButton=true;
+    // this.options.toastClass='toast-pink';
+    this.toastr.toastrConfig.positionClass='toast-bottom-full-width';
+    this.toastr.toastrConfig.timeOut = 150000;
+    this.toastr.toastrConfig.closeButton=true;
+    this.toastr.toastrConfig.progressAnimation='decreasing';
+    //this.toastr.toastrConfig.toastClass='ngx-toastr toast-warning paula';
+    
    }
 
-  
   ngOnInit() {
     this.subscribe();
     this.subscribed = true;
     
   }
-
-
 
   public subscribe() { 
     if (this.subscribed) {
@@ -48,7 +50,7 @@ export class MqttComponent implements OnInit {
     this.subscription = this.messages.subscribe(this.on_next);
 
     
-}
+  }
 
 public unsubscribe() {
     if (!this.subscribed) {
@@ -63,22 +65,25 @@ public unsubscribe() {
   }
 
   public on_next = (message: Message) => {
-     this.body = message.body;
-    this.showSuccess();
+     this.message = message.body;
+      this.showSuccess();
   
-    // Swal.fire('Nivel ALTO en:',body);
-    console.log("mensaje",this.body);
+     //Swal.fire('Nivel ALTO en:',this.message);
+    console.log("mensaje",this.message);
   }
+
   showSuccess() {
-
     //this.toastr["warning"]("Device 1", "Nivel alto en:")
-
-
-    this.toastr.warning(this.body,'Nivel alto en :')
+    //this.toastr.success(this.message,'Nivel alto en :')
+    // this.options = this.toastr.toastrConfig;
+    // this.options.positionClass = 'toast-bottom-full-width';
+    // this.options.timeOut = 150000;
+    // this.options.progressAnimation='decreasing';
+    // this.options.closeButton=true;
+    this.toastr.warning('Hello world!', 'Toastr fun!', {
+      timeOut: 3000
+    });
     
-   
     //this.toastr.warning( this.body,'Nivel alto en :');
-
-  
     }
   }
