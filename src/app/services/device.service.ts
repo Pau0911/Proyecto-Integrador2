@@ -18,9 +18,6 @@ export class DevicesService {
     return this.http.get(this.url + '/iot/currentStatus');
   }
 
-  
 
-  // getDevice(index:string){
-  //   return this.devices[index]
-  // }
+  
 }

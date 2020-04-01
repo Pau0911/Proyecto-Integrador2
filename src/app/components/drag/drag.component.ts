@@ -34,9 +34,13 @@ export class DragComponent implements OnInit {
     getDevices() {
       return this.devices
     }
+    getDevice(index:number){
+      return this.devices[index]
+    }
 
 
   viewDevice(index:number){
+    console.log("Index",index)
     this.route.navigate(['/device',index])
   }
   

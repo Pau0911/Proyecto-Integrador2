@@ -30,7 +30,7 @@
     transform:translate3d(171px, -334px, 0px);
     
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .title {
         margin-top:30%;
         }

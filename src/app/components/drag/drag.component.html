@@ -9,10 +9,10 @@
             </div>
         </div>
         <ul class="list-group-collapse" id="side-menu-collapse">
-            <h1 *ngFor="let device of devices;let i =index" [routerLink]="['/device',i]"> 
-                <button *ngIf="device.status=='BAJO'" type="button"[ngClass]="'salon'+ device.sala"  class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>{{i}}
+            <h1 *ngFor="let device of devices;let i = index" [routerLink]="['/device',i]"> 
+                <button *ngIf="device.status=='BAJO'" (click)="viewDevice(i)" type="button"[ngClass]="'salon'+ device.sala"  class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link"></i>{{i}}
                 </button>
-                <button  *ngIf="device.status!='BAJO'" type="button" [ngClass]="'salon'+ device.sala"  class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>{{i}}
+                <button  *ngIf="device.status!='BAJO'" (click)="viewDevice(i)" type="button" [ngClass]="'salon'+ device.sala"  class="btn btn-danger btn-circle btn-xl animate flash"><i class="fa fa-link"></i>{{i}}
                 </button>
             </h1>
         </ul>

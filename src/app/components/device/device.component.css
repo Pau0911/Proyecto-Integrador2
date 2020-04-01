@@ -1,0 +1,10 @@
+@media screen and (max-width: 1024px) {
+    .title {
+        margin-top:30%;
+        }
+    }
+@media screen and (min-width:1024px) {
+    .title {
+        margin-top:10%;
+        }
+    }    

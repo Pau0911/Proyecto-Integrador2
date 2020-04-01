@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {StompService, StompState} from '@stomp/ng2-stompjs';
-import {BehaviorSubject, Observable, Subscription} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {Message} from '@stomp/stompjs';
-import { ToastrService,IndividualConfig } from 'ngx-toastr';
+import {ToastrService,IndividualConfig } from 'ngx-toastr';
 import Swal from 'sweetalert2';
+import { Piso1Component } from '../../piso1/piso1.component';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-mqtt',
@@ -18,15 +22,15 @@ export class MqttComponent implements OnInit {
   private message;
   //private options: IndividualConfig;
 
-  constructor(private _stompService: StompService,private toastr: ToastrService) {
+  constructor(private _stompService: StompService,private toastr: ToastrService, private devicePiso:Piso1Component, private router: Router) {
     // this.options = this.toastr.toastrConfig;
     // this.options.positionClass = 'toast-bottom-full-width';
     // this.options.timeOut = 150000;
     // this.options.progressAnimation='decreasing';
     // this.options.closeButton=true;
     // this.options.toastClass='toast-pink';
-    this.toastr.toastrConfig.positionClass='toast-bottom-full-width';
-    this.toastr.toastrConfig.timeOut = 150000;
+    //this.toastr.toastrConfig.positionClass='toast-bottom-full-width';
+    this.toastr.toastrConfig.timeOut = 15000000;
     this.toastr.toastrConfig.closeButton=true;
     this.toastr.toastrConfig.progressAnimation='decreasing';
     //this.toastr.toastrConfig.toastClass='ngx-toastr toast-warning paula';
@@ -67,23 +71,24 @@ public unsubscribe() {
   public on_next = (message: Message) => {
      this.message = message.body;
       this.showSuccess();
-  
      //Swal.fire('Nivel ALTO en:',this.message);
     console.log("mensaje",this.message);
   }
 
   showSuccess() {
-    //this.toastr["warning"]("Device 1", "Nivel alto en:")
-    //this.toastr.success(this.message,'Nivel alto en :')
-    // this.options = this.toastr.toastrConfig;
-    // this.options.positionClass = 'toast-bottom-full-width';
-    // this.options.timeOut = 150000;
-    // this.options.progressAnimation='decreasing';
-    // this.options.closeButton=true;
-    this.toastr.warning('Hello world!', 'Toastr fun!', {
-      timeOut: 3000
-    });
-    
-    //this.toastr.warning( this.body,'Nivel alto en :');
+    if(this.message){
+      this.toastr.warning('Nivel ALTO','Alerta!!!', {
+      }).onTap.subscribe((action) =>
+      this.router.navigateByUrl('/device/'+this.message)
+      );  
+      //this.toastr.warning( this.body,'Nivel alto en :');
+      }
+      else{
+        this.toastr.error('En el mensaje','Error', {
+        })
+        
+        //this.toastr.warning( this.body,'Nivel alto en :');
+      }
     }
+    
   }

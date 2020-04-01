@@ -25,7 +25,10 @@ export class Piso1Component implements OnInit {
     }
 
   
-
+  getDevice(index:string){
+      return this.devices[index]
+  }
+  
   alert(i:number){
     console.log(i);
 
