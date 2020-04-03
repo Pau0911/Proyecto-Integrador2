@@ -38,6 +38,7 @@ export class MqttComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.messages = null;
     this.subscribe();
     this.subscribed = true;
     
@@ -53,11 +54,11 @@ export class MqttComponent implements OnInit {
     // Subscribe a function to be run on_next message
     this.subscription = this.messages.subscribe(this.on_next);
 
-    
   }
 
 public unsubscribe() {
     if (!this.subscribed) {
+      this.message=null;
         return;
     }
   
@@ -77,17 +78,19 @@ public unsubscribe() {
 
   showSuccess() {
     if(this.message){
-      this.toastr.warning('Nivel ALTO','Alerta!!!', {
-      }).onTap.subscribe((action) =>
-      this.router.navigateByUrl('/device/'+this.message)
-      );  
-      //this.toastr.warning( this.body,'Nivel alto en :');
+      const toast=this.toastr.warning('Nivel ALTO','Alerta!!!', {
+      })
+      if(this.message){
+        toast.onTap.subscribe((action) =>
+        this.router.navigateByUrl('/device/'+this.message)  
+        ); 
+      }
+
       }
       else{
-        this.toastr.error('En el mensaje','Error', {
+        this.toastr.error('En el mensaje','ERROR', {
         })
-        
-        //this.toastr.warning( this.body,'Nivel alto en :');
+       
       }
     }
     
