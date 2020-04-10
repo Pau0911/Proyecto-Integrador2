@@ -2,12 +2,22 @@
 <app-mqtt></app-mqtt>
 <hr>
 <div class="row">
+
+    <div class="container" style="text-align:left;" >
+        <div class="col-5">
+            <label  >Enviar mensajes a todos los dispositivos:</label>
+            <input #valor style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Mensaje">
+        <button  style="margin-bottom: 20px;"  (click)="onclick(valor.value)"  class="btn btn-primary">Enviar mesajes</button>
+    </div>
+</div>
     <div class="col-3 offset-md">
+        
         <div class="row">
             <div class="col-md offset-md">
                 <img src="assets/img/planoBiblio.png" class="plano">
             </div>
         </div>
+     
         <ul class="list-group-collapse" id="side-menu-collapse">
             <h1 *ngFor="let device of devices;let i = index"> 
                 <button *ngIf="device.status=='BAJO'" (click)="viewDevice(i)"  type="button"[ngClass]="'salon'+ device.sala"  class="btn btn-success btn-circle btn-xl animate flash"><i class="fa fa-link" style="font-size:9px; color: black;">{{device.deviceName}}</i>

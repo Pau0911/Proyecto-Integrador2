@@ -43,5 +43,13 @@ export class DragComponent implements OnInit {
     console.log("Index",index)
     this.route.navigate(['/device',index])
   }
+
+  onclick(message:string){
+    console.log("mensaje",message);
+    this._devicesService.sendMessageDevices(message).subscribe(resp =>{
+      console.log("Encender",message);
+    
+    });
+  }
   
 }
