@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DevicesService } from '../../services/device.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _deviceService:DevicesService) { }
 
   ngOnInit() {
   }
 
+  onclick(message:string){
+    this._deviceService.startDevices(message).subscribe(resp =>{
+      console.log("Encender",message);
+    
+    });
+
+    
+  }
 }

@@ -75,6 +75,8 @@ const stompConfig: StompConfig = {
     CommonModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
+    
+      //autoDismiss:true
       
      }),
   ],

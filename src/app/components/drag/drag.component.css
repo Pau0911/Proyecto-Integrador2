@@ -14,20 +14,20 @@
           }  
     }
 
-.salon0{
-    width: 40px;
-    height: 40px;
-    transform: translate3d(177px, -709px, 0px);
-}
 .salon1{
     width: 40px;
     height: 40px;
-    transform: translate3d(402px, -540px, 0px);
+    transform: translate3d(183px, -833px, 0px);
 }
 .salon2{
     width: 40px;
     height: 40px;
-    transform:translate3d(171px, -334px, 0px);
+    transform: translate3d(400px, -491px, 0px);
+}
+.salon3{
+    width: 40px;
+    height: 40px;
+    transform:translate3d(575px, -769px, 0px);
     
 }
 @media screen and (max-width: 1024px) {

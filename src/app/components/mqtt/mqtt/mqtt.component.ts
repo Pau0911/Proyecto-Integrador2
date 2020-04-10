@@ -49,9 +49,7 @@ export class MqttComponent implements OnInit {
         return;
     }
     this.subscribed = true;
-    // Stream of messages
     this.messages = this._stompService.subscribe('/topic/paula');
-    // Subscribe a function to be run on_next message
     this.subscription = this.messages.subscribe(this.on_next);
 
   }
@@ -70,6 +68,7 @@ public unsubscribe() {
   }
 
   public on_next = (message: Message) => {
+   
      this.message = message.body;
       this.showSuccess();
      //Swal.fire('Nivel ALTO en:',this.message);
@@ -78,16 +77,21 @@ public unsubscribe() {
 
   showSuccess() {
     if(this.message){
+
+      console.log("info",this.toastr.info)
+
       const toast=this.toastr.warning('Nivel ALTO','Alerta!!!', {
+      
       })
       if(this.message){
         toast.onTap.subscribe((action) =>
-        this.router.navigateByUrl('/device/'+this.message)  
-        ); 
-      }
-
+       
+        this.router.navigateByUrl('/device/'+this.message)
+        );}
+       
       }
       else{
+      
         this.toastr.error('En el mensaje','ERROR', {
         })
        
