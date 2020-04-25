@@ -1,21 +1,34 @@
-<h1 class="title">Plano biblioteca</h1>
+<h1 class="title" style="font-family: 'Montserrat', sans-serif;">Plano biblioteca</h1>
 <!-- <app-mqtt></app-mqtt> -->
 <hr>
 <div class="row" style="text-align:left;">
-    <div class="col-2"> 
-        <label  >Enviar mensaje:</label>
-        <input #valor style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Mensaje">
-        <button  style="margin-bottom: 20px;"  (click)="onclick(valor.value)"  class="btn btn-primary">Enviar mensaje</button>
-        <label class="mr-sm-2" for="inlineFormCustomSelect">Dispositivo</label>
-        <select (change)="saveId($event)" class="custom-select mr-sm-2 " id="deviceName" >
-          <option  disabled selected value >Seleccione...</option>
-          <option value={{item.deviceName}} *ngFor="let item of devices; let i = index">{{devices[i]['deviceName']}}</option>
-        </select>
-
-        <label  >Enviar mensaje al dispositivo:</label>
-        <input #valor1 style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Mensaje">
-        <button  style="margin-bottom: 20px;"  (click)="onclick1(valor1.value)"  class="btn btn-primary">Enviar mensaje</button>
-    </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                    <div class="card">
+                    <div class="card-body">
+                  <h6 class="card-title" style="font-family: 'Montserrat', sans-serif;">Enviar mensaje a todos los dispositivos:</h6>
+                  <input #valor style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Mensaje">
+                  <button  style="margin-bottom: 20px;"  (click)="onclick(valor.value)"  class="btn btn-primary">Enviar </button>
+                </div>
+            </div>    
+                  <div class="card" style="margin-top: 20px;">
+                    <div class="card-body">
+                  <h6  style="font-family: 'Montserrat', sans-serif;">Dispositivo:</h6>
+                  <select (change)="saveId($event)" class="custom-select mr-sm-2 " id="deviceName" >
+                    <option  disabled selected value >Seleccione...</option>
+                    <option value={{item.deviceName}} *ngFor="let item of devices; let i = index">{{devices[i]['deviceName']}}</option>
+                  </select>
+                  <h6 style="margin-top:20px;font-family: 'Montserrat', sans-serif;" >Enviar mensaje al dispositivo:</h6>
+                  <input #valor1 style="margin-bottom: 20px;" type="text" class="form-control" placeholder="Mensaje">
+                  <button  style="margin-bottom: 20px;"  (click)="onclick1(valor1.value)"  class="btn btn-primary">Enviar </button>
+                </div>
+                </div>
+            </div>
+              </div>
+            </div>
+            
+       
     <div class="col-4 ">
         <div class="row">
             <div class="col">
