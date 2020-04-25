@@ -26,10 +26,8 @@ export class DeviceComponent implements OnInit {
       });
     
     }); 
-  
-    
-  
   }
+  
   ngOnInit() {
     
   }

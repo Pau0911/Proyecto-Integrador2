@@ -14,7 +14,7 @@
           }  
     }
 
-.salon1{
+.salon0{
     width: 40px;
     height: 40px;
     transform: translate3d(183px, -833px, 0px);
@@ -33,10 +33,15 @@
 @media screen and (max-width: 1024px) {
     .title {
         margin-top:30%;
+        text-align: center;
+        margin-bottom: 10px;
+
         }
     }
 @media screen and (min-width:1024px) {
     .title {
         margin-top:10%;
+        text-align: center;
+        margin-bottom: 10px;
         }
     }    

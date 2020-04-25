@@ -1,0 +1,286 @@
+/* Links */
+
+a, dt, .optionsRibbon ul li a:hover, .optionsRibbon ul li a.hover, .optionsRibbon ul li a:focus, nav#leftColumn li a.centreIcon span, header .dropDown a:hover, header .dropDown a:focus, .rightColumn a *, .rightColumn ul.largeImgs li > a, .rightColumn a.sectionLink, #TableA a span, #TableB a span, nav#leftColumn ol li a:not(.centreIcon):hover, nav#leftColumn ol li a:not(.centreIcon):hover span, nav#leftColumn ol li a.selected, .messagesHolder .dropDown ul li .ms-user, .notificationsHolder .dropDown ul li .ms-user, nav#leftColumn .scroll a:hover span, #facebox #complete_signup h2, .primaryColorText, #fixedSectionHeader a.sectionLink:hover span, #courseToolbar a.sectionLink:hover span, .options_btn:hover, .options_btn:focus, nav#leftColumn .options_btn:hover, nav#leftColumn .options_btn:focus, #Uploader #dropzone, a.secondaryColorText:hover, .dashboard_widgets a.footer label {
+  color: #2AC09E
+}
+
+/* Hover */
+
+a:hover, .rightColumn ul li a:hover *, .rightColumn a:hover, .rightColumn ul.largeImgs li > a:hover, table a span, table span a, div.materialStyle table a:hover, div.materialStyle table a:hover *, a.tableLink1:hover, a.tableLink1:hover *, a.tableLink2:hover, a.tableLink2:hover *, h2.playerLevel span, h3, h5, #facebox h2, .secondaryColorText {
+  color: #E47E78
+}
+
+/* Left nav heading */
+
+#leftColumn h3 {
+  color: #2EDEB2
+}
+
+/* h2 and metadata */
+
+#centreColumn h2, #courseToolbar h2, #tinymce h2, #facebox form#resources_form .search-metadata {
+  color: #43638C
+}
+
+/* Top bar hover */
+
+.dropDownHolder > a:hover, .quickLinks > a:hover, .quickLinks .dropDownHolder > a:focus, .quickLinks > a:focus, .highlight {
+  background: #ff767c
+}
+
+/* Top bar */
+
+.difSignIn, input[type="submit"], input[type="button"], button, .mainNav .cta a, header, #facebox .header, #chatContainer .header, .chatHeader, .mobileSearch, .ui-datepicker .ui-datepicker-buttonpane button, .ui-datepicker .ui-widget-header, .select2-results .select2-highlighted, .select2-container-multi .select2-choices .select2-search-choice, .messageOptions li a, .optionsRibbon ul.inverted li a, .section-intro p.number, .jconfirm .jconfirm-box div.title, .options_btn.inverted, .quiz_match_choice.ui-draggable-dragging, #fullscreen_msg_holder .header, .vex .vex-header, .link_button, .senders-placeholder span {
+  background: #EF6268
+}
+
+/* Top tab selector */
+
+ul.tabnav li a.selected:after, table.calendar_small .current div, table.calendar .current, .calendar-agenda-day .current, .optionsRibbon ul li.selected a:before {
+  background: #7698B8
+}
+
+/* Inverted options links */
+
+.optionsRibbon ul.inverted li a, .options_btn.inverted {
+  background: #4A6E9C
+}
+
+/* Table of contents */
+
+  .section_nav_holder {
+    background-color: #fff
+  }
+  .section_nav a.module_link:not(.selected), .section_nav a.module_link.locked.hovering.selected {
+    background: #e9e9e9
+  }
+
+/* Section link navigation */
+
+.sectionLink.inverted {
+  background: #4A6E9C
+}
+
+/* Footer */
+
+footer {
+  background: #233240
+}
+
+/* Alert box */
+
+header .quickLinks a .newAlert, a.rightMobileBar .newAlert {
+  border: 1px solid #597591;
+  background-color: #45617D
+}
+
+/* Table row selection */
+
+table tr.highlight td, .badgeOptions a.highlight, ul.quiz_blocks li.selected, .quiz_match_dropzone > div {
+  background: #DBF3FF
+}
+table tr td.highlight {
+  background: #efffff
+}
+table tr.highlight td, ul.quiz_blocks li.selected, .quiz_match_dropzone > div {
+  border-color: #c7dfeb
+}
+
+/* Tinymce */
+
+.mce-window-head, .mce-foot .mce-btn button, .mce-menu-item:hover, .mce-menu-item.mce-selected, .mce-menu-item:focus {
+  background: #EF6268 !important
+}
+
+/* Fonts */
+
+h1, h2, h3, h4, h5, h6, #centreColumn .centerHeading, #courseToolbar .centerHeading, .quiz_points, .jconfirm .title, .mce-window-head .mce-title {
+  font-family: 'Roboto Slab', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+/* Main nav - Background and border */
+
+#contentWrap.hasLeftColumn:before, nav#leftColumn ol.thinMainNav, nav#leftColumn ol.thinMainNav.hoverMainNav, nav#leftColumn ol.hoverMainNav:before, .closeNavTrigger a, [dir=rtl] .user #contentWrap.hasLeftColumn:after {
+  background-color: #374E63;
+  border-color: #374E63
+}
+[dir=rtl] nav#leftColumn ol.hoverMainNav:before {
+  border-left-color: #374E63
+}
+@media screen and (max-width: 1024px) {
+  /* same as media query styles below, but without body class */
+  nav#leftColumn ol.staticMainNav > li > ul {
+    background: #233a4f;
+    border-color: #233a4f
+  }
+  nav#leftColumn ol.staticMainNav > li > ul li a.selected, nav#leftColumn ol.staticMainNav > li > ul li a:hover {
+    border-color: #374E63
+  }
+}
+@media screen and (min-width: 1025px) {
+/* same as media query styles above, but with body class */
+  .keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul {
+    background: #233a4f;
+    border-color: #233a4f
+  }
+  .keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul li a.selected, .keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul li a:hover {
+    border-color: #374E63
+  }
+}
+
+  /* Main nav - Icons  */
+
+  nav .icon {
+    fill: #fff
+  }
+  nav#leftColumn ol > li > a > span, nav#leftColumn ol > li > a:not(.normalLink), nav#leftColumn ol > li > a:not(.centreIcon):hover span, nav#leftColumn a:not(.centreIcon).highlight span, nav#leftColumn ol li a.selected span, nav#leftColumn ol li ul.subClasses li a, nav#leftColumn ol li ul.subClasses li a span {
+    color: #fff
+  }
+  nav#leftColumn ol > li > a i:after, nav#leftColumn i.ellipsis:after, nav#leftColumn ol > li > a:not(.centreIcon):hover i:after, nav#leftColumn > ol > li:hover > a:not(:hover) i:after, nav#leftColumn ol > li > a:not(.centreIcon).highlight i:after, nav#leftColumn ol > li > a.selected i:after, nav#leftColumn ol.thinMainNav > li > a i:after, nav#leftColumn ol.thinMainNav.hoverMainNav > li > a:hover i:after, .closeNavTrigger a i:after, .closeNavTrigger a:hover i:after, nav#leftColumn li > ul > li > a i:after, nav#leftColumn > ol > li:hover > a:not(:hover) i:after {
+    left: -40px
+  }
+
+/* Main nav - Selected background */
+
+nav#leftColumn ol > li > a:not(.centreIcon):hover, nav#leftColumn ol > li > a:not(.centreIcon).highlight, nav#leftColumn ol > li > a.selected, nav#leftColumn li > ul > li > a:not(.centreIcon):hover, nav#leftColumn li > ul > li > a.selected, .section_nav a:not(.locked):hover, .section_nav ul a.selected {
+  background: #27B393;
+  background: linear-gradient(to right,  #27B393 0%, #3bc7a7 100%);
+  border-color: #374E63;
+}
+[dir=rtl] nav#leftColumn ol > li > a:not(.centreIcon):hover, [dir=rtl] nav#leftColumn ol > li > a:not(.centreIcon).highlight, [dir=rtl] nav#leftColumn ol > li > a.selected, [dir=rtl] nav#leftColumn li > ul > li > a:not(.centreIcon):hover, [dir=rtl] nav#leftColumn li > ul > li > a.selected, [dir=rtl] .section_nav a:not(.locked):hover, [dir=rtl]  .section_nav ul a.selected {
+  background: linear-gradient(to left,  #27B393 0%, #3bc7a7 100%);
+}
+
+  /* Main nav - Flyout side color border */
+
+  .no-touch nav#leftColumn > ol > li:not(.dropDownHolder) a.highlight + .dropDown, .touch nav#leftColumn > ol > li:not(.dropDownHolder):hover .dropDown {
+    border-left: 4px solid #3bc7a7
+  }
+  [dir=rtl].no-touch nav#leftColumn > ol > li:not(.dropDownHolder) a.highlight + .dropDown, [dir=rtl].touch nav#leftColumn > ol > li:not(.dropDownHolder):hover .dropDown {
+    border-right: 4px solid #3bc7a7;
+  }
+
+
+
+/* Main nav - Selected text */
+
+nav#leftColumn ol > li > a:not(.centreIcon):hover span, nav#leftColumn ol > li > a:not(.centreIcon).highlight span, nav#leftColumn ol > li > a.selected span, nav#leftColumn li > ul > li > a:not(.centreIcon):hover span, nav#leftColumn li > ul > li > a.selected span {
+  color: #fff
+}
+
+/* Main nav - Selected icon */
+
+nav#leftColumn ol > li > a:not(.centreIcon):hover i:after, nav#leftColumn ol > li > a:not(.centreIcon).highlight i:after, nav#leftColumn ol > li > a.selected i:after, nav#leftColumn li > ul > li > a:not(.centreIcon):hover i:after, nav#leftColumn li > ul > li > a.selected i:after, nav#leftColumn ol.thinMainNav.hoverMainNav > li > a:hover i:after {
+  left: -40px
+}
+
+  nav a:hover .icon {
+    fill: #fff
+  }
+
+
+/* Tile backgrounds */
+
+.catalog_boxes .tile_color_1, html:not([dir=rtl]) .catalog_class.tile_color_1 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_1 #contentWrap:after, .catalog_class.tile_color_1 #leftColumn, .people_boxes > div:nth-child(4n+1), .resources_boxes > a:nth-child(4n+1), .app_boxes > div:nth-child(4n+1), .dashboard_blocks > div:nth-child(4n+1), .dashboard_widgets > div:nth-of-type(4n+1) .headingLinkWrap, .lesson_boxes > div:nth-of-type(4n+1), .lesson_boxes > a:nth-of-type(4n+1), .modern_module_list > table:nth-of-type(4n+1) .modern_module_row td {
+  background-color: #ffffff
+}
+.catalog_boxes .tile_color_2, html:not([dir=rtl]) .catalog_class.tile_color_2 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_2 #contentWrap:after, .catalog_class.tile_color_2 #leftColumn, .people_boxes > div:nth-child(4n+2), .resources_boxes > a:nth-child(4n+2), .app_boxes > div:nth-child(4n+2), .dashboard_blocks > div:nth-child(4n+2), .dashboard_widgets > div:nth-of-type(4n+2) .headingLinkWrap, .lesson_boxes > div:nth-of-type(4n+2), .lesson_boxes > a:nth-of-type(4n+2), .modern_module_list > table:nth-of-type(4n+2) .modern_module_row td {
+  background-color: #ffffff
+}
+.catalog_boxes .tile_color_3, html:not([dir=rtl]) .catalog_class.tile_color_3 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_3 #contentWrap:after, .catalog_class.tile_color_3 #leftColumn, .people_boxes > div:nth-child(4n+3), .resources_boxes > a:nth-child(4n+3), .app_boxes > div:nth-child(4n+3), .dashboard_blocks > div:nth-child(4n+3), .dashboard_widgets > div:nth-of-type(4n+3) .headingLinkWrap, .lesson_boxes > div:nth-of-type(4n+3), .lesson_boxes > a:nth-of-type(4n+3), .modern_module_list > table:nth-of-type(4n+3) .modern_module_row td {
+  background-color: #ffffff
+}
+.catalog_boxes .tile_color_4, html:not([dir=rtl]) .catalog_class.tile_color_4 #contentWrap:before, [dir=rtl] .catalog_class.tile_color_4 #contentWrap:after, .catalog_class.tile_color_4 #leftColumn, .people_boxes > div:nth-child(4n+4), .resources_boxes > a:nth-child(4n+4), .app_boxes > div:nth-child(4n+4), .dashboard_blocks > div:nth-child(4n+4), .dashboard_widgets > div:nth-of-type(4n+4) .headingLinkWrap, .lesson_boxes > div:nth-of-type(4n+4), .lesson_boxes > a:nth-of-type(4n+4), .modern_module_list > table:nth-of-type(4n+4) .modern_module_row td {
+  background-color: #ffffff
+}
+
+  /* Tile headings */
+
+  #centreColumn .dashboard_blocks h2, #centreColumn .catalog_boxes h2, #centreColumn .modern_module_row h2, #centreColumn .modern_module_row h2 span {
+    color: #43638C;
+  }
+
+  /* Tile text */
+
+  .modern_module_row .label.box, .modern_module_overview *, .catalog_boxes .label, .app_boxes .footer a, .catalog_courses .teacher span, #centreColumn .dashboard_blocks ul li, .catalog_boxes .lightText, .catalog_boxes .lightText *, .catalog_boxes .header .description, .catalog_student .footer .gameStatus span, .catalog_student .footer .gradeHolder span {
+    color: #707070
+  }
+  .modern_module_row a:hover span, .modern_module_info .accordionLink .label, .app_boxes .footer a:hover, .catalog_courses .footer.textFooter a.teacher:hover span {
+    color: #808080
+  }
+  .catalog_boxes .footer > .circleNum span, .catalog_boxes .footer > .blockNum span, .catalog_boxes .header .label.highlight, .catalog_boxes .footer .label.highlight {
+    background-color: rgba(0,0,0,.4);
+    color: #fff
+  }
+  .catalog_student .footer i.pageBlank span {
+    color: #fff
+  }
+
+  /* Tiles icons */
+
+  .modern_module_row i:after, .catalog_boxes > * > *:not(.quick_edit_icon) i:after {
+    left: 0 !important;
+  }
+  .modern_module_row i.icon.inverted path {
+    fill: #5e5f5f
+  }
+  .catalog_boxes.app_boxes .footer a:hover i {
+    opacity: 0.8
+  }
+
+  /* Adjust row view */
+
+  .modern_module_row + tr > td {
+    background: linear-gradient(#f7f7f7, white 20%);
+  }
+  .catalog_class .modern_module_list > table {
+    margin-bottom: 12px !important;
+  }
+
+  /* Tile progress background */
+
+  .user_progress:not(.red) {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0
+  }
+
+  /* Dashboard widget - Headings */
+
+  #centreColumn .dashboard_widgets .headingLinkWrap h2 {color: #222}
+
+
+  /* Checkout page side bar - Background */
+
+  .catalog_class #leftColumn, html:not([dir=rtl]) .catalog_class #contentWrap:before, [dir=rtl] .catalog_class #contentWrap:after {
+    background-color: #374E63 !important
+  }
+
+  /* Checkout page side bar - Border */
+
+  @media screen and (min-width: 768px) {
+    html:not([dir=rtl]) .catalog_class #contentWrap:before, [dir=rtl] .catalog_class #contentWrap:after {
+      border: 1px solid #374E63 !important;
+      border-width: 0 1px 0 0 !important
+    }
+    [dir=rtl] #contentWrap.hasLeftColumn:after {
+      border-width: 0 0 0 1px !important
+    }
+  }
+
+
+
+
+/* Profile_header - Background */
+
+.profile_header .profile_background {
+background-color: #2AC09E
+}
+
+/* Catalog call to action - Background */
+
+.catalog_item .profile_header .profile_info .alignR .link_button {
+background-color: #EF6268
+}
+

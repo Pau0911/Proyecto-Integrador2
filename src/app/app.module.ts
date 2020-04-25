@@ -15,6 +15,7 @@ import {StompConfig, StompService} from '@stomp/ng2-stompjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MqttComponent } from './components/mqtt/mqtt/mqtt.component';
 //Componentes
+import {  ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -26,18 +27,19 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { DragComponent } from './components/drag/drag.component';
 import { DeviceComponent } from './components/device/device.component';
 //Mensajes (Para alertas)
+
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 
 //Configuración con Rabbitmq
 const stompConfig: StompConfig = {
   // Which server?
-  url: 'ws://127.0.0.1:15674/ws',
+  url: 'ws://chimpanzee.rmq.cloudamqp.com:1883/ws',
   // Headers
   // Typical keys: login, passcode, host
   headers: {
-      login: 'guest',
-      passcode: 'guest'
+      login: 'qeqwzcps:qeqwzcps',
+      passcode: 'ijOv0DHpdzRleeN0_axHnaSEk5HLlVmt'
   },
   // How often to heartbeat?
   // Interval in milliseconds, set to 0 to disable
@@ -73,6 +75,7 @@ const stompConfig: StompConfig = {
     DragDropModule,
     ChartsModule,
     CommonModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
     

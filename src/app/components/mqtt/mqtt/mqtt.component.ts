@@ -38,9 +38,9 @@ export class MqttComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.messages = null;
-    this.subscribe();
-    this.subscribed = true;
+    //this.messages = null;
+    //this.subscribe();
+   // this.subscribed = true;
     
   }
 
@@ -49,7 +49,7 @@ export class MqttComponent implements OnInit {
         return;
     }
     this.subscribed = true;
-    this.messages = this._stompService.subscribe('/topic/paula');
+    this.messages = this._stompService.subscribe('/iot');
     this.subscription = this.messages.subscribe(this.on_next);
 
   }

@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit {
     
     });
 
+    // this._deviceService.sendMessageDevices(message).subscribe(resp =>{
+    //   console.log("Encender",message);
     
+    // });
   }
 }

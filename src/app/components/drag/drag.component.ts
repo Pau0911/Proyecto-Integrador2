@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DevicesService} from '../../services/device.service';
 import { Router } from '@angular/router';
+import { log } from 'util';
+import { Form, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-drag',
@@ -9,9 +11,11 @@ import { Router } from '@angular/router';
 })
 export class DragComponent implements OnInit {
 
+  formDevice:FormGroup;
   devices:any;
   dev:any=[];
-
+  idName:string;
+  idDevice;
   myDevice:string;
   constructor(private _devicesService: DevicesService, private route:Router) { }
 
@@ -37,6 +41,9 @@ export class DragComponent implements OnInit {
     getDevice(index:number){
       return this.devices[index]
     }
+    name(idName){
+      console.log("nombre",idName)
+    }
 
 
   viewDevice(index:number){
@@ -47,9 +54,19 @@ export class DragComponent implements OnInit {
   onclick(message:string){
     console.log("mensaje",message);
     this._devicesService.sendMessageDevices(message).subscribe(resp =>{
-      console.log("Encender",message);
     
     });
   }
+  saveId(event:any){
+    this.idName = event.target.value
+    console.log(this.idName)
+  }
+  onclick1(message:string){
+    console.log()
+    this._devicesService.sendMessageDevice(message,this.idName).subscribe(resp =>{
+
+    });
+  }
+
   
 }

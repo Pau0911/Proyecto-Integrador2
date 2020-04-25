@@ -1,0 +1,56 @@
+#Uploader ul.tabnav .file_upload_settings a {margin-right: 0}
+
+#Uploader div.plupload input[type="file"] {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 99% !important;
+  height: 100% !important;
+  cursor: pointer !important;
+}
+
+#Uploader #UploaderContainer {overflow:hidden}
+#Uploader #dropzone {height:115px; background-color:#fff; padding-top:69px; text-align:center; cursor:pointer}
+#Uploader #dropzone * {cursor:pointer;}
+#Uploader .dragover {background-color:#f8f8f8 !important;}
+
+.uploader-list {margin-top:0; display:none;}
+.uploader-list .progress-bar-container {border:1px solid #ccc; margin:4px 0; overflow:hidden; height:28px; position:relative;}
+.uploader-list .progress-bar-container b {float:right;}
+.uploader-list .progress-bar-container .text {position:absolute; width:99%; padding:5px; top:0;}
+.uploader-list .progress-bar {background-color:#85C3CC; width:0; height:28px;}
+.uploader-list .progress-bar-container {width: 100%;}
+
+.width-1-4 .uploader-list {margin:0 auto; width: 90%;}
+.width-1-4 .uploader-list .uploader_close_image_link {position: absolute; top: 5px; right: 12px;}
+
+#Uploader button.disabled {background-color:#CACACA;cursor:default}
+
+.uploader-list .progress-bar._processing {
+  -webkit-animation: progress 1s linear infinite; 
+  -moz-animation: progress 1s linear infinite; 
+  animation: progress 1s linear infinite; 
+  background-repeat: repeat-x; 
+  background-size: 30px 30px; 
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent); 
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+@-webkit-keyframes progress {to {background-position: 30px 0;}}
+@-moz-keyframes progress {to {background-position: 30px 0;}}
+@keyframes progress {to {background-position: 30px 0;}}
+
+#resources_file .uploader_filter {padding-bottom: 10px; border-bottom: 1px solid #ccc}
+#resources_file .uploader_filter p {padding-bottom: 0; margin-bottom: 0}
+#resources_file .uploader_filter_name {padding: 2px 3px; font-size: 14px; width: 150px}
+#resources_file #uploader_subject {width: 150px!important; height: 25px; padding: 1px 6px 1px 4px; font-size: 14px}
+#resources_file .facebox-content {max-height: 400px !important}
+#equella_file .uploader_filter {padding-bottom: 10px; border-bottom: 1px solid #ccc}
+#equella_file .equella_uploader_filter_name {padding: 2px 3px; font-size: 14px; margin-left: 3px}
+
+/* TinyMCE popup */
+#Uploader.frame .facebox-content {padding-left: 0; padding-right: 0}
+
+/* Tile image uploader */
+#facebox #Uploader.uploader ul.tabnav {margin: 0 10px 10px}
+#facebox #Uploader.uploader .uploader_filter {margin: 0 10px}

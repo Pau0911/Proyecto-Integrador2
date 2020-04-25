@@ -1,0 +1,3117 @@
+/* ===================
+    Scrollbar
+===================*/
+.showScroll::-webkit-scrollbar {-webkit-appearance: none; width: 7px; height: 7px}
+.showScroll::-webkit-scrollbar-thumb {border-radius: 4px; background-color: rgba(0, 0, 0, .5); -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)}
+
+/* ===================
+   Transitions
+   ===================*/
+p a, nav.mainNav .wideDropDown .scroll li a:not(:first-child) i {
+	-webkit-transition: all .3s .05s ease;
+	transition: all .3s .05s ease;
+}
+.lesson_boxes > div {
+	-webkit-transition: background-color .3s .05s ease;
+	transition: background-color .3s .05s ease;
+}
+
+/* ===================
+   Font Sizes
+   ===================*/
+h1 {
+	font-size: 34px;
+}
+h2 {
+	font-size: 23px;
+}
+footer a strong, .language strong, .people_boxes .footer span span, .resources_boxes .footer span span {
+	font-size: 20px
+}
+.columnBlock h2, .dashboard_blocks h2 {
+	font-size: 19px;
+}
+.comment .wrapPost a.commentTitle {
+	font-size: 18px;
+}
+h3, #facebox table span, .px16 {
+	font-size: 16px;
+}
+#leftColumn, nav.mainNav ol, nav.mainNav ol > li > a, .quickLinks a.username,
+#Table td, #Table td span, dl dd, table.chat td #messages span, table.chat textarea, table.chat label, table .tableDropdown a {
+	font-size: 15px;
+}
+nav.mainNav .dropDown, nav.mainNav .dropDown ul li, nav.mainNav .dropDown p, .quickLinks .dropDown a,
+.comment .metadata p,
+.rightColumn h2:not(.playerLevel) span, .rightColumn ul li a + a:not(.inline_link_lrg), table:not(.calendar) td span:not(.px16),
+#TableA td, #TableB td, #TableC td, #TableC input, #Table .dropDown a, .tooltip, .tooltipBot, .px14, #facebox table span.px14, .modern_module_list p {
+	font-size: 14px;
+}
+.materialStyle table:not(.calendar) td span:not(.px16) {
+	font-size: inherit;
+}
+nav.mainNav .wideDropDown .dropDownHeading a {
+	font-size: 13px;
+}
+.rightColumn ul li a.dueLink span:last-child, .rightColumn table td span,
+.gradebook_tooltip, #TableA td .dropDown a, #TableA td.assignment_category, #TableA td.assignment_category span, #TableA td.assignment * {
+	font-size: 12px;
+}
+#regular_window_button li, #full_window_button li {border-left-width: 0}
+#centreColumn #gradebook_jump_to {float:right;}
+#centreColumn .gradebook-spacer {margin: 0px 0 15px;}
+#centreColumn .gradebook-spacer > div {margin-top: 5px;}
+#centreColumn .gradebook-spacer .filter span + i {margin: 0 0 0 -12px; vertical-align: top}
+#centreColumn .gradebook_status_parent {margin: 0; min-height: 24px;}
+#centreColumn #gradebook_jump_to select {height: 27px; margin-top: 1px;width:150px;margin-left: 10px; padding: 0;}
+/* Add Ellipsis */
+.rightColumn ul li a span:first-child, .rightColumn ul li:not(.centreIcon) a, .rightColumn ul li p, nav.lessonNav > h2, .curriculumTable td a, .proficienciesForm input[type="checkbox"] + label, .proficienciesForm input[type="radio"] + label, .proficiencyItem, .leaderboardSml li > div:nth-child(2) > div:not(.tooltip), .rightColumn .leaderboardSml li > div > a, .rightColumn h2.playerLevel span {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.curriculumTable td a, .proficiencyItem {width: 90%; display: inline-block}
+.proficiencyList i[class] {margin-top: -14px !important}
+.curriculumTable td a {height: 18px}
+img.proficiencyBullet {margin-bottom: 7px}
+.proficienciesForm input[type="checkbox"] + label:before, .proficienciesForm input[type="radio"] + label:before {
+	left: 0;
+}
+.proficienciesForm input[type="checkbox"] + label, .proficienciesForm input[type="radio"] + label {
+	width: 90%;
+}
+@media screen and (max-width: 600px) {
+	.rightColumn ul li a span:first-child, .rightColumn ul li p, nav.lessonNav > h2 {
+		white-space: normal;
+	}
+}
+
+/* ===================
+   Header Bar & Navigation
+   ===================*/
+#wrapper {padding-top: 44px}
+
+header {position: fixed; top: 0; width: 1550px; max-width: 100%; height: 44px; z-index: 10; display: flex}
+@media screen and (max-width: 767px) {
+	header {display: block}
+}
+.site_full_width header {width: 2050px}
+header img {vertical-align: middle; margin-top: -5px}
+
+header .site_name {height: 100%; margin: 0 16px 0 14px; width: 174px; text-align: center; display: table; font-size: 24px}
+header .site_name a {vertical-align: middle; display: table-cell}
+header .site_name a img {max-width: 180px; max-height: 31px}
+header .site_name a div.large {font-size: 24px; margin-top: 1px}
+header .site_name a div.medium {font-size: 17px; line-height: 16px}
+header .site_name a div.small {font-size: 15px; line-height: 16px}
+
+.navTrigger + .site_name + div.sectionTitle, .linkHome + .site_name + div.sectionTitle {margin-left: 204px}
+nav.mainNav .dropDown > ul > li i, .quickLinks .linksHolder .dropDown i, nav.mainNav ol > li.userQuicklinks, nav.mainNav .newAlert {
+	display: none;
+}
+nav.mainNav ol, nav.mainNav ol > li > a {
+	line-height: 44px;
+	margin: -1px 0 1px;
+}
+nav.mainNav .dropDown, nav.mainNav .dropDown ul li, .quickLinks .dropDown a {
+	line-height: 32px;
+}
+nav.mainNav ol > li > a, nav.mainNav .dropDown ul li a, nav.mainNav .wideDropDown .dropDownHeading, .linksHolder .dropDown a {
+	padding: 0 8px;
+}
+nav.mainNav .dropDown > ul li a img {
+	margin-right: 10px;
+}
+nav.mainNav .dropDown ul li.moderator a, nav#leftColumn .dropDown .scroll li.moderator a, nav#leftColumn .dropDown .scroll li.moderator a:hover {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M4,14.8H15.94l1.12-9.6L13.34,9.8,10,5.42,6.66,9.73,2.94,5.23Z' fill='%23999' fill-rule='evenodd'/%3E%3C/svg%3E") 98% 57% no-repeat;
+	padding-right: 10px;
+}/*('/images/icons/moderator.svg')*/
+
+/* empty dropdown message */
+nav.mainNav .dropDown p {margin: 0; padding: 6px 9px 7px; border-width: 1px}
+nav.mainNav .wideDropDown p {border-width: 1px 0 1px 1px}
+/* --- Main Nav with Lesson Name --- */
+header .site_name, .quickLinks .username {
+	position: relative;
+	z-index: 1;
+}
+nav.mainNav.lessonNav {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;  height: 44px;
+	padding: 0 320px 0 204px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav.mainNav.lessonNav ol {
+	position: absolute;
+	top: 0;
+	z-index: 999;
+}
+div.sectionTitle {overflow: hidden; flex: 1; align-self: center}
+div.sectionTitle h1 {padding: 0 14px; color: #fff; font-size: 26px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+div.sectionTitle h1 span {color: #fff}
+
+nav.mainNav.lessonNav h2 {
+	margin: -100px 0 0 -10px;
+	padding: 7px 0 9px;
+	width: 100%;
+	color: #fff;
+	font-size: 25px;
+	line-height: 28px; /* for chrome */
+}
+nav.mainNav.lessonNav h2 i {margin: -3px 5px 0 0;}
+nav.mainNav.lessonNav h2 i.arrowRight:after {top: -160px;}
+nav.mainNav.lessonNav h2 i.home:after, .mm-menu i.home:after {top: -180px;}
+
+nav.mainNav.lessonNav.disableNav    {overflow: hidden;}
+nav.mainNav.lessonNav.disableNav h2 {margin-top: 0;}
+nav.mainNav.lessonNav.disableNav ol {top: 100px;}
+nav.mainNav.lessonNav.disableNav ol > li:hover {background: transparent;}
+
+
+/* --- Main Nav Wide Dropdowns --- */
+nav.mainNav .wideDropDown {
+	width: 350px;
+}
+nav.mainNav .wideDropDown .dropDownHeading:not(:first-child), nav.mainNav .cta, .quickLinks .cta {
+	border-top: 0;
+}
+nav.mainNav .wideDropDown .dropDownHeading, nav.mainNav .wideDropDown .cta, .quickLinks .wideDropDown .cta {
+	border-right: 0;
+}
+nav.mainNav .wideDropDown {
+	border-width: 0 1px 0 0;
+}
+nav.mainNav .wideDropDown .dropDownHeading a {
+	float: right;
+	margin-top: -1px;
+}
+nav.mainNav .wideDropDown .scroll {
+	max-height: 192px;
+	overflow: auto;
+	overflow-x: hidden;
+	border-width: 0 0 1px;
+}
+nav.mainNav .wideDropDown .scroll li {
+	position: relative;
+	border-width: 0 0 0 1px !important; /* overwrite first & last-child borders */
+}
+nav.mainNav .wideDropDown .scroll li a {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+nav.mainNav .wideDropDown .scroll li a:first-child img {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	margin-top: -9px;
+}
+nav.mainNav .wideDropDown .scroll li a:not(:first-child) {
+	position: absolute;
+	top: 0;
+	margin: 5px 0 0 7px;
+	padding: 0;
+	height: auto;
+	line-height: normal;
+}
+nav.mainNav .wideDropDown .scroll li a:nth-child(2) {right: 9px;}
+nav.mainNav .wideDropDown .scroll li a:nth-child(3) {right: 33px;}
+nav.mainNav .wideDropDown .scroll li a:nth-child(4) {right: 57px;}
+nav.mainNav .wideDropDown .scroll li a:nth-child(5) {right: 81px;}
+nav.mainNav .wideDropDown .scroll li a:not(:first-child) i {
+	filter: alpha(opacity=50); /* IE8 */
+	opacity: 0.5;
+}
+nav.mainNav .wideDropDown .scroll li a:not(:first-child):hover i {
+	filter: alpha(opacity=100); /* IE8 */
+	opacity: 1.0;
+}
+
+/* --- Main Nav CTA Buttons --- */
+.cta {overflow: hidden}
+.quickLinks .cta, nav.mainNav .cta {padding: 6px 0}
+nav.mainNav .dropDown ul.cta li {border-width: 0 1px}
+nav.mainNav .cta a {padding: 0 6px}
+.quickLinks .cta a.floatL, nav.mainNav .cta a.floatL {margin: 0 0 0 9px}
+.quickLinks .cta a.floatR, nav.mainNav .cta a.floatR {margin: 0 9px 0 0}
+
+nav#leftColumn .dropDown .cta, nav#leftColumn .dropDown .three_column_nav {padding: 11px 16px}
+nav#leftColumn .dropDown .cta a {display: block}
+nav#leftColumn .dropDown .cta a.floatR {margin: 0 0 0 10px}
+nav#leftColumn .dropDown .cta a.floatL {margin: 0 10px 0 0}
+
+.quickLinks .cta a:hover i:after {left: -20px}
+.quickLinks .cta a i {margin: -2px 4px 0 0}
+
+/* --- Main Nav Quick Links --- */
+.quickLinks {padding-right: 12px; margin-left: auto; display: flex}
+.quickLinks a, .quickLinks .dropDownHolder, .quickLinks .dropDownHolder > a, .quickLinks > a {display: inline-block; line-height: 22px; margin: 0 3px}
+.quickLinks, .quickLinks .dropDownHolder, .quickLinks .dropDownHolder > a, .quickLinks > a {line-height: 44px}
+.quickLinks a.header_cart > span {position: relative}
+.quickLinks .dropDownHolder a, .quickLinks > a {padding: 0 5px; margin: 0 1px}
+
+.quickLinks a.username {vertical-align: top; padding: 0 7px}
+.quickLinks a.username span {color: #fff}
+.quickLinks a.username img {border-radius: 50%; border: 1px solid #fff; background-color: #fff}
+.quickLinks a.username span + img:not(.original_profile) {margin-left: 7px} /* Name and image */
+.quickLinks a.username img:first-child:not(:only-child) {margin-right: 5px} /* Image and logged in image */
+.quickLinks a.username img.original_profile {position: absolute; top: 10px; right: 5px}
+.quickLinks a.username span.logged_in_as_name {background-color: rgba(255,255,255,.15); border-radius: 3px; font-size: 14px; line-height: 1.3; padding: 0 5px; position: relative; top: -1px; margin-right: 5px} /* Name and logged in image */
+.quickLinks a.username span.logged_in_as_name + img:not(.original_profile) {margin-left: 0; margin-right: 4px} /* Name, image and logged in image */
+.quickLinks a .newAlert, a.rightMobileBar .newAlert {background: #cb4437; position: absolute; top: 0; z-index: 1; margin: -6px 0 0 10px; padding: 3px}
+a.rightMobileBar .newAlert {margin-left: 14px}
+a.rightMobileBar i:after, .quickLinks > a > i:after, .quickLinks > a.header_cart i:after, .quickLinks > div > a > i:after, .quickLinks button i:after, nav.mainNav.lessonNav h2 i:after, .linkHome i:after {
+	content: '';
+	background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='240' viewBox='0 0 20 240'%3E%3Cpath d='M15.16,231.09H14v4.6c0,1.05-.41,1.33-1.46,1.33H5.39c-1,0-1.45-.22-1.45-1.26v-4.67H3c-.56-.13-2-1.07.91-3.32l4-3.43a4,4,0,0,1,.72-.43v-.23a1.76,1.76,0,0,1,.45.07,1.62,1.62,0,0,1,.44-.07v.23a4.11,4.11,0,0,1,.73.43l4,3.43C17.18,230,15.72,231,15.16,231.09Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M14.53,213.37l1.36-4.92s.74-2.34-2.16-4.1a1,1,0,0,1-.28-1.32.83.83,0,0,0-.68-.94h-.11a.86.86,0,0,0-1.14.41l0,0a1.08,1.08,0,0,1-.92,1c-3.43.13-4,2.51-4,2.51L5.22,211a3,3,0,0,1-2.9,2L2,214.16,8.81,216h0l6.84,1.73.33-1.2A2.89,2.89,0,0,1,14.53,213.37ZM7.3,216A1.4,1.4,0,0,0,8,217.84a1.75,1.75,0,0,0,.32.12,1.51,1.51,0,0,0,1.83-1,2.21,2.21,0,0,0,.05-.25Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M15.48,188.8c-1.12-.94-4.87-4.47-4.87-4.47a1.75,1.75,0,0,0-2.48-.24,1.36,1.36,0,0,0-.24.24l-4,3.42C1,190,2.41,191,3,191.07v4.67c0,1,.41,1.26,1.45,1.26H7v-4a.69.69,0,0,1,.36-.9.7.7,0,0,1,.38,0h2.37a.9.9,0,0,1,.88.71c0,.64,0,4.25,0,4.25h2.48c1,0,1.46-.28,1.46-1.33V191C16.55,191,16.54,189.61,15.48,188.8ZM15,183.6a.55.55,0,0,0-.46-.6H12.73a.52.52,0,0,0-.66.35.39.39,0,0,0,0,.15v.69l3,2.68V183.6Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M10.23,170.14,5.8,164.88,7,163.77l5.54,6.37L7,176.51,5.8,175.4Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M2,144v12H18V144Zm15.4,11.43-5.47-4.19L10,152.49l-1.71-1.23-5.86,4.08,5-5-5-5.43,7.51,6,7.37-6.23-4.68,5.59Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M3.85,122.38,6.11,126H17.29l-1.91,7H5.79l-3.92-9.71ZM13,134.58a1.67,1.67,0,1,1-1.67,1.67h0A1.67,1.67,0,0,1,13,134.58Zm-6.08,0a1.67,1.67,0,1,1-1.67,1.67h0A1.67,1.67,0,0,1,7,134.58Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M9.19,91.18l5.25-4.43L15.55,88,9.19,93.53,2.82,88l1.11-1.24Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M18.17,76.47l-3.94-4.12a6.77,6.77,0,1,0-1.78,1.87l3.85,4a1.29,1.29,0,0,0,1.87-1.79ZM3.84,68.71A4.69,4.69,0,1,1,8.53,73.4a4.69,4.69,0,0,1-4.69-4.69Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M3,42H16a1,1,0,0,1,1,1V57a1,1,0,0,1-.89,1H3a1,1,0,0,1-1-1V43A1.09,1.09,0,0,1,3,42Zm3.64,5.58H8.51a1.09,1.09,0,0,1,.34-.85,1.28,1.28,0,0,1,.82-.29,1.18,1.18,0,0,1,.91.35,1.35,1.35,0,0,1,.32,1,1.78,1.78,0,0,1-.28,1,3.64,3.64,0,0,1-.74.83,4.4,4.4,0,0,0-1.06,1.05A2.88,2.88,0,0,0,8.55,52h1.9a2.55,2.55,0,0,1,.13-.87,1.62,1.62,0,0,1,.53-.63,4.23,4.23,0,0,0,1.22-1.2,2.7,2.7,0,0,0,.49-1.56,2.56,2.56,0,0,0-.84-2A3.31,3.31,0,0,0,9.68,45a3.45,3.45,0,0,0-2.22.67,2.32,2.32,0,0,0-.83,1.94Zm3.82,7.5v-2H8.55v2Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M16,38H3a1,1,0,0,1-1-1V23a1,1,0,0,1,1-1H16a1,1,0,0,1,1,1V37A1,1,0,0,1,16,38Zm-4-1V35H10v2ZM9,37V35H7v2ZM3,37H6V35H3ZM6,26H3v2H6Zm0,3H3v2H6ZM3,32v2H6V32Zm6-6H7v2H9Zm0,3H7v2H9ZM7,32v2H9V32Zm5-6H10v2h2Zm0,3H10v2h2Zm-2,3v2h2V32Zm6-6H13v2h3Zm0,3H13v2h3Zm0,3H13v2h3Zm-3,3v2h3V35Z' fill='%23fff' fill-rule='evenodd'/%3E%3Cpath d='M17.91,8c-1.28,1.18-5.95,5.54-6.4,6a2.4,2.4,0,0,1-1.52.93h0A2.42,2.42,0,0,1,8.46,14C8,13.51,3.34,9.16,2.06,8A1.84,1.84,0,0,0,2,8.44v7.84a2,2,0,0,0,.21.9L6,12.88a.19.19,0,0,1,.26,0l0,0a.3.3,0,0,1,0,.36L2.48,17.57c.24.27.16.42.52.43H16a2.92,2.92,0,0,0,1.5-.43l-3.78-4.33a.3.3,0,0,1,0-.36.19.19,0,0,1,.26,0l0,0,3.76,4.3a2,2,0,0,0,.2-.9V8.44A1.84,1.84,0,0,0,17.91,8ZM4.57,7.83a1.11,1.11,0,0,1,1-1.09h8.74a1.1,1.1,0,0,1,1,1.09v1.4l2.09-1.9s-6.23-5-6.53-5.22a2.08,2.08,0,0,0-1-.46h0a2.11,2.11,0,0,0-1,.46c-.3.18-6.52,5.22-6.52,5.22l2.08,1.9Z' fill='%23fff' fill-rule='evenodd'/%3E%3Crect x='12' y='106' width='2' height='10' fill='%23fff'/%3E%3Crect x='6' y='106' width='2' height='10' fill='%23fff'/%3E%3Crect x='9' y='106' width='2' height='10' fill='%23fff'/%3E%3Cpath d='M12,103v-1H8v1H2v2H4v12a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V105l2,0v-2Zm3,14H5V105H15Z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
+	width: 20px; height: 1000px; opacity: 1
+}/*('/images/icons/quicklinks-icons.svg')*/
+a.rightMobileBar:hover i:after, .quickLinks a:hover i:after, .quickLinks a.highlight i:after {
+	left: 0
+}
+.quickLinks > a:hover i, .quickLinks > a:focus i, .quickLinks > div > a:hover > i, .quickLinks > div > a:focus > i, a.rightMobileBar:hover i, .quickLinks > .highlight i, a.rightMobileBar.highlight i {opacity: .7}
+.quickLinks i.messages:after, a.rightMobileBar i.messages:after {top: 0}
+.quickLinks i.calendar:after {top: -20px}
+.quickLinks i.help:after {top: -40px}
+.quickLinks i.search:after {top: -60px}
+.quickLinks i.arrow-down:after, .quickLinks i.arrow-left:after {top: -80px}
+.quickLinks i.trash:after {top: -100px}
+.quickLinks i.cart:after {top: -120px}
+.quickLinks i.unread:after {top: -140px}
+.quickLinks i.notifications:after, a.rightMobileBar i.notifications:after {top: -200px}
+.quickLinks i.arrow-left {transform: rotate(90deg); margin-top: -2px}
+a.rightMobileBar i.messages {margin: 0 0 0 4px}
+a.rightMobileBar i.notifications {margin: 0 4px}
+
+/* --- Dropdown Holders --- */
+/* The relevant dropdown styles for tabnav .dropDown are in default-styles.css */
+.quickLinks .dropDownHolder {
+	position: relative;
+	margin: 0;
+}
+.quickLinks .dropDownHolder .dropDown, nav#leftColumn .dropDownHolder .dropDown, table .dropDownHolder .dropDown, .optionsRibbon .dropDown {
+	position: absolute;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+	right: -1px
+}
+.mobile-app.android .quickLinks .dropDownHolder .dropDown, .mobile-app.android nav#leftColumn .dropDownHolder .dropDown, .mobile-app.android table .dropDownHolder .dropDown, .mobile-app.android .optionsRibbon .dropDown {
+	overflow: visible;
+}
+.quickLinks .dropDownHolder .dDownShow, nav#leftColumn .dropDownHolder .dDownShow, table .dropDownHolder .dDownShow, .optionsRibbon .dDownShow {
+	height: auto;
+	visibility: visible;
+	position: absolute;
+	z-index: 10
+}
+.quickLinks .dropDownHolder .dropDown {
+	display: none;
+}
+.quickLinks .dropDownHolder .dDownShow {
+	display: block;
+}
+.quickLinks .dropDownHolder .dropDown a, nav#leftColumn .dropDownHolder .dropDown a, table .dropDownHolder .dropDown a, .optionsRibbon .dropDown > a {
+	width: 100%;
+	display: block;
+	box-sizing: border-box
+}
+.quickLinks .dropDownHolder .dropDown .cta a {width: auto}
+
+/* --- Table Dropdown Holder --- */
+table .tableDropdown {position: absolute; margin: -12px 0 0 -13px}
+table .tableDropdown > a {padding: 0 2px 0 4px; line-height: 15px; display: inline-block; border: 1px solid transparent}
+table .tableDropdown > a i {width: 17px; vertical-align: top}
+table .tableDropdown .dropDown {top: 21px; right: 0; text-align: left}
+table .tableDropdown .dropDown a {white-space: nowrap; padding: 6px 6px 5px}
+table .tableDropdown .dropDown a i {margin: -2px 5px 0 0; vertical-align: top}
+
+/* --- Search Dropdown Holder --- */
+.quickLinks .searchHolder {margin-right: -4px}
+.quickLinks .searchHolder form {padding: 20px 20px 5px; overflow: hidden; width: 290px}
+.quickLinks .searchHolder form a {padding: 3px 0 2px; clear: both}
+.quickLinks .searchHolder form input, .quickLinks .searchHolder form button {float: left; margin: 0}
+.quickLinks .searchHolder form input[type="text"] {width: 253px; height: 33px; border-radius: 3px 0 0 3px}
+.quickLinks .searchHolder form button {border-radius: 0 3px 3px 0; padding: 0 5px}
+.quickLinks .searchHolder form button i {margin-top: -6px}
+
+.quickLinks .linksHolder {
+	margin-left: -4px;
+}
+.quickLinks .linksHolder .dropDown {
+	width: 150px;
+}
+.quickLinks .linksHolder .dropDown.wideDropDown {
+	width: 220px;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount {
+	padding: 3px 5px 5px 5px;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount img {
+	margin: 0 2px 0 0;
+	vertical-align: middle;
+	width: 26px; height: 26px;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount div {
+	width: 90px;
+	display: inline-block;
+	line-height: 16px;
+	vertical-align: middle;
+}
+.quickLinks .linksHolder .dropDown.wideDropDown a.linkedAccount div{
+	width: 160px;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount span {
+	display: block;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount span + span {
+	font-size: 12px;
+	color: #989898;
+}
+.quickLinks .linksHolder .dropDown a.linkedAccount i {
+	margin-top: 0;
+	width: 15px;
+	display: inline-block !important;
+	vertical-align: middle;
+}
+
+/* ===================
+   Left Column Content
+   ===================*/
+nav#leftColumn h3 {
+	border-width: 1px 0 0;
+	padding: 14px 0;
+	margin: 10px 15px 0 0;
+}
+nav#leftColumn .lesson_only_nav + .largeImgs h3 {border-top: 0}
+nav#leftColumn ol {position: relative; width: 81px}
+nav#leftColumn ol li {
+	padding: 2px 0 2px 2px;
+	margin: -4px 0 -4px -3px;
+	overflow: hidden;
+}
+nav#leftColumn ol li hr {
+	width: 175px;
+	margin-left: 1px;
+	border-width: 0 0 1px 0;
+}
+nav#leftColumn ol li a:not(.centreIcon) {
+	display: flex;
+	align-items: center;
+	padding: 8px 15px 9px 6px;
+	margin: 1px 0 1px 1px;
+	position: relative;
+	line-height: 16px;
+	box-sizing: border-box
+}
+nav#leftColumn ol li > a:not(.centreIcon):hover, nav#leftColumn a:not(.centreIcon).highlight, nav#leftColumn ol li a.selected{
+	background: #fff;
+	margin: 0;
+	border-right-width: 0;
+}
+nav#leftColumn ol li a:not(.centreIcon) i, nav#leftColumn ol li a img {
+	margin: -9px 6px -5px 0
+}
+/* Lessons - Small Images */
+nav#leftColumn > ol:not(.largeImgs) li a img {
+	left: 7px;
+	margin-top: -7px; /* half height */
+}
+
+/* Large Image Lists */
+nav#leftColumn ol.largeImgs li a:not(.centreIcon) {padding: 7px 0; cursor: pointer; display: block}
+nav#leftColumn ol.largeImgs li a img,
+nav#leftColumn ol.largeImgs li a svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 8px 0 6px;
+	position: static;
+}
+nav#leftColumn ol.largeImgs li a span {
+	display: inline-block;
+	vertical-align: middle;
+	width: 130px;
+}
+nav#leftColumn ol.thinMainNav ~ ol.largeImgs li a span {width: 103px;}
+/* Sub UL Lists */
+nav#leftColumn ol > li > ul li:first-child {
+	margin-top: -2px;
+}
+nav#leftColumn ol > li > ul li:last-child {
+	margin-bottom: -2px;
+}
+nav#leftColumn ol > li > ul li {
+	margin-left: 22px;
+}
+nav#leftColumn ol li ul.subClasses.student li a {
+	padding-left: 31px;
+}
+nav#leftColumn ol > li > a > i {left: 7px !important}
+nav#leftColumn ol.largeImgs .centreIcon i {left: -7px !important}
+
+/* Dropdown Lists */
+nav#leftColumn .dropDownHolder .dropDown {
+	z-index: 1;
+	left: -1px;
+	margin-top: 0;
+	width: 99%;
+}
+nav#leftColumn .dropDownHolder > a:hover:after,
+nav#leftColumn .dropDownHolder > a.highlight:after {
+    background: url('/images/icons/main-icons.svg?6') no-repeat 0 -19px;
+    content: '';
+    width: 17px;
+    height: 20px;
+    float: right;
+    margin-top: -2px
+}
+nav#leftColumn .dropDownHolder > a.highlight:after {
+	background-position: 0 -40px
+}
+nav#leftColumn .dropDownHolder .dropDown a {margin: 0}
+nav#leftColumn .dropDownHolder .dropDown a:hover {background: #E8E8E8}
+nav#leftColumn .dropDownHolder .dropDown li {margin: 0; padding: 0}
+nav#leftColumn .dropDownHolder .dropDown li a:not(.centreIcon) {padding-left: 32px}
+
+/* Left Nav */
+.navTrigger, .linkHome {position: absolute; bottom: 0; left: 0; z-index: 2; width: 120px}
+.closeNavTrigger {padding: 15px 0 0 15px}
+.navTrigger a, .linkHome a {display: inline-block; line-height: 44px; padding: 0 15px; cursor: pointer}
+.navTrigger:not(.closeNavTrigger) a {background: url('/images/icons/mobile-nav-icon.gif') no-repeat 18px 50%; background-size: 18px 14px}
+.closeNavTrigger a {background: #e8e8e8; line-height: 32px; padding: 1px 6px 0 9px}
+.navTrigger:not(.closeNavTrigger) a i:after {display: none}
+.navTrigger:not(.closeNavTrigger) a:hover {opacity: 0.75}
+.closeNavTrigger a:hover i:after {opacity: 0.75; left: 0}
+.closeNavTrigger a i, .linkHome a i {margin-top: -4px}
+.navTrigger + .site_name, .linkHome + .site_name {display: none}
+.linkHome a i.home:after {top: -180px}
+.linkHome a i.homePlain:after {top: -220px}
+.linkHome a:hover i:after {left: 0; opacity: .7}
+
+nav#leftColumn ol.staticMainNav + ol.thinMainNav {display:none;}
+nav#leftColumn > ol > li .dropDown, nav#leftColumn > ol.thinMainNav:not(.hoverMainNav) > li .dropDown {
+	height: 0;
+	display: none;
+	overflow: hidden;
+	margin-top: 0;
+}
+.no-touch nav#leftColumn > ol > li:not(.dropDownHolder) a.highlight + .dropDown,
+.touch nav#leftColumn > ol > li:not(.dropDownHolder):hover .dropDown {
+	height: auto;
+	display: block;
+	overflow: visible;
+	width: 450px;
+	position: absolute;
+	margin: -43px 0 0 190px;
+	z-index: 7;
+	background: #fff;
+	border: 1px solid #d4d4d4;
+	border-left-width: 0;
+	box-shadow: 0 -3px 4px -3px rgba(0,0,0,.15), 3px 0 4px -3px rgba(0,0,0,.15), 0 3px 4px -3px rgba(0,0,0,.15);
+}
+.no-touch nav#leftColumn > ol > li:not(.dropDownHolder) a.highlight + .dropDown.three_column_nav_holder,
+.touch nav#leftColumn > ol > li:not(.dropDownHolder):hover .dropDown.three_column_nav_holder {width: 550px}
+
+[dir=rtl].no-touch nav#leftColumn > ol > li:not(.dropDownHolder) a.highlight + .dropDown,
+[dir=rtl].touch nav#leftColumn > ol > li:not(.dropDownHolder):hover .dropDown {
+	border-left: 1px solid #d4d4d4
+}
+nav#leftColumn > ol > li:hover > a:not(:hover) i:after {left: -20px}
+
+nav#leftColumn ol.staticMainNav {padding-left: 1px; width: 189px}
+nav#leftColumn ol.staticMainNav li.navArrowContainer {display:none}
+nav#leftColumn > ol > li .dropDown p {padding: 10px 20px}
+nav#leftColumn > ol > li .dropDown li {padding: 0; margin: 0; overflow: visible}
+nav#leftColumn > ol > li .dropDown a {padding: 0; margin: 0; line-height: 28px}
+nav#leftColumn > ol > li .dropDown a:hover {box-shadow: none !important}
+nav#leftColumn > ol > li .dropDown a.selected {background: none; border: 0; box-shadow: none}
+nav#leftColumn > ol > li .dropDown a img {width: 32px; height: 32px}
+nav#leftColumn > ol > li .dropDown a[href*='/organization/'] img {height: auto; max-height: 32px; object-fit: contain}
+nav#leftColumn > ol > li .dropDown a i {margin-right: 4px}
+nav#leftColumn .dropDown .scroll {max-height: 310px; overflow: auto; overflow-x: hidden; padding: 16px}
+
+/* Force scrollbar to show in Mac Chrome*/
+nav#leftColumn .dropDown .scroll::-webkit-scrollbar, .portalResults::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+nav#leftColumn .dropDown .scroll::-webkit-scrollbar:vertical, .portalResults::-webkit-scrollbar:vertical {
+	width: 11px;
+}
+nav#leftColumn .dropDown .scroll::-webkit-scrollbar-thumb, .portalResults::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	border: 2px solid #fff;
+	background-color: rgba(0, 0, 0, .5);
+}
+nav#leftColumn .dropDown .scroll::-webkit-scrollbar-track, .portalResults::-webkit-scrollbar-track {
+	background-color: #fff;
+	border-radius: 8px;
+}
+nav#leftColumn .dropDown .scroll ul li {position: relative; clear: both}
+nav#leftColumn .dropDown .scroll a {vertical-align: top; border-width: 0 0 1px}
+nav#leftColumn .dropDown .scroll li:not(:first-child):not(:last-child) a:not(.sub_links) {height: 46px}
+nav#leftColumn .dropDown .scroll li:first-child a:not(.sub_links),
+nav#leftColumn .dropDown .scroll li:first-child a:not(.sub_links):hover {padding-top: 0; height: 38px; background-position-y: 47%}
+nav#leftColumn .dropDown .scroll li:last-child a,
+nav#leftColumn .dropDown .scroll li:last-child a:hover {border-bottom: none; padding-bottom: 0; background-position-y: 73%}
+nav#leftColumn .dropDown .scroll li:only-child a, nav#leftColumn .dropDown .scroll li:only-child a:hover {height: 32px}
+nav#leftColumn .dropDown .scroll a:not(.sub_links) {padding: 8px 0 7px}
+nav#leftColumn .dropDown .scroll a:not(.sub_links):hover {background: none}
+nav#leftColumn .dropDown .scroll a img {display: inline-block; vertical-align: middle; margin: 0 13px 0 0; position: static}
+nav#leftColumn .dropDown .scroll li a span {white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
+nav#leftColumn .dropDown .scroll li a span,
+nav#leftColumn .dropDown .scroll li > span,
+nav#leftColumn .dropDown .scroll.matrix_classes_popout li a span,
+nav#leftColumn .dropDown .scroll.matrix_groups_popout li a span {width: 330px}
+nav#leftColumn .dropDown .scroll li a.sub_links {position: absolute; top: 50%; margin: -10px 0 0 0; padding: 0; height: auto; line-height: normal}
+nav#leftColumn .dropDown .scroll li a.sub_links i {left: 0; margin: 0; top: 1px; opacity: 0.5}
+.no-touch nav#leftColumn .dropDown .scroll li a.sub_links i {display: none}
+nav#leftColumn .dropDown .scroll li:first-child a.sub_links i {top: -3px}
+nav#leftColumn .dropDown .scroll li:last-child a.sub_links i {top: 4px}
+nav#leftColumn .dropDown .scroll li:last-child > span {margin-top: -14px}
+nav#leftColumn .dropDown .scroll li a.sub_links:hover i {opacity: 1}
+nav#leftColumn .dropDown .scroll li a:nth-child(2) {right: 0}
+nav#leftColumn .dropDown .scroll li a:nth-child(3) {right: 39px}
+nav#leftColumn .dropDown .scroll li span + a {right: 0 !important}
+nav#leftColumn .dropDown .scroll li span + a + a {right: 39px !important}
+nav#leftColumn .dropDown .scroll li a span {display: inline-block; vertical-align: middle; line-height: 18px}
+nav#leftColumn .dropDown .scroll li > span {float: left; margin: -20px 0 0 45px; font-size: 11px}
+nav#leftColumn .dropDown .scroll li:first-child > span {margin-top: -16px}
+
+nav#leftColumn .dropDown *[class*='column_nav']:not(.cta) {padding: 12px 16px 7px}
+nav#leftColumn .dropDown *[class*='column_nav'] ul {display: flex; flex-flow: row wrap}/*wrap row by row*/
+nav#leftColumn .dropDown .two_column_nav ul {justify-content: space-between}
+nav#leftColumn .dropDown .two_column_nav li {width: 49%}
+nav#leftColumn .dropDown .three_column_nav li {width: 32%}
+nav#leftColumn .dropDown .three_column_nav li:nth-child(3n + 2) {margin: 0 2%}
+nav#leftColumn .dropDown *[class*='column_nav'] ul li a {padding: 2px 0 !important; height: 37px; display: block}
+nav#leftColumn .dropDown *[class*='column_nav'] ul li a,
+nav#leftColumn .dropDown *[class*='column_nav'] + .cta a {white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+nav#leftColumn .dropDown *[class*='column_nav'] ul li a i.ellipsis:after {left: 0}
+nav#leftColumn .dropDown *[class*='column_nav'] + hr {width: calc(100% - 30px); margin: auto; opacity: .5}
+nav#leftColumn .dropDown .cta.two_column_nav,
+nav#leftColumn .dropDown .three_column_nav + .cta {display: flex; justify-content: space-between; margin-top: 2px}
+nav#leftColumn .dropDown .three_column_nav + .cta li {overflow: hidden}
+nav#leftColumn .dropDown .three_column_nav + .cta:not([class*='column_nav']) li:not(.m_r_auto) a {margin-right: 20px}
+nav#leftColumn .dropDown .three_column_nav + .cta:not([class*='column_nav']) .m_r_auto ~ li a,
+nav#leftColumn .dropDown .three_column_nav + .cta:not([class*='column_nav']) li:last-child a {margin: 0 0 0 20px}
+
+/* Thin main nav */
+#contentWrap.hasThinNav.hasLeftColumn:before {border-width: 0 0 0 29px; width: 175px}
+nav#leftColumn ol.thinMainNav {position: fixed; z-index: 9; top: 44px; margin-left: -14px; transition: background-color 0.2s ease; -webkit-user-select: none; width: 0; padding-top: 15px; outline: 0}
+nav#leftColumn ol.thinMainNav > li > a {color: #fff;width: 190px; overflow: hidden}
+nav#leftColumn ol.thinMainNav:not(.hoverMainNav) > li > a {background: transparent; border-color: transparent;}
+nav#leftColumn ol.hoverMainNav:before {
+	border-right: 1px solid #c8c8c8;
+	position: absolute;
+	top: 0; right: 0;
+	height: 100%;
+	content: '';
+}
+#contentWrap.hasThinNav nav#leftColumn ol.thinMainNav ~ ol,
+nav#leftColumn ol.thinMainNav ~ ol.narrowLists {
+	width: 164px;
+	margin-right: -14px;
+	float: right;
+}
+nav#leftColumn ol.thinMainNav > li a.mainNavArrow:hover, nav#leftColumn ol.thinMainNav > li a.mainNavArrow {
+	border: 0;
+	background: none;
+	box-shadow: none;
+	line-height: 40px;
+	margin: 10px 0 1px 1px;
+}
+nav#leftColumn ol.thinMainNav > li a.mainNavArrow:hover span {opacity: 0.7}
+nav#leftColumn ol.thinMainNav.hoverMainNav > li > a.mainNavArrow i:after {top: -240px; margin: 0 0 0 -1px}
+
+/* Class splash page nav */
+.class_splash_page nav#leftColumn {width: auto; padding: 0 !important}
+.class_splash_page nav#leftColumn ol.thinMainNav {margin-left: 0 !important; margin-right: 0 !important}
+
+/* Minimized main nav */
+.mini_main_nav .navTrigger,
+.mini_main_nav .linkHome,
+.mini_main_nav nav#leftColumn,
+.mini_main_nav nav#leftColumn .staticMainNav,
+.mini_main_nav nav#leftColumn .largeImgs {width: 63px !important}
+.mini_main_nav .navTrigger + .site_name + div.sectionTitle,
+.mini_main_nav .linkHome + .site_name + div.sectionTitle,
+.mini_main_nav header .mobileBar + .site_name + .sectionTitle {margin-left: 63px !important}
+.mini_main_nav nav#leftColumn .staticMainNav > li > a > span:first-child,
+.mini_main_nav nav#leftColumn .staticMainNav > li > a.lessonItem img,
+.mini_main_nav nav#leftColumn .largeImgs li a img,
+.mini_main_nav nav#leftColumn .largeImgs li a svg {margin-bottom: 1px !important}
+.mini_main_nav nav#leftColumn .largeImgs h3 {height: 1px; overflow: hidden; padding: 9px 0 0 !important}
+/* Minimized main nav tooltips */
+.mini_main_nav nav#leftColumn ol:not(.thinMainNav) > li {overflow: visible}
+.mini_main_nav nav#leftColumn ol:not(.thinMainNav) > li > a span:nth-child(2) {opacity: 0; position: absolute; width: 0}
+.mini_main_nav nav#leftColumn ol:not(.thinMainNav) > li > a:not([rel="popup"]):not([href*="javascript"]):hover span:last-child {opacity: 1; overflow: visible !important; transition: opacity 400ms; transition-delay: 0.2s; background: #333; color: #fff; font-size: 12px; padding: 0 9px; border-radius: 3px; white-space: nowrap; text-decoration: none; line-height: 2.2; top: calc(50% - 13px); left: 55px; width: auto}
+.mini_main_nav nav#leftColumn ol:not(.thinMainNav) > li > a:not([rel="popup"]):not([href*="javascript"]):hover span:last-child:after {position: absolute; width: 0; height: 0; border: 5px solid transparent; content: ''; top: calc(50% - 5px); border-right-color: #333; border-left-width: 0; right: 100%}
+/* Animate main nav */
+html:not([dir=rtl]) .section_nav_page #contentWrap.hasLeftColumn:before {transition: width .3s ease}
+html:not([dir=rtl]) .section_nav_page.mini_main_nav #contentWrap.hasLeftColumn:before {width: 62px}
+.section_nav_page nav#leftColumn > ol:not(.thinMainNav) {transition: width .3s ease, margin .3s ease}
+.section_nav_page #leftColumn > *:not(ol) {width: 95px; opacity: 1; transition: width .3s ease, opacity .3s ease, height .3s ease, opacity 0s ease}
+.section_nav_page.keep_tablet_nav.mini_main_nav #leftColumn > *:not(ol) {width: 63px; height: 0; opacity: 0}
+
+@media screen and (min-width: 768px) {
+	body:not(.mobile-app).section_nav_page #centreColumn,
+	body:not(.mobile-app).section_nav_page #fixedSectionHeader {padding-left: 25px; padding-right: 25px !important}
+	.section_nav_page #fixedSectionHeader .fixed_header_delimiter {margin-left: -30px; margin-right: -30px}
+	.section_nav_page.mini_main_nav #centreColumn {margin-left: 0px}/* minimum margin */
+	.section_nav_page.mini_main_nav.section_nav_open #centreColumn {margin-left: 190px;}
+	body:not(.mini_main_nav).section_nav_page #centreColumn {margin-left: 0px}/* minimum margin */
+	body:not(.mini_main_nav).section_nav_page.section_nav_open #centreColumn {margin-left: 190px}
+}
+@media screen and (min-width: 768px) and (max-width: 2050px) {/* site max-width */
+	.site_full_width.section_nav_page #fixedSectionHeader {transition: left .3s ease}
+	.site_full_width .section_nav_holder {transition: all .3s ease}
+
+	.site_full_width.section_nav_page #fixedSectionHeader {left: 63px; right: 0; width: auto !important;}
+	.site_full_width.section_nav_page.section_nav_open #fixedSectionHeader {left: calc(63px + 190px)}
+	body:not(.mini_main_nav).site_full_width.section_nav_page #fixedSectionHeader {left: 95px}
+	body:not(.mini_main_nav).site_full_width.section_nav_page.section_nav_open #fixedSectionHeader {left: calc(95px + 190px)}
+}
+@media screen and (min-width: 768px) and (max-width: 1550px) {/* non site_max_width */
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader {transition: left .3s ease}
+	body:not(.site_full_width) .section_nav_holder {transition: all .3s ease}
+
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader {left: 63px; right: 0; width: auto !important}
+	body:not(.site_full_width).section_nav_page.section_nav_open #fixedSectionHeader {left: calc(63px + 190px)}
+	body:not(.site_full_width):not(.mini_main_nav).section_nav_page #fixedSectionHeader {left: 95px}
+	body:not(.site_full_width):not(.mini_main_nav).section_nav_page.section_nav_open #fixedSectionHeader {left: calc(95px + 190px)}
+	body:not(.site_full_width):not(.keep_tablet_nav):not(.section_nav_open).section_nav_page #fixedSectionHeader {left: 204px}
+	body:not(.site_full_width):not(.keep_tablet_nav).section_nav_open.section_nav_page #fixedSectionHeader {left: calc(204px + 190px)}
+}
+@media screen and (min-width: 1025px) {
+	body:not(.keep_tablet_nav).section_nav_page.section_nav_open #centreColumn {margin-left: 190px;}
+	body:not(.keep_tablet_nav).section_nav_page #leftColumn > *:not(ol) {width: 204px}
+	body:not(.keep_tablet_nav):not(.mini_main_nav).section_nav_page .section_nav_holder {left: 0px; transform: translateX(14px);}
+    body:not(.keep_tablet_nav):not(.mini_main_nav).section_nav_page.section_nav_open .section_nav_holder {left: 0px; transform: translateX(204px);}
+    body:not(.keep_tablet_nav).section_nav_page #leftColumn > *:not(ol) {width: 204px}
+}
+@media screen and (min-width: 1025px) and (max-width: 2050px) {/* site max-width */
+	body:not(.keep_tablet_nav).section_nav_page.site_full_width #fixedSectionHeader {left: 204px}
+	body:not(.keep_tablet_nav).section_nav_page.site_full_width.section_nav_open #fixedSectionHeader {left: calc(204px + 190px)}
+}
+@media screen and (min-width: 1551px) {
+	/* Non site_max_width - Before max-width site's header becomes fixed align it correctly */
+	body:not(.site_full_width).section_nav_page {overflow-y: scroll}
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader {margin-left: -30px; margin-right: -30px}
+	body:not(.site_full_width).section_nav_page #fixedMarginTop:not(.loaded) {margin-top: 0}
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader:not([style]) {width: 100%; position: relative; top: 0; padding-top: 0; overflow: hidden; margin-bottom: 0}
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader:not([style]).student.lesson {margin-bottom: -13px}
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader:not([style]).student:not(.lesson) {margin-bottom: 2px}
+	body:not(.site_full_width).section_nav_page:not(.section_nav_open) .section_nav_holder {clip: rect(0, 1000px, auto, 127px)}
+	body:not(.site_full_width).section_nav_page .section_nav_holder {opacity: 0}
+	body:not(.site_full_width).section_nav_page .section_nav_holder.transition {transition: left .3s ease}
+	body:not(.site_full_width).section_nav_page #fixedSectionHeader.transition {transition: all .3s ease}
+}
+@media screen and (min-width: 2050px) {
+	/* Site max-width - Before max-width site's header becomes fixed align it correctly */
+	.site_full_width.section_nav_page {overflow-y: scroll}
+	.site_full_width.section_nav_page #fixedSectionHeader {margin-left: -18px; }
+	.site_full_width.section_nav_page #fixedMarginTop:not(.loaded) {margin-top: 0}
+	.site_full_width.section_nav_page #fixedSectionHeader:not([style]) {width: 100%; position: relative; top: 0; padding-top: 0; overflow: hidden; margin-bottom: 0}
+	.site_full_width.section_nav_page #fixedSectionHeader:not([style]).student.lesson {margin-bottom: -13px}
+	.site_full_width.section_nav_page #fixedSectionHeader:not([style]).student:not(.lesson) {margin-bottom: 2px}
+	.site_full_width.section_nav_page:not(.section_nav_open) .section_nav_holder {clip: rect(0, 1000px, auto, 127px)}
+	.site_full_width.section_nav_page .section_nav_holder {opacity: 0}
+	.site_full_width.section_nav_page .section_nav_holder.transition {transition: transform .3s ease, clip .3s ease}
+	.site_full_width.section_nav_page #fixedSectionHeader.transition {transition: all .3s ease}
+}
+@media screen and (min-width: 768px) {
+	.no-touch .keep_tablet_nav.mini_main_nav nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch .keep_tablet_nav.mini_main_nav nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder):hover .dropDown {margin-top: -35px}
+
+	.no-touch .keep_tablet_nav.mini_main_nav #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch .keep_tablet_nav.mini_main_nav #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder):hover .dropDown,
+	.no-touch .keep_tablet_nav.mini_main_nav nav#leftColumn > ol.staticMainNav > li a.highlight + .dropDown,
+	.touch .keep_tablet_nav.mini_main_nav nav#leftColumn > ol.staticMainNav > li:hover .dropDown {margin-left: 64px}
+}
+
+/* Section nav */
+.section_nav_open .section_nav_holder {left: 0;transform: translateX(63px);}
+body:not(.section_nav_open) .section_nav_holder {box-shadow: none}
+.section_nav_holder {left: 0px;transform: translateX(-127px); width: 190px; position: fixed; background: #e9e9e9; top: 44px; bottom: 0; box-sizing: border-box; border-right: 1px solid #e0e0e0; box-shadow: 0 2px 5px rgba(0,0,0,.05); z-index: 6}
+.section_nav {display: flex; flex-direction: column; height: 100%; overflow-y: hidden; opacity: 0}
+.section_nav .scrollable {padding: 10px; overflow-y: auto}
+.section_nav .scrollable ul {width: 168px}/* Safari */
+.section_nav a {padding: 8px 9px; display: flex; align-items: center; border-radius: 3px}
+.section_nav a:not(.locked):hover span, .section_nav a.selected:not(.locked) span {color: #fff}
+.section_nav a.locked {opacity: .7}
+.section_nav a.locked:hover {cursor: default}
+.section_nav a.module_link {font-size: 13px; margin: 2px 0}
+.section_nav a.module_link:not(.selected), .section_nav a.module_link.locked.hovering.selected {background: #fff}
+.section_nav .module_sections a {padding: 4px 7px; margin: 2px 0}
+.section_nav .module_sections a span {font-size: 11px}
+.section_nav .module_sections a.selected i:after, .section_nav .module_sections a:not(.locked):hover i:after {left: -40px}
+.section_nav .module_sections a i {margin: 0 2px 0 0}
+.section_nav .module_sections a i.arrowRight {margin-left: -1px}
+.section_nav .module_sections a i:after {left: -20px}
+body:not(.mini_main_nav) .section_nav_holder {left: 0px; transform: translateX(-95px);}
+body:not(.mini_main_nav).section_nav_open .section_nav_holder {left: 0px; transform: translateX(95px);}
+/* Section nav handle */
+.section_nav_handle {position: absolute; top: calc(50% - 20px); width: 15px; height: 40px; background: #fff; border-radius: 0 3px 3px 0; box-shadow: 2px 1px 4px rgba(0,0,0,0.2); right: -16px}
+.section_nav_handle i {position: absolute; top: 10px; left: -2px; margin: 0; font-size: 24px}
+.section_nav_open .section_nav_handle i.arrowRight {display: none}
+body:not(.section_nav_open) .section_nav_handle i.arrowLeft {display: none}
+/* Accordion */
+.section_nav.has_accordion button {-webkit-appearance: none; -moz-appearance: none; background: transparent; color: #222; font-size: 13px}
+.section_nav.has_accordion button:focus {box-shadow: none}
+.section_nav.has_accordion .expand_contract_all {padding: 5px 4px; margin: 0; line-height: 1.6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; text-align: left}
+.section_nav.has_accordion .expand_contract_all i {vertical-align: middle; margin: -3px 2px 0 1px; transform: scale(.85)}
+.section_nav.has_accordion .expand_contract_all:focus i:after,
+.section_nav.has_accordion .expand_contract_all:hover i:after {left: -20px}
+.section_nav.has_accordion .expand_contract_all:focus,
+.section_nav.has_accordion .expand_contract_all:hover {opacity: 1}
+.section_nav.has_accordion .scrollable > ul:first-child {margin-top: 10px}
+.section_nav.has_accordion .module_wrap {position: relative}
+.section_nav.has_accordion .expand_contract {position: absolute; top: 50%; right: 8px; z-index: 1; margin: -8px 0 0 0; padding: 0; line-height: 1.5; width: 16px; height: 16px}
+.section_nav.has_accordion .expand_contract i {margin: -5px 0 0 -2px}
+.section_nav.has_accordion .expand_contract i:after {background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 60 40' style='enable-background:new 0 0 60 40;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bdisplay:none;%7D .st1%7Bdisplay:inline;%7D .st2%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23AAAAAA;%7D .st3%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%2342951D;%7D .st4%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23AB4E03;%7D .st5%7Bfill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg id='bg' class='st0'%3E%3Crect x='0' class='st1' width='60' height='80'/%3E%3C/g%3E%3Cg id='Layer_4'%3E%3Cpolygon class='st2' points='15,9 11,9 11,5 9,5 9,9 5,9 5,11 9,11 9,15 11,15 11,11 15,11 '/%3E%3Crect x='5' y='29' class='st2' width='10' height='2'/%3E%3Cpolygon class='st3' points='35,9 31,9 31,5 29,5 29,9 25,9 25,11 29,11 29,15 31,15 31,11 35,11 '/%3E%3Crect x='25' y='29' class='st4' width='10' height='2'/%3E%3Cpolygon class='st5' points='55,9 51,9 51,5 49,5 49,9 45,9 45,11 49,11 49,15 51,15 51,11 55,11 '/%3E%3Crect x='45' y='29' class='st5' width='10' height='2'/%3E%3C/g%3E%3C/svg%3E%0A"); height: 40px}/*('/images/icons/toc-icons.svg')*/
+.section_nav.has_accordion .expand_contract[aria-expanded="true"] i:after {top: -20px}
+.section_nav.has_accordion .module_link:hover + .expand_contract,
+.section_nav.has_accordion .expand_contract:hover {box-shadow: 0 0 3px rgba(0,0,0,.3); background: #fff}
+.section_nav.has_accordion .module_link {transition: background .2s ease-in-out; position: relative}
+.section_nav.has_accordion li:not(.open) .module_sections {display: none}
+.no-touch .section_nav.has_accordion .expand_contract {opacity: 0}
+.no-touch .section_nav.has_accordion .module_link:hover + .expand_contract,
+.no-touch .section_nav.has_accordion .module_link.selected.hovering + .expand_contract {opacity: 1}
+html:not([dir=rtl]).touch .section_nav.has_accordion .module_link {padding-right: 27px}
+.touch .section_nav.has_accordion .module_link:hover + .expand_contract i:after {left: 0}
+.touch .section_nav.has_accordion .module_link.selected + *:not(:hover) i:after,
+.touch .section_nav.has_accordion .module_link:not(.locked):hover + * i:after {left: -40px}
+/* Section indentation */
+html:not([dir=rtl]) .section_nav .module_sections a.indent1 {margin-left: 21px}
+html:not([dir=rtl]) .section_nav .module_sections a.indent2 {margin-left: calc(21px + 21px)}
+html:not([dir=rtl]) .section_nav .module_sections a.indent3 {margin-left: calc(21px + 21px + 21px)}
+html:not([dir=rtl]) #section_list .indent1 {padding-left: 39px}
+html:not([dir=rtl]) #section_list .indent2 {padding-left: calc(39px + 35px)}
+html:not([dir=rtl]) #section_list .indent3 {padding-left: calc(39px + 35px + 35px)}
+html:not([dir=rtl]) .modern_module_list .indent1 {padding-left: 45px}
+html:not([dir=rtl]) .modern_module_list .indent2 {padding-left: calc(45px + 29px)}
+html:not([dir=rtl]) .modern_module_list .indent3 {padding-left: calc(45px + 29px + 29px)}
+/* Organizations indentation */
+html:not([dir=rtl]) #organizations td.indent1 {padding-left: 50px}
+html:not([dir=rtl]) #organizations td.indent2 {padding-left: calc(50px + 44px)}
+html:not([dir=rtl]) #organizations td.indent3 {padding-left: calc(50px + 44px + 44px)}
+html:not([dir=rtl]) nav#leftColumn .dropDown a.indent1 {padding-left: 45px}
+html:not([dir=rtl]) nav#leftColumn .dropDown a.indent2 {padding-left: calc(45px * 2)}
+html:not([dir=rtl]) nav#leftColumn .dropDown a.indent3 {padding-left: calc(45px * 3)}
+
+.section_nav_open header .section_progress {display: none}
+header .section_progress {color: #fff; background-color: rgba(0,0,0,.15); margin-right: 10px}
+header .section_progress > svg polygon {fill: #fff}
+nav .section_progress {flex: 0 0 61px}
+.section_progress {display: flex; align-items: center; justify-content: center; padding: 0 16px; font-size: 14px}
+.section_progress > span[data-highcharts-chart] {margin: 0}
+.section_progress > img, .section_progress > svg {margin: 0 8px}
+.section_progress > svg {width: 25px; height: 19px}
+.section_nav.has_accordion .scrollable {padding-top: 0}
+.section_nav.has_accordion .section_progress {position: relative}
+.section_nav.has_accordion .section_progress:after {content: ''; position: absolute; bottom: 0; left: 10px; right: 10px; height: 1px; background-color: #ccc}
+
+@media screen and (max-width: 767px) {
+	.section_nav_holder, header .section_progress {display: none}
+	#centreColumn .inline_tabs_options ~ h2:first-of-type {margin-top: 0}
+}
+@media screen and (min-width: 768px) {
+	.inline_tabs_options ~ h2:first-of-type + .optionsRibbon.optionsRight,
+	.inline_tabs_options + .filter-scopes-wrapper {margin-top: 13px}
+}
+
+/* ===================
+   Centre Column Content
+   ===================*/
+#centreColumn h1, #centreColumn h2, #courseToolbar h1, #courseToolbar h2 {
+	display: inline-block;
+}
+#centreColumn .materialStyle h1, #centreColumn .materialStyle h2 {
+	display: block;
+}
+#centreColumn h1, #courseToolbar h1 {
+	line-height: 26px;
+}
+#courseToolbar h2 {
+	margin-top: 15px;
+}
+#centreColumn .rightColumn h2 {margin-top: 0; display: block}
+
+@media screen and (max-width: 979px) {
+	#centreColumn h2, #courseToolbar h2 {
+		margin-top: 0;
+	}
+}
+#fixedSectionHeader .pageHeading{
+	display: inline-block;
+}
+#centreColumn .pageHeading, #courseToolbar .pageHeading {
+	display: inline;
+}
+#centreColumn .pageHeading h2, #centreColumn .pageHeading #fromLeft, #courseToolbar .pageHeading h2 {
+	display: none;
+}
+#centreColumn h1 + h2, #centreColumn h1 + .optionsRight + h2, #courseToolbar h1 + h2, #courseToolbar h1 + .optionsRight + h2,
+#centreColumn .pageHeading + h2, #centreColumn .pageHeading + .optionsRight + h2, #courseToolbar .pageHeading + h2, #courseToolbar .pageHeading + .optionsRight + h2 {
+	display: block;
+	margin-top: 5px;
+}
+#centreColumn .optionsRibbon + a + h2, #centreColumn .optionsRibbon + h2, #courseToolbar .optionsRibbon + a + h2, #courseToolbar .optionsRibbon + h2 {
+	margin-top: 20px;
+}
+#centreColumn table + a + h2, #centreColumn table + h2, #courseToolbar table + a + h2, #courseToolbar table + h2 {
+	margin-top: 10px;
+}
+#centreColumn .tabnav ~ .dashboard_header h2:first-of-type, #centreColumn .dashboard_blocks h2, #centreColumn .rightColumn .optionsRibbon + h2, #centreColumn .tabnav + h2, #centreColumn .tabnav + div + h2, #centreColumn .tabnav + script + script + script + h2, #centreColumn .tabnav + script + script + script + script + h2, #centreColumn #fixedSectionHeader + h2, #centreColumn .tabnav ~ .leftColumn h2:first-child, #centreColumn .flex_full_width ~ .leftColumn h2:first-of-type, #centreColumn .profile_header ~ .leftColumn h2:first-of-type {
+	margin-top: 0;
+}
+#centreColumn .optionsRight ul:last-child {margin-right:0}
+
+#centreColumn p.jumpToClass {height: 30px}
+
+/* ---------- Dashboard pages ---------- */
+#centreColumn.dashboard .leftColumn > ul.tabnav:first-of-type {margin-top: 0}
+.leftColumn .dashboard_header {margin-top: -1px}
+.leftColumn .dashboard_header:before, .leftColumn .dashboard_header:after {content: " "; display: table}
+.leftColumn .dashboard_header:after {clear: both}
+.leftColumn .dashboard_header h2 {margin-bottom: 16px}
+.leftColumn .dashboard_header .optionsRight {padding-bottom: 14px}
+.leftColumn .dashboard_header .filter-scopes-wrapper .hide-filter-field {margin-bottom: 12px}
+.leftColumn .dashboard_header + *:not(.catalog_carousel_heading),
+.leftColumn .dashboard_header + * .catalog_boxes {margin-top: 0 !important; padding-top: 0}
+.leftColumn .dashboard_header + .tableForm > .optionsRibbon {height: auto}
+.leftColumn .dashboard_header + .tableForm > .optionsRibbon ul {margin-top: 0}
+
+/* ---------- Color scheme ---------- */
+.ctr_themes.act_edit select {min-width: 200px}
+.ctr_themes.act_show table {table-layout: fixed}
+.ctr_themes:not(.act_index) table td {line-height: 1.4}
+.ctr_themes:not(.act_index) tbody + tbody tr:first-child td {border-top: 0}
+@media screen and (max-width: 480px) {
+	.ctr_themes.act_show table td:nth-child(2) {width: 0; padding: 0}
+	.ctr_themes.act_edit table td:last-child {width: 50px}
+	.ctr_themes.act_edit table td:last-child > * {min-width: 100%; width: 100% !important}
+}
+
+/* ---------- News Feed ---------- */
+#news_options {margin-top: 10px; border-bottom: 1px solid #D7DCDE; padding-bottom: 8px; display: flex}
+#news_options.ln-remove-top-spacing {margin-top: -3px}
+#news_options .optionsRight {top: 0; overflow: visible}
+#news_options h1 {flex: 1; margin-top: 3px}
+
+.comment {border-width: 0 0 1px 0}
+i.comment {border-width: 0}
+.comment > img, .comment-reply > img {float: left; margin: 8px 10px 5px 0}
+.comment > img {width: 53px; height: 53px; margin: 10px 10px 10px 2px}
+.comment .wrapPost, .comment .metadata p {padding: 0 10px 0 71px}
+.comment .metadata p {margin-bottom: 7px}
+.comment .wrapPost > p {margin-top: 0}
+.comment .wrapPost > p span {display: inline-block; vertical-align: top; line-height: 24px; margin-left: 3px}
+.comment p {padding: 5px 0}
+.comment .metadata .comment_date, .comment .metadata p a {padding-right: 8px}
+.comment .metadata p .thumbsUp ~ a {padding-right: 0}
+.comment-reply {margin: 0 0 0 78px; padding: 0 0 7px 10px}
+.comment-reply .comment-reply {margin-left: 63px; padding-left: 2px}
+.comment-reply + .comment-reply {border-top: 1px solid #E0E0E0}
+.comment-reply .wrapPost, .comment-reply .metadata p {padding-left: 64px; margin-bottom: 0}
+.comments textarea.commentMessage {margin: 0}
+.comments .optionsRibbon {border-bottom: none; padding-bottom: 10px}
+.comments .centreIcon {text-align: center}
+.comments .wrapPost .centreIcon {margin-top: -10px}
+.commentsPadding .comment-reply:last-child {margin-bottom: 15px}
+.commentsPadding .comment-reply .comment-reply:last-child {margin-bottom: 0}
+.commentsPadding .comment-reply .comment-reply:first-child {margin-top: 5px}
+
+.postAttachment > p {margin: 0; padding: 0}
+.postAttachment > p img {margin-top: 3px}
+.postAttachment > p a {font-size: 15px !important}
+
+.optionsRibbon[id*="commentControll"] ul {float: right; margin: 0 -3px 0 0}
+
+.news_form .optionsRibbon {padding-right: 0; padding-left: 0; left: 0; height: auto}
+.news_form .optionsRibbon ul {float: none; margin: 3px 0; box-shadow: none; border: 0 !important; background: none; display: flex; flex-wrap: wrap}
+.news_form .optionsRibbon ul li.overflowOption {display: block !important}
+#centreColumn .news_form .optionsRibbon ul li {float: none; margin: 1px 2px !important; border: 1px solid #c8c8c8; border-radius: 3px; background: #fff}
+#centreColumn .news_form .optionsRibbon ul li i {margin: 0 2px 0 0}
+#system_notice_form .optionsRibbon ul {justify-content: flex-end}
+
+@media screen and (max-width: 499px) {
+	.post_form_flag .optionsRibbon ul {justify-content: flex-end}
+	.news_form .optionsRibbon ul::before, .news_form .optionsRibbon ul::after {content: ''; width: 100%; order: 1}
+	#centreColumn .news_form .optionsRibbon ul li.alignR,
+	#centreColumn .news_form .optionsRibbon ul li.alignR ~ li {order: 1; margin-top: 5px !important}
+}
+@media screen and (min-width: 500px) {
+	#centreColumn .news_form .optionsRibbon ul li.alignR {margin-left: auto !important}
+}
+
+/* ---------- Forms ---------- */
+#contentWrap form {
+	margin: 10px 0;
+}
+#contentWrap .commentsPadding form.noBorderForm {
+	margin-top: 15px;
+}
+label.setLabelWidth, form.setLabelWidth label {
+	width: 150px;
+}
+label, #centreColumn input[type="text"], #centreColumn input[type="number"], #centreColumn input[type="tel"], #centreColumn input[type="url"], #centreColumn input[type="password"], #centreColumn input[type="email"] {
+	width: auto;
+}
+#centreColumn select {
+	width: auto;
+	margin-right: 0;
+}
+#centreColumn table.assignmentsEdit td input[type="text"].hasDatepicker {margin-right: 0; width: 200px}
+#centreColumn input#transfer_date {width: 200px}
+#centreColumn form[action*='check_access_code'] {position: absolute; margin-top: 0}/*prevent input :focus cutting off*/
+
+/* ---------- Tables ---------- */
+/* Close gap between default text and small span text - safari lower align issue */
+table td > a ~ span * {
+	vertical-align: top;
+}
+table td > a ~ span {
+	display: inline-block;
+	/*height: 14px;  remove to allow wrapping - will bring back small gap below */
+}
+a.tableLink1, a.tableLink2, a.tableLink3 {
+	padding: 3px;
+	margin: -3px 0;
+	min-width: 10px;
+	display: inline-block;
+}
+a.tableLink2, a.tableLink3 {border: 1px solid transparent;}
+tr.highlight a.tableLink3:hover {background-color: #fff}
+table tr.hideRow {display: none}
+td[align='center'] a.progressHolder {display: inline-block}
+td[align='center'] i.tick {margin: 1px 0 0 3px}
+
+tr.draggable.ui-sortable-helper {display: table}
+
+/* Rubrics */
+table.rubric td {line-height: 20px}
+table.rubric td.tlEmptyCell {border-width: 0 1px 0 0}
+table.rubric td.rubricHover {cursor: pointer}
+table.rubric tr.rowUnderline td {border-bottom: 2px solid #d6d6d6}
+table.rubric input[type="text"] {padding: 0; margin-right: 0}
+table.rubric input.emptyLabel, table.rubric input.emptyLabel + label {display: none}
+table.rubric textarea {padding: 0 3px; margin: 0 0 4px; float: left; resize: vertical}
+table.rubric .rubricLinks {float: right; margin-top: 1px}
+table.rubric i.delete {margin-right: -1px}
+table.rubric i.arrowRight:after, table.rubric i.arrowLeft:after, table.rubric i.arrowUp:after, table.rubric i.arrowDown:after {left: -20px}
+table.rubric td.rubricHover:hover {background-color: #d8e8cd}
+@-moz-document url-prefix() { form table.rubric td:not(.highlight) {height: 100%} }
+form table.rubric td:not(.highlight) textarea {border-color: #fff; background: transparent; padding: 0; margin: 0}
+table.wrap_rubric_text {table-layout: fixed}
+table.wrap_rubric_text tr td, table.wrap_rubric_text td textarea, table.wrap_rubric_text input[type="text"] {font-size: 15px; line-height: 1.4; hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto; word-wrap: break-word; /* Prefixes for Safari, IE11, Edge. Word-wrap for Chrome PC */}
+
+/* Assignment Tables - Teacher & Student */
+form#assignments table a, table.assignmentsTable td a, table#assignmentsToGrade a {
+	margin-top: -4px;
+	display: inline-block;
+}
+form#assignments table td.assignment *, table.assignmentsTable td.assignment * {
+	vertical-align: top;
+}
+form#assignments table td.assignment a, table.assignmentsTable td.assignment a {
+	margin-top: 0;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+form#assignments table td.assignment i, table.assignmentsTable td.assignment i {
+	margin-top: -2px;
+}
+
+/* ---------- Attendance Tables ---------- */
+#Table2, #TableD, #TableE, #TableF {
+	float: left;
+}
+#TableD, #TableE, #TableF {
+	overflow: auto;
+}
+#TableD, #TableE {
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#Table2 table, #TableD table, #TableE table, #TableF table, #TableD {
+	margin: 0;
+	table-layout: fixed;
+}
+#Table2 table {border-width: 1px 0 0 1px;}
+#TableD table {border-width: 1px 0 0 0;}
+#TableE table {border-width: 0 0 0 1px;}
+#TableF table {border-width: 0;}
+/*#TableD tr td:last-child, #TableF tr td:last-child {border-right-width: 0;}*/
+
+#Table2 th, #Table2 td, #TableD td, #TableE td, #TableF td {
+	border: 1px solid #d6d6d6;
+	border-width: 0 1px 1px 0;
+	font-size: 15px;
+}
+#Table2 th {
+	padding: 4px 8px;
+}
+#Table2 td, #TableD td, #TableE td, #TableF td {
+	text-align: center;
+	height: 26px;
+	padding: 0;
+}
+#TableE {
+	clear: both;
+}
+#TableE td {
+	text-align: left;
+}
+#Table2, #TableE, #Table2 table, #TableE table {
+	width: 170px;
+}
+#TableD td, #TableF td {
+	width: 100px;
+}
+#TableE tr.odd td {
+	background-color: #f5f5f5;
+}
+#TableE td > div {
+	padding-left: 8px;
+	width: 100%;
+	height: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#TableE td > div > a {
+	width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	margin-top: 3px;
+	line-height: 18px;
+}
+/* Pre JS Settings */
+#TableD, #TableF {
+	width: 505px;
+}
+#TableD table, #TableF table {
+	width: 909px;
+}
+
+/* ---------- Attendance ---------- */
+body[class*='ctr_teacher_attendance'] {overflow-x: hidden; margin-right: calc(-1 * (100vw - 100%))}
+body[class*='ctr_teacher_attendance'] .attendance-types {margin: -10px 0 5px; clear: both}
+.attendance-types > span {padding: 0 5px; line-height: 35px; font-size: 12px}
+.attendance-types > span > i {margin-top: -3px}
+.attendanceDatepicker input[type="text"] {width: 200px !important}
+
+body[class*='ctr_student_attendance'] .attendance td {position: relative}
+body[class*='ctr_student_attendance'] .attendance i.excused {position: absolute; bottom: 0; left: 0}
+body[class*='ctr_student_attendance'] .attendance i.comment {top: 0; position: absolute; right: 0}
+body[class*='ctr_student_attendance'] .flip i {transform: scaleX(-1); margin-left: -7px}
+
+/* ---------- Rules Tables ---------- */
+table.rulesList td i {
+	margin-top: -3px;
+}
+table.rulesList td a {
+	vertical-align: initial;
+}
+
+/* ---------- Purchase Table ---------- */
+table.purchase_table thead th, table.purchase_table .purchase_total td {padding: 10px 8px; font-size: 15px}
+table.purchase_table thead th span {display: inline-block}
+table.purchase_table .bundle_list .imgCrop .start img {width: 26px; height: 26px}
+table.purchase_table .purchase_detail span {line-height: 18px; margin-top: 4px}
+table.purchase_table .purchase_detail a i {margin-top: -3px}
+table.purchase_table .purchase_detail + td {font-size: 15px}
+table.purchase_table .purchase_total a {margin-top: -2px; display: inline-block}
+
+/* ---------- User Tables ---------- */
+table .table_flex_content > img, #facebox table .table_flex_content > img {margin-right: 10px; flex-shrink: 0}
+table .table_flex_content > a {line-height: 18px}
+table .table_flex_content > div > span a {font-size: 11px}
+
+table .multiple_avatars .avatar {margin: 0 -18px 3px 0; border: 2px solid #fff}
+table .multiple_names {line-height: 20px}
+
+table #question_list .table_flex_content i {flex-shrink: 0}
+
+@media screen and (min-width: 768px) {
+	table .table_flex_content {display: flex; align-items: center}
+}
+@media screen and (max-width: 767px) {
+	table .table_flex_content, table .table_flex_content > img {display: block}
+	table #question_list .table_flex_content {display: flex; align-items: center}
+}
+
+/* ---------- Column Block ---------- */
+.columnBlock {
+	margin: 10px 0 0;
+	clear: both;
+	display: table;
+	padding-bottom: 10px;
+	width: 100%
+}
+.columnBlock.top-border {
+	border-top: 1px solid #E2E0E0;
+	padding-top: 10px;
+	margin-top: 15px;
+}
+.columnBlock > div {
+	border-width: 0 1px 0 0;
+	display: table-cell;
+	vertical-align: top;
+	position: relative;
+}
+.columnBlock > div:last-child {border-right-width: 0}
+.columnBlock > div.hasButton {padding-bottom: 36px}
+.columnBlock > div div.toggleAssignment {display: none}
+.columnBlock.width-1-3 > div {width: 33.3%}
+.columnBlock.width-1-4 > div {width: 25%}
+.columnBlock > div > a {
+	width: 100%;
+	padding: 5px 0;
+	text-align: center;
+	display: inline-block;
+}
+.columnBlock input[type="checkbox"].emptyLabel + label:before {top: 0.2em}
+#centreColumn select#max_attempts, #centreColumn select#max_submissions {height: 26px; padding: 0; margin-top: -2px}
+.columnBlock #attachments input[type="file"] {display:block}
+.columnBlock #attachments input[type="file"]:after {content: '+'; cursor: pointer}
+.columnBlock p > a > i, .columnBlock p > i {margin-top: -4px}
+#centreColumn .columnBlock h2 {margin: 0 15px 5px}
+#centreColumn .columnBlock h2 ~ h2 {margin-top: 10px}
+#centreColumn .columnBlock p {margin: 3px 15px}
+#centreColumn .columnBlock ul {margin: 0 15px 0 20px}
+#centreColumn .columnBlock ul li {white-space: nowrap;}
+#centreColumn .columnBlock .optionsRibbon {margin: 0; padding-bottom: 0; position: absolute; bottom: 0}
+#centreColumn .columnBlock .optionsRibbon > ul {margin: 0 15px 0 18px}
+#centreColumn .columnBlock .optionsRibbon > ul ul {margin: 0}
+#centreColumn .columnBlock > div:first-child * {margin-left: 0}
+#centreColumn .columnBlock > div:first-child .optionsRibbon ul {margin-left: 3px}
+#centreColumn .columnBlock table {
+	padding: 0 15px 0 0; /* fixed table work-around */
+	margin: 0;
+}
+#centreColumn .columnBlock td {border: 0; padding-left: 0}
+#centreColumn .columnBlock tr td:last-child {padding-right: 0}
+#centreColumn .columnBlock td a {word-break: break-all; display: inline-block; line-height: 18px}
+.columnBlock.firefox-pre-30 > div.hasButton {padding-bottom: 0}
+#centreColumn .columnBlock.firefox-pre-30 .optionsRibbon {position: static; margin-top: 10px}
+
+/* ---------- checkboxes ------ */
+.checkboxes-3 input[type="checkbox"] + label {width: 32.33%; margin: 0; padding: 2px 14px 5px 26px; box-sizing: border-box; position: relative; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.checkboxes-3 input[type="checkbox"] + label:before {position: absolute; top: 3px; left: 3px}
+
+.checkboxes-4 input[type="checkbox"] + label {width: 24.33%; margin: 0; padding: 2px 14px 5px 26px; box-sizing: border-box; position: relative; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.checkboxes-4 input[type="checkbox"] + label:before {position: absolute; top: 3px; left: 3px}
+
+.checkboxes-5 input[type="checkbox"] + label {width: 19.33%; margin: 0; padding: 2px 14px 5px 26px; box-sizing: border-box; position: relative; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.checkboxes-5 input[type="checkbox"] + label:before {position: absolute; top: 3px; left: 3px}
+
+/* ---------- items container */
+.items-container > span {padding: 0px 5px 0px 5px; margin: 3px 0 3px 5px; color: #fff; background-color: #999; font-size: 80%}
+
+/* ---------- Lists ---------- */
+dl {margin: 10px 0 0 10px}
+dl dt {margin: 10px 0 0}
+dl dt input[type="checkbox"].emptyLabel + label:before,
+dl dt input[type="radio"].emptyLabel + label:before {top: 3px}
+dl dd {margin: 0 0 0 24px}
+dl dd input[type="checkbox"] + label:before, dl dd input[type="radio"] + label:before {top: 0.25em}
+dl i {margin-top: -3px}
+
+#centreColumn ul li, #courseToolbar ul li {position: relative; padding: 0 0 0 20px; margin-top: 5px}
+#centreColumn ul li:before {background-position: 0 -1400px; width: 20px; height: 20px; overflow: hidden}
+
+#centreColumn ul.select2-choices {display: block}
+#centreColumn ul.select2-choices li {padding: 0; margin-top: 0}
+#centreColumn ul.select2-choices li.select2-search-choice {margin-top: 2px}
+#centreColumn ul.select2-choices li div {padding: 2px 20px 2px 3px}
+#centreColumn ul.select2-choices li:before {display: none}
+/* Inline List */
+#centreColumn ul.inlineList {padding: 5px 0}
+#centreColumn ul.inlineList li, #facebox ul.inlineList li {display: inline-block; padding: 10px 4px 0; margin-top: 0; text-align: center; vertical-align: top}
+/* Help List */
+#centreColumn ul.helpList {padding: 10px 0}
+#centreColumn ul.helpList li, #facebox ul.helpList li {padding: 0 4px 7px 0; text-align: left; width: 34%; box-sizing: border-box}
+#facebox ul.helpList li {padding: 5px 4px 12px 0}
+#centreColumn ul.helpList li:not(:nth-child(3n+1)),
+#facebox ul.helpList li:not(:nth-child(3n+1)) {width: 33%; margin-left: -4px}/* account for inline-block gap */
+
+/* ---------- Quizzes ---------- */
+.progress_list {margin: 0 14px 13px 0; max-height: 305px; overflow: auto}
+.progress_list::-webkit-scrollbar { -webkit-appearance: none; width: 7px; height: 7px}
+.progress_list::-webkit-scrollbar-thumb {border-radius: 4px; background-color: rgba(0, 0, 0, .2); -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)}
+.progress_list ul {position: relative; margin-bottom: 0}
+html:not([dir=rtl]) .progress_list ul {margin-right: 0}
+.progress_list ul:before {content: ''; top: 20px; left: 7px; bottom: 20px; width: 1px; background: #d7d7d7; position: absolute; z-index: 0;}
+.progress_list ul li {padding-left: 0 !important; border-width: 0 !important}
+#centreColumn .rightColumn .progress_list ul li:before {display: block; content: ''; top: 12px; left: 4px; width: 3px; height: 3px; background: #d7d7d7; background-image: none !important; position: absolute; z-index: 0; border-radius: 50%; border: 2px solid transparent; box-shadow: 0 0 0 2px #fff}
+#centreColumn .rightColumn .progress_list ul li.selected:before {top: 11px; left: 3px; width: 5px; height: 5px; border-color: #fff; box-shadow: 0 0 0 1px #499900}
+#centreColumn .rightColumn .progress_list ul li.selected:before, #centreColumn .rightColumn .progress_list ul li.completed:before {background-color: #499900}
+#centreColumn .rightColumn .progress_list ul li a:not(:hover) * {color: #222}
+#centreColumn .rightColumn .progress_list ul li:not(.selected):not(.completed) a:not(:hover) * {color: #868686}
+.progress_list ul li > * {padding: 0 10px 0 30px; overflow: hidden}
+.rightColumn .progress_list ul li > * > span:last-child {font-size: 12px; color: #595959; width: 45px; position: static; margin-top: 4px}
+
+#question_form {margin-bottom: 0 !important}
+
+body[class*='assignment'] .leftColumn h2.quiz_question:first-of-type {
+	margin: 3px 0 5px !important
+}
+.quiz_points {margin-top: 7px; font-size: 16px; display: inline-block}
+.quiz_info {margin: 20px 0}
+.quiz_blocks li {border-radius: 3px; padding: 12px !important; border: 1px solid transparent; cursor: pointer}
+.quiz_blocks li:before {display: none}
+.quiz_blocks li label {padding-left: 32px}
+.quiz_blocks li input[type="checkbox"] + label:before, .quiz_blocks li input[type="radio"] + label:before {position: absolute; top: 50%; left: 13px; margin: -9px 0 0}
+.quiz_footer {margin: 16px 0 5px; display: flex; justify-content: space-between}
+.quiz_footer button {margin-top: 5px}
+.quiz_footer button:only-child {margin-left: auto}
+#question_form .textInput {margin: 4px 3px; padding-top: 3px; padding-bottom: 4px}
+
+.quiz_response {border-radius: 3px; padding: 15px; margin: 5px 0 15px; display: flex; justify-content: space-between}
+.quiz_response i {margin-top: -4px}
+.quiz_response.correct {background: #82bf6b}
+.quiz_response.partial {background: #f59d4c}
+.quiz_response.incorrect {background: #ff7c68}
+.quiz_feedback {border-style: solid; border-width: 0 0 0 6px; padding-left: 15px; margin-top: 15px}
+.quiz_feedback.correct {border-color: #82bf6b}
+.quiz_feedback.partial {border-color: #f59d4c}
+.quiz_feedback.incorrect {border-color: #ff7c68}
+
+.quiz_match_table {display: table; width: 100%; border-collapse: separate; border-spacing: 0 10px}
+.quiz_match_table.quiz_match_highlight .quiz_match_dropzone {border-color: #7d7d7d; border-style: solid}
+.quiz_match_row {display: table-row}
+.quiz_match_row > div {display: table-cell; text-align: center; vertical-align: middle}
+.quiz_match_option {width: 41%; border-radius: 3px; padding: 11px 13px}
+.quiz_match_connect {width: 8%; position: relative; vertical-align: middle}
+.quiz_match_connect:before {content: ''; height: 1px; display: block}
+.quiz_match_dropzone {width: 41%; border-radius: 3px; border-style: dashed; border-width: 1px; line-height: 25px}
+.quiz_match_dropzone i.dotHandle {display: none}
+.quiz_match_dropzone > div {display: block; padding: 7px 14px 8px; box-shadow: none; float: none; border-width: 1px; border-style: solid}
+.quiz_match_choices {padding: 5px; display: inline-block; min-height: 67px; width: 100%; box-sizing: border-box}
+.quiz_match_choices > div {padding: 11px 14px 10px; margin: 7px; float: left}
+.quiz_match_choice {background: #fff; cursor: pointer; position: relative; border-radius: 2px; user-select: none; cursor: move}
+.quiz_match_choice i {vertical-align: top}
+.quiz_match_choice > span {max-width: 400px; display: inline-block}
+.quiz_match_choice > span p:first-of-type {margin-top: 0}
+.quiz_match_choice > span p:last-of-type {margin-bottom: 0}
+.quiz_match_choice > span p img {max-width: 100%}
+.quiz_match_choice.ui-draggable-dragging {z-index: 1}
+.quiz_match_choice.ui-draggable-dragging * {color: #fff}
+.quiz_match_choice.ui-draggable-dragging i:after {left: -40px}
+
+/* ---------- Warning, Error, Info ---------- */
+.alert_block {width: auto; margin: 1px 0 15px; position: relative; z-index: 1}
+#centreColumn > #alerts > .alert_block {width: 100%}/* ie quiz error */
+a.forced-sync, a.forced-sync-info {border-radius: 3px; text-decoration: none !important; color: #fff; background: #C83131; padding: 1px 5px; display: inline-block}
+a.forced-sync-info:hover i:after {left: -40px}
+a.forced-sync:hover, a.forced-sync-info:hover {color: #fff; opacity: .8}
+
+/* ---------- Dashboard Catalog ---------- */
+.dashboard_blocks {display: flex; display: -webkit-flex; -webkit-flex-flow: row wrap; flex-flow: row wrap}
+.dashboard_blocks > div {-webkit-flex-direction: column; flex-direction: column}
+.dashboard_blocks .header {margin: 0; padding: 6px 10px 0; box-sizing: border-box}
+#centreColumn .dashboard_blocks ul {min-height: 42px; padding: 2px 0 8px}
+#centreColumn .dashboard_blocks ul li {display: inline-block; padding: 0; line-height: 18px; vertical-align: top; font-size: 15px; margin: 0}
+#centreColumn .dashboard_blocks ul li i:after {left: -40px}
+
+.progressHolder > span {margin: -10px 0 0 -10px; display: block}
+table td a.progressHolder > span {margin: -6px 0 -7px -22px; left: 50%; position: relative}
+.user_progress.chart > span {margin: -10px; width: 44px; display: block}
+
+.catalog_student .footer > div:not(.tooltip), .catalog_student .footer > a {float: left}
+.catalog_student .footer > a > i {width: 15px}
+.catalog_student .footer i.pageBlank span {position: relative; z-index: 1; font: 9px/24px Arial; text-align: center; display: block}
+.catalog_student .footer .gameStatus span {font-size: 11px; margin: 8px 0 0 0; position: absolute}
+.catalog_student .footer .gradeHolder {font-size: 15px; margin: 3px 0 -1px; text-align: center}
+.catalog_student .footer .gradeHolder + a {text-align: center}
+.catalog_student:not(.catalog_teacher) .footer > .block {width: 12%}
+.catalog_student:not(.catalog_teacher) .footer > .block ~ .block {width: 29%}
+.catalog_student:not(.catalog_teacher) .footer > .block ~ .block ~ .block {width: 20%}
+.catalog_student:not(.catalog_teacher) .footer > .block ~ .block ~ .block ~ .block {width: 29%; text-align: center}
+.catalog_student:not(.catalog_teacher) .footer > .block ~ .block ~ .block ~ .block ~ .block {width: 10%; text-align: right}
+.catalog_student:not(.catalog_teacher) .footer .pageNum {text-align: center !important}
+.catalog_student:not(.catalog_teacher) .footer .pageNum div {right: auto !important; width: 21px !important}
+
+/* ---------- Catalog carousel ---------- */
+.catalog_carousel_heading {display: flex; align-items: center; justify-content: space-between; margin: -10px 80px 9px 0}
+.catalog_carousel + .catalog_carousel_heading {margin-top: 10px}
+.catalog_carousel {flex-flow: row nowrap !important; opacity: 0; transition: all .7s ease; position: relative}
+.catalog_carousel.owl-loaded {opacity: 1}
+.catalog_carousel > * {border: 0; margin: 0 !important}
+.catalog_carousel > *:hover {box-shadow: none !important; border: 0 !important}
+.catalog_carousel .owl-stage-outer {width: 100%; flex-flow: row nowrap !important; overflow: visible}
+.catalog_carousel .owl-stage-outer .owl-stage {display: flex}
+.catalog_carousel .owl-stage-outer .owl-stage .owl-item {border-radius: 4px; overflow: hidden; display: flex; border: 1px solid #e2e0e0; transition: box-shadow .3s ease-in-out, border .3s ease-in-out}
+.catalog_carousel .owl-stage-outer .owl-stage .owl-item:hover {box-shadow: 3px 3px 9px rgba(0,0,0,.25); border: 1px solid #c4c4c4}
+.catalog_carousel .owl-stage-outer .owl-stage .owl-item > * {display: flex; flex-direction: column; width: 100%}
+.catalog_carousel .owl-nav {width: 66px; position: absolute; top: -44px; right: 0; flex-direction: row !important; justify-content: space-between}
+.catalog_carousel .owl-nav > * {background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12px' height='27px' viewBox='-0.863 -3.843 12 27'%3E%3Cpolygon fill='%235E5F5F' points='1.873,19.314 0,17.634 6.726,9.653 0,1.68 1.873,0 10.273,9.653 '/%3E%3C/svg%3E") #fff 50% / 9px no-repeat; width: 30px; height: 26px; border-radius: 4px; border: 1px solid #c8c8c8}/*('/images/icons/large-arrow.svg')*/
+.catalog_carousel .owl-nav > .disabled {opacity: .5}
+.catalog_carousel .owl-nav > *:hover {opacity: .6}
+.catalog_carousel .owl-nav .owl-prev {transform: rotate(180deg)}
+.catalog_carousel .owl-dots {width: 0}
+
+/* ---------- Catalog goals ---------- */
+.goal_row {display: flex; margin-bottom: 15px}
+.goal_row h2 {margin-top: 0 !important}
+.goal_row > *:first-child {width: 242px; margin-right: 15px}
+.goal_row > *:first-child > * {width: 100%; margin: 0}
+.goal_row > *:first-child .description {display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden}
+.recommendation_list {background: #fff; border-radius: 3px; border: 1px solid #e2e0e0; height: 393px; display: flex; flex-direction: column; flex: 1}
+.recommendation_list .recommendation_header {border-bottom: 1px solid #e2e0e0; padding: 8px 15px}
+.recommendation_list .recommendation_header h2 {color: #222 !important; margin: 0 !important; font-size: 19px !important}
+.recommendation_list .scroll {overflow: auto; padding: 10px}
+.recommendation_list .recommendation {display: flex; align-items: center; margin-bottom: 2px; border-radius: 3px; padding: 5px; transition: all .3s ease-in-out}
+.recommendation_list .recommendation:hover {background-color: #f3f3f3}
+.recommendation_list .recommendation:last-child {margin-bottom: 0}
+.recommendation_list .recommendation .flex_fixer {width: 130px; flex-shrink: 0}
+.recommendation_list .recommendation .item_text {margin: 0 15px; flex: 1}
+.recommendation_list .recommendation .item_text h2 {font-size: 18px !important; overflow: hidden; white-space: nowrap; text-overflow: ellipsis}
+.recommendation_list .recommendation .item_text p {font-size: 15px; margin-bottom: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; height: 63px}
+.recommendation_list .recommendation .item_info {width: 90px; text-align: right; flex-shrink: 0}
+.recommendation_list .recommendation .item_info .label.box {font-size: 15px; display: inline-block; margin-bottom: 20px; color: #222}
+.recommendation_list .recommendation .item_info .ratingStatic {height: 22px}
+.recommendation_list .recommendation .item_info .ratingStatic i:after {left: 0}
+
+/* ---------- Other tiles ---------- */
+.narrow_headers:not(.people_boxes):not(.resources_boxes) .header h2 {padding-top: 10px; padding-bottom: 2px}
+.catalog_boxes.narrow_headers .header h2 {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block}
+
+.people_boxes .imgCrop {background-size: 100%}
+.catalog_student:not(.lesson_boxes) {display: flex; flex-flow: row wrap}
+.catalog_student:not(.lesson_boxes) > div {display: flex; flex-direction: column}
+.catalog_student:not(.lesson_boxes) > div .footer {margin-top: auto}
+.flexbox .catalog_student:not(.catalog_teacher):not(.lesson_boxes) p,
+.flexbox .catalog_student:not(.catalog_teacher):not(.lesson_boxes) .lightText {margin-bottom: 4px}
+.no-flexbox .catalog_student:not(.catalog_teacher):not(.narrow_headers) .header {height: 98px}
+.no-flexbox .catalog_student.catalog_teacher:not(.narrow_headers) .header {height: 82px}
+
+.catalog_student .footer.flex_footer {display: flex}
+.catalog_student .footer.flex_footer .label {font-size: 14px; line-height: 1.5; white-space: nowrap; margin-left: auto}
+
+.catalog_boxes .header .lightText {margin-top: 7px}
+.user_progress {height: 24px; padding: 1px 3px 1px 10px; background-color: #fff; border-radius: 20px; font-size: 13px; color: #222 !important; display: inline-flex; align-items: center; margin: auto auto 0; align-self: center;/*align-self for IE11*/}
+.user_progress.red {color: #fff !important}
+.user_progress.no_icon {padding-right: 10px}
+.user_progress.locked {opacity: 1; padding-right: 6px}
+.user_progress.completed,
+.user_progress.not_started {padding-right: 5px}
+.user_progress.chart {padding-left: 2px}
+.user_progress.chart .percentage {margin: 0 5px; color: #707070 !important}
+.user_progress i {margin: 0 0 0 7px}
+.user_progress i:after {left: 0 !important}
+.no_hover a.user_progress:hover {box-shadow: 3px 3px 9px rgba(0,0,0,.25)}
+
+.catalog_boxes.app_boxes {display: flex; flex-flow: wrap}
+.catalog_boxes.app_boxes .footer {display: flex; justify-content: space-between; padding: 4px 11px 10px}
+.catalog_boxes.app_boxes .footer a:first-of-type {margin: 2px 12px 0; text-align: center}
+.catalog_boxes.app_boxes .footer a:only-of-type {margin-right: 0; text-align: right}
+.catalog_boxes.app_boxes .footer a {display: inline-block; margin-top: 2px; float: none}
+.catalog_boxes.app_boxes .footer a i {margin: -3px 0 0; opacity: 0.7}
+.catalog_boxes.app_boxes .footer a:hover i {opacity: 1}
+.catalog_boxes.app_boxes .footer a:hover i:after {left: -40px}
+
+.resources_boxes > a h2 i {margin-top: -4px}
+.resources_boxes > a h2 i.googleDrive, .resources_boxes > a h2 i.questionMark, .resources_boxes > a h2 i.portal {margin-top: -3px}
+.resources_boxes > a:hover i:after {left: -40px}
+.resources_boxes > a:hover .label.floatR i:after {margin-right: -2px}
+#leftColumn > img[src*='/images/resources/'] {max-width: 150px}
+
+/* ---------- Chat ---------- */
+body.popupContent {height: 100%; overflow: hidden}
+table.chat, table.chat textarea {background: #fff}
+table.chat {margin: 0; border-collapse: collapse; table-layout: fixed}
+table.chat .chat_col2 {width: 140px}
+table.chat th, table.chat td {height: auto; vertical-align: top; text-align: left; border-width: 1px}
+table.chat td #messages {height: 400px; margin: 2px 0; overflow: auto; width: 100%}
+table.chat td #messages span {margin-bottom: 5px; display: block; line-height: 1.2}
+table.chat #users {height: 400px; overflow: auto; margin: 8px 0 0 3px; width: 122px}
+table.chat #users .chat-avatar {width:100%}
+table.chat form {margin-top: 0}
+table.chat td.chat_message_holder {padding: 1px; overflow: hidden}
+table.chat textarea {border: none; width: 100%; height: 95px; padding: 6px; margin: 0; resize: none; color: #000}
+table.chat button {float: right; margin-top: 6px}
+table.chat span.chat-avatar {line-height: 17px; margin-bottom: 8px; display: inline-block}
+table.chat span.chat-avatar img {float: left; margin: 1px 8px 0 0; width: 35px}
+table.chat span.chat-avatar span {float: left; width: 72px; height: 37px; overflow: hidden; word-wrap: break-word}
+table.chat input[type="checkbox"] + label:before {left: 0}
+
+/* New Chat */
+#chatContainer {position: fixed; right: 0; bottom: -4px; z-index: 999; background:  #fff; border: 1px solid #e2e0e0}
+#chatIframe iframe {width: 400px; height: 450px; border: 0; max-width: 100%}
+#chatContainer .header, .chatHeader {padding-left: 10px; width: 100%; height: 37px; position: absolute; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box}
+#chatContainer .header h4, .chatHeader h4 {font-size: 18px; color: #fff; padding: 0; margin: 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; flex: 1}
+#chatContainer a.close, .chatHeader a.close {margin: -1px 5px 0 0}
+#chatContainer a.popout, .chatHeader a.popout {margin: -1px 5px 0}
+.chatHeader a.popin {margin: -3px 5px 0}
+#chatContainer a:hover i:after, .chatHeader a:hover i:after  {left: -40px; opacity: 0.7}
+
+/* ---------- Tooltips ---------- */
+a[rel="popup"] {cursor: pointer}
+.tooltip, .tooltipBot {display: none; position: absolute; background: #fff; width: 276px; padding-top: 7px; z-index: 9; border-radius: 3px; margin: -10px 0 0 277px !important;/* overwrite dynamic inline margin */}
+.tooltipBot {margin-top: 30px !important}
+.tooltip .arrow, .tooltipBot .arrow {position: absolute; width: 70px !important;/* for rightColumn arrows */ height: 15px; bottom: -15px; left: 7px; overflow: hidden}
+.tooltip .arrow:after, .tooltipBot .arrow:after {position: absolute; width: 15px; height: 15px; top: -9px; left: 5px; content: ''; transform: rotate(45deg)}
+.tooltipBot .arrow {top: -15px}
+.tooltipBot .arrow:after {top: 6px; background: #fff}
+.tooltip > img, .tooltipBot > img,
+.tooltip .personalInfo, .tooltipBot .personalInfo,
+.tooltip .personalInfo a, .tooltipBot .personalInfo a {line-height: 17px; display: inline-block; vertical-align: middle}
+.tooltip .personalInfo a, .tooltipBot .personalInfo a, .tooltip .personalInfo span, .tooltipBot .personalInfo span {overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important}
+.tooltip > img, .tooltipBot > img {padding: 0 7px}
+.tooltip .personalInfo, .tooltipBot .personalInfo {margin-top: -2px}
+.tooltip .personalInfo a, .tooltipBot .personalInfo a {width: 206px; vertical-align: top; padding: 0}
+.tooltip .activity_status:before, .tooltipBot .activity_status:before {content: ''; vertical-align: middle; margin: -3px 4px 0 0; width: 7px; height: 7px; display: inline-block; border-radius: 50%}
+.tooltip .activity_status.online:before {background-color: #91c73b}
+.tooltip .activity_status.offline:before {background-color: #ff0000}
+.tooltipContactLinks {padding: 8px 7px 6px; margin-top: 8px; display: block; border-radius: 0 0 3px 3px}
+.tooltipContactLinks a, nav#leftColumn ol li .tooltipContactLinks a {margin-right: 7px}
+#centreColumn ul.inlineList .tooltip {text-align: initial}
+
+/* Left Column Tweaks */
+nav#leftColumn .tooltip, nav#leftColumn .tooltipBot {
+	margin: -5px 0 0 177px !important; /* overwrite centreColumn margin */
+	width: 176px
+}
+body:not([dir=rtl]).keep_tablet_nav #leftColumn .tooltip,
+body:not([dir=rtl]).keep_tablet_nav #leftColumn .tooltipBot {margin-left: 205px !important}
+nav#leftColumn .tooltipBot {margin-top: 25px !important}
+nav#leftColumn ol.largeImgs li .tooltip a,
+nav#leftColumn ol.largeImgs li .tooltipBot a {display: inline-block; margin: 0; padding: 0}
+nav#leftColumn .personalInfo a, nav#leftColumn .personalInfo span {width: 100px; display: inline-block}
+nav#leftColumn .tooltipContactLinks i {margin-top: -2px}
+nav#leftColumn .tooltipContactLinks a {width: 135px}
+
+nav#leftColumn ol.resourceFilter li {margin: 3px 0; float: left; width: 30%}
+nav#leftColumn ol.resourceFilter li select, nav#leftColumn ol.resourceFilter li input[type="text"]{width: 100%}
+nav#leftColumn ol.resourceFilter li label{margin-left: 2px}
+nav#leftColumn ol.resourceFilter li:nth-child(odd) {margin-top: 9px}
+nav#leftColumn ol.resourceFilter li:nth-child(even) {width: 60%}
+body:not([dir=rtl]).mini_main_nav nav#leftColumn .tooltip {margin-left: 189px !important}
+
+/* Right Column Tweaks */
+.rightColumn .tooltip, .rightColumn .tooltipBot {width: 100% !important; margin-left: 175px !important; /* overwrite centreColumn margin */}
+.rightColumn li > a:first-child + .tooltip, .rightColumn li > a:first-child + .tooltipBot, .rightColumn .avatarHolder + .tooltipBot {margin-left: 220px !important} /* ie. Friends list and leaderboard */
+.rightColumn li > i + a + .tooltip, .rightColumn li > i + a + .tooltipBot {margin-left: 190px !important} /* ie. Admin listing */
+.rightColumn .tooltip > img, .rightColumn .tooltipBot > img {margin-right: 6px !important}
+.rightColumn div.personalInfo, .rightColumn div.tooltipContactLinks {width: auto !important}
+.rightColumn div.personalInfo a, .rightColumn div.personalInfo span {width: 148px !important; display: inline-block !important}
+.rightColumn div.tooltipContactLinks {display: block !important; margin-top: 8px !important; width: auto !important}
+.rightColumn div.tooltipContactLinks a {width: auto !important; margin: 0 7px 0 0 !important}
+.rightColumn .tooltipBot .arrow {top: -13px}
+.rightColumn .avatarHolder + .tooltipBot .arrow {left: 12px; top: -15px}
+/* News Tweaks */
+.comments .tooltip, .comments .tooltipBot {
+	margin-top: 0 !important;
+}
+.comments .tooltipContactLinks i {
+	margin-top: -3px;
+}
+
+/* Table tweaks */
+#centreColumn table a[rel="popup"] {position: relative}
+
+/* ===================
+   Fullscreen
+   ===================*/
+body.fullscreen {background: #fff; overflow-y: hidden}
+body.fullscreen #wrapper {max-width: 100%; box-shadow: none}
+body.fullscreen header {width: 100%}
+body.fullscreen #leftColumn {width: 0; padding: 0 !important}
+body.fullscreen .navTrigger + .site_name + div.sectionTitle {margin-left: 60px}
+body.fullscreen.keep_tablet_nav .navTrigger {text-align: left}
+body.fullscreen.keep_tablet_nav .closeNavTrigger {padding-left: 15px}
+
+/* ===================
+   Footer
+   ===================*/
+footer {padding: 10px 20px; clear: both; z-index: 10}
+footer .footerLinks, footer .footerLinks > a {display: inline-block; font-size: 15px}
+footer .footerLinks > a, footer .powered_by {padding: 5px 0; margin: 5px 15px 5px 0}
+footer .footerLinks a[rel="facebox"]:not(:first-child), footer .powered_by {border-width: 0 0 0 1px; padding-left: 15px; margin-right: 0}
+footer .powered_by {display: inline-block; padding-bottom: 7px}
+footer .footerLinks a i.arrowRightSml:after {left: -40px; margin-top: -2px}
+footer .footerLinks:first-child:last-child, footer #socialBlocks {float: right;}
+footer .footerLinks:first-child:last-child > a {margin: 0 0 0 15px}
+
+#socialBlocks li {float: left}
+#socialBlocks a {background: #fff; margin-left: 10px; display: inline-block; line-height: 20px}
+#socialBlocks a:hover {background: none; opacity: 1}
+
+/* ===================
+   Miscellaneous
+   ===================*/
+.avatarHolder {display: table}
+.avatarHolder img.avatar, .avatarHolder span.avatarText {display: table-cell; vertical-align: middle}
+.avatarHolder img.avatar {margin: 2px 10px 0 0; position: relative; top: -2px}
+.avatarHolder img.avatar.lrgIcon {margin-left: -6px}
+.avatarHolder span.avatarText i.crown {margin-top: -5px}
+
+.avatarHolder.avatar_msg_holder {margin-bottom: 0}
+.avatarHolder.avatar_msg_holder > span:first-of-type {padding-right: 10px}
+.avatarHolder.avatar_msg_holder > .avatar {margin-right: 10px}
+.avatarHolder.avatar_msg_holder .multiple {padding-right: 10px; white-space: nowrap; vertical-align: middle; display: table-cell}
+.avatarHolder.avatar_msg_holder .multiple .avatar {margin: 0 -18px 0 0; display: inline-block; border: 2px solid #fff}
+.avatarHolder.avatar_msg_holder .multiple .avatar:last-child {margin-right: 0}
+@media screen and (max-width: 979px) {
+	.avatarHolder.avatar_msg_holder > * {display: inline-block !important}
+	.avatarHolder.avatar_msg_holder .multiple + .avatarText {display: block !important}
+}
+
+/* Round avatars */
+#facebox img.avatar,
+header .dropDown ul li .ms-image img,
+.notificationsPopUpHolder ul li .ms-image img,
+.quickLinks .linksHolder .dropDown a.linkedAccount img,
+table.chat span.chat-avatar img, .inlineList li > a > img,
+.tooltip > img, .tooltipBot > img, .tippy-tooltip.user-theme img {border-radius: 50%; border: 1px solid #e2e2e2}
+.materialStyle .avatarHolder img.avatar, #facebox .avatarHolder img.avatar {border-radius: 0; border: 0}
+#leftColumn img.avatar {border: 0}
+
+.quickLinks .linksHolder .dropDown a.linkedAccount img {margin: -1px 0 0 -1px}
+table.chat span.chat-avatar img, table td:not(.logo_cell) .table_flex_content > img, table .multiple_avatars .avatar, .avatar_msg_holder .avatar {width: 32px; height: 32px}
+.tooltip > img, .tooltipBot > img {padding: 0; margin: 0 6px 0 7px}
+
+/* Paragraph with text next to icon */
+p.sideImg {
+	overflow: hidden;
+}
+p.sideImg img, img.sideImg {
+	float: left;
+	margin: 0 12px 5px 0;
+}
+/* Libraries Search Results & Existing Course Form */
+.search-item {
+	margin-top: 20px;
+}
+.search-item i {
+	margin: -3px 2px 0 0;
+}
+.search-item input[type="radio"] + label, .search-item input[type="checkbox"] + label {
+	margin-left: 3px;
+}
+.search-item input[type="radio"].emptyLabel + label + a,
+.search-item input[type="checkbox"].emptyLabel + label + a {
+	display: inline-block;
+	margin: -20px 0 0 27px;
+	position: relative;
+	top: -4px;
+}
+.search-metadata, .search-description {
+	margin-left: 26px;
+}
+/* Quiz grid highlight */
+table.grid_navigation tr td.selected {
+	outline: 2px solid #999;
+	border: none;
+}
+/* SCORM */
+a.scormLink {
+	position: relative;
+	display: inline-block;
+}
+a.scormLink img:first-child {
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin: -38px 0 0 -38px;
+}
+a.scormLink img:last-child {
+	max-width: 100%;
+	height: auto;
+}
+.launch_placeholder{width:220px; height:165px}
+.launch_new_placeholder{width:78px; height:78px}
+.oneLine #set_launch_mode{float:left; margin-right:120px}
+iframe#scorm_content, iframe#home, iframe#table_of_contents {border: 0}
+iframe#home, iframe#scorm_content, .scorm_content_container {width: 100%}
+.scorm_content_container {position: relative}
+iframe#table_of_contents {float: left; width: 19%; margin-right: 1%}
+iframe#table_of_contents + .scorm_content_container {float:left; width: 79%}
+iframe#scorm_iframe {margin-top: 15px}
+
+iframe#scorm_content{
+	background: transparent;
+	z-index: 2;
+	position: relative;
+}
+iframe#scorm_content + .scorm_loader{
+	content: '';
+	text-align: center;
+	margin: 0 auto;
+	border: 4px solid #f3f3f3; /* Light grey */
+	border-top: 4px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: calc(50% - 40px);
+	left: 0;
+	right: 0;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+#scorm_iframe.no_preview_image {height: 200px}
+
+/* Messages box */
+.messagesHolder a .newAlert,
+.notificationsHolder a .newAlert {
+	margin-top: 5px;
+}
+.messagesHolder .dropDown,
+.notificationsHolder .dropDown {
+	width: 450px;
+	left: 0px;
+}
+.messagesHolder .dropDown ul li,
+.notificationsHolder .dropDown ul li,
+.notificationsPopUpHolder li {
+	border-bottom: 1px solid #EAEAEA;
+	display: block;
+	clear: both;
+	overflow: hidden;
+}
+.messagesHolder .dropDown ul li,
+.notificationsHolder .dropDown ul li {display: table}
+.messagesHolder .dropDown ul li a,
+.notificationsHolder .dropDown ul li a,
+.notificationsPopUpHolder ul li a {
+	position:relative;
+	padding: 0
+}
+.messagesHolder .dropDown ul li .ms-image,
+.notificationsHolder .dropDown ul li .ms-image,
+.notificationsPopUpHolder ul li .ms-image {
+	display: block;
+	width: 40px;
+	float: left;
+	margin: 6px 0 0;
+	padding: 0;
+	padding: 7px 0 7px 9px;
+}
+.messagesHolder .dropDown ul li .ms-user,
+.messagesHolder .dropDown ul li .ms-subject,
+.messagesHolder .dropDown ul li .ms-date,
+.notificationsHolder .dropDown ul li .ms-user,
+.notificationsHolder .dropDown ul li .ms-subject,
+.notificationsHolder .dropDown ul li .ms-date,
+.notificationsPopUpHolder ul li .ms-user,
+.notificationsPopUpHolder ul li .ms-subject {
+	display: block;
+	float: left;
+	width: 345px;
+	line-height: 17px;
+	font-size: 14px;
+}
+
+.messagesHolder .dropDown ul li .ms-date,
+.notificationsHolder .dropDown ul li .ms-date,
+.notificationsPopUpHolder ul li .ms-date {
+	font-size: 12px;
+	line-height: 14px;
+	padding: 0 0 6px;
+	color: #999;
+}
+
+.messagesHolder .dropDown ul li .ms-user,
+.notificationsHolder .dropDown ul li .ms-user,
+.notificationsPopUpHolder ul li .ms-user {
+	padding: 3px 0 0;
+}
+
+.messagesHolder .dropDown ul li .ms-user i,
+.notificationsHolder .dropDown ul li .ms-user i,
+.notificationsPopUpHolder ul li .ms-user i {
+	margin-left: 5px;
+}
+.messagesHolder .dropDown ul li .ms-arrow,
+.notificationsHolder .dropDown ul li .ms-arrow,
+.notificationsPopUpHolder ul li .ms-arrow {
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	background: transparent url('../images/icons/notif_arr_icon.png') no-repeat center center;
+}
+.messagesHolder .dropDown ul li .ms-subject,
+.notificationsHolder .dropDown ul li .ms-subject,
+.notificationsPopUpHolder ul li .ms-subject {
+	padding: 0;
+	overflow: hidden;
+	height: 17px;
+	white-space: nowrap;
+}
+
+.messagesHolder .dropDown .scroll,
+.notificationsHolder .dropDown .scroll {
+	max-height: 320px;
+	overflow: auto;
+	overflow-x: hidden;
+	border-width: 0 0 1px;
+}
+.messagesHolder .dropDown .loader,
+.notificationsHolder .dropDown .loader {
+	height: 60px;
+	background: url('../images/loading-animation-white-retina.gif') no-repeat center center / 100px;
+}
+.notificationsPopUpHolder .ms-status {position: absolute; top: 13px; right: 10px}
+.quickLinks .dropDownHolder .dropDown li.ms-holder a {width: 410px; display: table-cell}
+.quickLinks .dropDownHolder .dropDown li.ms-holder a.ms-status-holder {width: 40px !important; vertical-align: middle; text-align: center}
+.quickLinks .dropDownHolder .dropDown li.ms-holder a .ms-status {display: inline-block; margin-top: 4px}
+
+.ms-holder [data-tooltip] {position: relative}
+.ms-holder [data-tooltip]:after, .ms-holder [data-tooltip]:before {position: absolute; visibility: hidden; opacity: 0; transition: transform 400ms ease, opacity 400ms; box-shadow: 0 0 10px rgba(#333,0.3); z-index: 99}
+.ms-holder [data-tooltip]:before {content: attr(data-tooltip); background: #333; color: #fff; font-size: 12px; padding: 0 9px; border-radius: 3px; white-space: nowrap; text-decoration: none; line-height: 2.3; top: 4%;}
+.ms-holder [data-tooltip]:after {width: 0; height: 0; border: 5px solid transparent; content: ''; top: calc(50% - 6px)}
+.ms-holder [data-tooltip]:hover:after, .ms-holder [data-tooltip]:hover:before {visibility: visible; opacity: 0.85}
+html:not([dir=rtl]) .ms-holder [data-tooltip]:before {right: 100%; margin-right: 10px}
+html:not([dir=rtl]) .ms-holder [data-tooltip]:after {border-left-color: #333; border-right: none; right: 100%; margin-right: 5px}
+
+/* popup notifications */
+.notificationsPopUpHolder {
+	position: absolute;
+	right: 0;
+	top: 44px;
+	left: auto;
+	line-height: 32px;
+	width: 100%;
+	max-width: 450px;
+	z-index: 10;
+}
+.notificationsPopUpHolder ul {
+	border-left: 1px solid #E2E0E0;
+	border-right: 1px solid #E2E0E0;
+	border-bottom: 1px solid #E2E0E0;
+}
+.notificationsPopUpHolder ul:empty {
+	border: 0 none;
+}
+.notificationsPopUpHolder ul li {
+	background: #FCFCFC;
+	height: 0;
+}
+.notificationsPopUpHolder ul li:last-child {
+	border-bottom: 0 none;
+}
+.notificationsPopUpHolder ul li a {
+	width: 100%;
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.notificationsPopUpHolder ul li .ms-image {position: absolute}
+.notificationsPopUpHolder ul li .ms-user,
+.notificationsPopUpHolder ul li .ms-subject {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left: 50px;
+	padding-right: 47px;
+}
+.notificationsPopUpHolder ul li .ms-date {
+	padding-left: 50px;
+	float: left;
+}
+.notificationsPopUpHolder ul li .ms-user {
+	margin-top: 1px;
+}
+.notificationsBottom {
+	position: relative;
+	display: none;
+	height: 20px;
+	background: #FCFCFC;
+	border-left: 1px solid #E2E0E0;
+	border-right: 1px solid #E2E0E0;
+	border-bottom: 1px solid #E2E0E0;
+	cursor: pointer;
+}
+.audioNotifications {
+	position: absolute;
+	float: left;
+	height: 20px;
+	top: -8px;
+	left: 11px;
+}
+.closeNotifications {
+	display: block;
+	text-align: center;
+}
+.closeNotifications i {
+	vertical-align: top;
+}
+
+/* Read Message Popup style */
+.messagePopup table {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.messagePopup table tbody tr td {
+	border: 0 none;
+	padding: 6px 0;
+}
+.messagePopup table tbody tr td p {
+	padding: 0 !important;
+	margin: 0 15px 0 0 !important;
+}
+.messagePopup table tbody tr td p img {
+	margin-bottom: 2px !important;
+}
+.messagePopup table .copy_from_form {
+	clear: left;
+}
+.messagePopup table .copy_from_form a {
+	vertical-align: inherit;
+}
+.messagePopup .messageContent {
+	border-top: 1px solid #e2e0e0;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+.replyPopup .messageContent {
+	border-top: 0 none;
+	padding-top: 0;
+}
+.replyPopup .messageContent p:last-child {
+	padding: 0!important;
+	margin: 0!important;
+}
+.replyPopup.biggerHeight {
+	height: 480px !important;
+}
+.messagePopup .footer {
+	text-align: center !important;
+}
+.messagePopup .footer .messageOptions {
+	display: inline-block;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+.messagePopup .footer .messageOptions li {
+	display: inline-block;
+}
+.messagePopup .footer .messageOptions li a {
+	display: block;
+	line-height: 28px;
+	padding: 0 8px;
+	margin: 6px 4px;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 3px
+}
+.messagePopup .footer .messageOptions li a:hover {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+.messagePopup .footer .popup_left, .messagePopup .footer .popup_right {
+	display: inline-block;
+	padding: 8px 9px;
+}
+.messagePopup .footer .popup_left {
+	float: left;
+}
+.messagePopup .footer .popup_right {
+	float: right;
+	margin-right: -10px;
+	padding: 8px 8px 8px 10px;
+}
+.messagePopup h2 {
+	margin: 10px 0;
+}
+.replyPopup hr {
+	margin: 25px 0!important;
+}
+.replyPopup > p:last-child, .messageSendPopup p:last-child {
+	display: none;
+}
+table td span.onforum {
+	font-size: 16px;
+	line-height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+/* New Message counter - left sidebar menu */
+#leftColumn li a .newAlert {background-color: #CB4437; color: #fff !important; margin: 1px 0 0 auto; padding: 4px}
+#leftColumn .hoverMainNav li a:hover .newAlert {margin-right: -1px}
+
+/* News feed Youtube/Vimeo play icon */
+.post-content .embedPrevIcon { display: block; margin-top: 10px}
+.embedPrevIcon a {position: relative; display: inline-block}
+.embedPrevIcon a img {display: block}
+.embedPrevIcon a span {
+	position: absolute; width: 100%; height: 100%;
+	background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' %5B %3C!ENTITY ns_flows 'http://ns.adobe.com/Flows/1.0/'%3E%0A%5D%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/' x='0px' y='0px' width='35px' height='35px' viewBox='0 0 35 35' overflow='visible' enable-background='new 0 0 35 35' xml:space='preserve'%3E%3Cdefs%3E%3C/defs%3E%3Cpath fill='%23FFFFFF' d='M17,0C7.611,0,0,7.611,0,17c0,9.391,7.611,17,17,17c9.391,0,17-7.609,17-17C34,7.611,26.391,0,17,0z M14.725,25.439l-1.636-1.469l5.877-6.973l-5.877-6.968l1.636-1.468l7.342,8.436L14.725,25.439z'/%3E%3C/svg%3E%0A") no-repeat center center
+}/*('/images/icons/start.svg')*/
+
+/*------------------- Leaderboard -------------------*/
+.leaderboardUser span {
+	display: inline-block;
+	padding-top: 8px;
+	text-align: center;
+	width: 32px !important; height: 24px;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	margin-left: 7px;
+	color: #fff;
+	font-size: 14px
+}
+.leaderboardUser img {
+	padding-left: 1px;
+	margin-right: 5px !important;
+	border-left-width: 6px;
+	border-left-style: solid
+}
+.leaderboardUser.gold img {border-color: #e5b20e}
+.leaderboardUser.bronze img {border-color: #c36116}
+.leaderboardUser.silver img {border-color: #949494}
+.leaderboardUser img, .leaderboardUser.other img {border-color: #4dacb2}
+.leaderboardUser span {border-radius: 50%; margin: 3px;}
+.leaderboardUser img {border-radius: 50%; border-width: 3px; border-style: solid; padding: 0}
+
+/* Progress circle */
+.leaderboardCircleHolder {position: relative}
+.rightColumn .leaderboardCircleHolder, .rightColumn .leaderboardCircleHolder > div, .rightColumn .leaderboardCircleInfo span {width: 116px !important; height: 78px}
+.playerStatus .leaderboardCircleHolder, .playerStatus .leaderboardCircleHolder > div, .playerStatus .leaderboardCircleInfo span {width: 156px !important; height: 104px}
+.leaderboardCircleHolder > div, .leaderboardCircleHolder > span {margin: 0; position: absolute; top: -3px; left: 0}
+.teamStatus .leaderboardCircleHolder > div, .teamStatus .leaderboardCircleHolder > span {top: 2px}
+.leaderboardCircleHolder > div {left: 0}
+
+.leaderboardCircleInfo {text-align: center; padding-top: 17px}
+.leaderboardCircleInfo > img {margin: 0 !important}
+.leaderboardCircleInfo > span {font-size: 16px; display: inline-block}
+
+/* Player status detail page */
+.playerStatusDetail table tr.expandTableRow td {border-bottom: 0}
+.playerStatusDetail table tr.expandTableRow td a {display: block}
+
+/* Top status area */
+.playerStatus {white-space: nowrap; padding-right: 156px}
+.playerStatus .leaderboardUser {text-align: right; position: relative}
+.playerStatus .leaderboardUser span {padding-top: 11px; height: 31px; width: 42px !important; right: 0}
+.playerStatus .leaderboardUser img {margin-right: 0 !important}
+.playerStatus > div:not(.remainingPts) {margin-right:-4px; display: inline-block}
+.playerStatus .leaderboardCircleInfo {top: 17px}
+.playerStatus .leaderboardCircleInfo img {margin-left: 3px}
+.playerStatus .leaderboardCircleInfo span {line-height: 18px}
+.playerStatus .leaderboardUser, .playerStatus .badges {margin: 33px -4px 0 0; display: inline-block; vertical-align: top; width: 50% !important}
+.playerStatus .badges img {margin: -2px 0 -3px}
+/*#centreColumn .remainingPts {padding: 8px 0; text-align: center}*/
+.playerStatus span {font-size: 17px}
+#leaderboardCircleLevels .highcharts-tooltip text {padding: 0 2px 4px}
+
+/* rightColumn game info */
+.rightColumn h2.playerLevel span {padding-right: 8px; display: block}
+.rightColumn .playerStatusSml.general li {border: 0!important;}
+.rightColumn .playerStatusSml li.stats, #centreColumn .rightColumn .playerStatusSml li.stats {max-width: 200px; margin: auto; white-space: nowrap; padding: 9px 116px 2px 0; border-bottom: 0; overflow: hidden}
+.rightColumn .playerStatusSml li.stats > div {white-space: nowrap !important}
+.rightColumn .playerStatusSml li > div:not(.remainingPts) {margin-right:-4px}
+.rightColumn .playerStatusSml .leaderboardUser, .rightColumn .playerStatusSml .badges {width: 50% !important}
+.rightColumn .playerStatusSml .badges {text-align: right}
+.rightColumn .playerStatusSml .badges span, .playerStatus .badges span {display: inline-block; text-align: center}
+.rightColumn .playerStatusSml .badges i {margin: -8px 0 0 6px}
+.rightColumn .playerStatusSml .remainingPts {width: 100% !important; text-align: center; margin-top: -4px !important}
+.rightColumn .playerStatusSml li.level {width: 100%; text-align: center; font-size: 16px;}
+.rightColumn .playerStatusSml .badges span, .rightColumn .playerStatusSml .remainingPts span, .rightColumn .playerStatusSml li.level span {width: auto !important}
+.rightColumn .playerStatusSml li.level span {color: #222}
+.rightColumn .leaderboardTitle {background: none !important; font-size: 16px; text-align: center; display: block !important}
+.rightColumn .teamStatus li.stats {padding-top: 0 !important; padding-bottom: 0 !important}
+.rightColumn .teamStatus li.stats .leaderboardCircleHolder {height: 66px}
+.rightColumn .teamStatus li.stats .leaderboardCircleInfo {padding-top: 10px}
+.rightColumn .teamStatus li.stats .badges {padding-top: 4px}
+
+.rightColumn .leaderboardSml li > div {display: inline-block; vertical-align: middle}
+.rightColumn .leaderboardSml li > div:nth-child(2) {width: 108px}
+.rightColumn .leaderboardSml li > div:nth-child(3) {width: 57px}
+.rightColumn .leaderboardSml li > div.popup-player-history {border: 1px solid transparent}
+.rightColumn .leaderboardSml li > div.popup-player-history:hover {border-color: #d8e8cd}
+.rightColumn .leaderboardSml li > div.popup-team-history {border: 1px solid transparent; padding: 3px 0 0}
+.rightColumn .leaderboardSml li > div.popup-team-history:hover {border-color: #d8e8cd}
+.rightColumn .leaderboardSml li > div.popup-team-history > span {font-size: 11px}
+.rightColumn .leaderboardSml li > div > span {display: inline-block; text-align: center}
+.rightColumn .leaderboardSml li > div:last-child > span:nth-child(1) {width: 33px}
+.rightColumn .leaderboardSml li > div > span:nth-child(2) {width: 26px}
+.rightColumn .leaderboardTitle {border-top: 1px solid #f2f0f0 !important; padding-top: 12px; margin: 12px 14px 5px}
+.rightColumn .leaderboardSml.no-players li {text-align: center}
+
+span.pointsDetail {margin-left: -3px}
+
+/* tweak the icon vertical align near the text */
+#games th i {margin-top:-3px}
+
+/* Half width content and student progress/mastery */
+.rightColumnHalfWidth {width: 49.9%; display: inline-block; vertical-align: top}
+.rightColumnHalfWidth + .rightColumnHalfWidth {margin-left: -4px}
+.rightColumn .rightColumnHalfWidth h2 {text-align: center}
+
+.rightColumnProgress, .rightColumnMastery {height: 79px; margin: 10px 0; display: block; text-align: center}
+.headingLinkWrap + .rightColumnProgress, .headingLinkWrap + .rightColumnMastery {margin-top: 0}
+a.rightColumnProgress:hover, a.rightColumnMastery:hover {opacity: 0.9}
+.rightColumnProgress .highcharts-container, .rightColumnMastery .highcharts-container {margin: auto}
+.rightColumnProgress {position: relative}
+.rightColumnProgress * {color: #222 !important}
+.rightColumnProgress .progressCircleInfo {position: absolute; left: 0; top: 27px; width: 100%; color: #222}
+.rightColumnProgress .progressCircleInfo img {margin-top: -4px; vertical-align: middle}
+
+/*------------------- Newsletter Styles -------------------*/
+table.newsletter table {margin: 0 auto}
+table.newsletter td {border: 0; height: auto}
+table.newsletter td:first-child {border-right-width: 0}
+table.newsletter tr:last-child td {border-bottom-width: 0}
+table.newsletter td, .messagePopup table.newsletter tbody tr td {padding: 0}
+table.newsletter td.headerImg img {max-width:100%; height:auto}
+table.newsletter td.contentBlock {width:100%}
+table.newsletter td.contentBlock a {text-decoration: underline}
+table.newsletter td i.movieStrip {display: none}
+table.newsletter h2, table.newsletter div {font-family: 'RobotoLightNew', Helvetica, Arial, sans-serif !important}
+table.newsletter strong {font-family: 'RobotoRegularNew', Helvetica, Arial, sans-serif !important}
+table.newsletter img.mainImg {min-width:100%; height:auto}
+table.newsletter td li, table.newsletter td p, table.newsletter td span {color: #717171}
+@media screen and (min-width: 768px) {
+	table.newsletter img {max-width: none}
+}
+@media screen and (max-width: 767px) {
+	table.newsletter .contentBlock img {width: auto; max-width:100%; height:auto}
+}
+@media screen and (max-width: 640px) {
+	table.newsletter table {width:100%}
+	table.newsletter, table.newsletter table {table-layout: auto !important}
+	table.newsletter .logoCell, table.newsletter .socialLinks {display: block; width: auto; text-align: center}
+	table.newsletter .logoCell {padding: 20px 10px 16px !important}
+	table.newsletter .socialLinks {padding-bottom: 16px}
+}
+
+/*------------------- Getting Started Help Center -------------------*/
+.getting-started-help-center p {margin: 30px 0;}
+.getting-started-help-center a {width: 24%; display: inline-block; text-align: center; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 1% 10px;}
+.getting-started-help-center a img {max-width: 100%; -ms-interpolation-mode: bicubic; width: 220px;}
+.getting-started-help-center h3 {margin-top: 10px; text-align: center; font-size: 24px;}
+
+.welcome-page .embed-max-size, #facebox .embed-max-size, .videos .embed-max-size {margin: 20px auto 0; max-width: 640px; max-height: 480px;}
+#facebox .embed-max-size {margin-bottom: 20px;}
+.welcome-page .embed-container, #facebox .embed-container, .videos .embed-container {position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;}
+.welcome-page .embed-container iframe, .welcome-page .embed-container object, .welcome-page .embed-container embed,
+#facebox .embed-container iframe, #facebox .embed-container object, #facebox .embed-container embed,
+.videos .embed-container iframe, .videos .embed-container object, .videos .embed-container embed {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+/*------------------- People filter -------------------*/
+.compactFilter {padding: 2px 8px 1px}
+.compactFilter i {display: none}
+.compactFilter input {margin-right: 2px; padding: 1px 5px; font-size: 13px}
+
+.compactFilterContainer input {font-size: 14px; line-height: 22px; padding: 0 5px; margin: 0;}
+
+.compactFilterContainer.new_filter {display: none; clear: both; overflow: hidden; margin-bottom: 10px; padding: 3px}
+.compactFilterContainer.new_filter input {float: left; font-size: 14px; line-height: 22px; padding: 0 5px; margin: 0; height: 24px;}
+.compactFilterContainer.new_filter input {-webkit-appearance: none; -webkit-border-radius:0; border-radius:0;} /* fix for the forced border radius in ipad */
+
+.new_filter a.hide-filter-field {float: left; display:inline-block; margin-left: 10px; border: 1px solid #C8C8C8; width: 22px; height: 22px; text-align: center; padding: 0; background-color: #fff}
+.new_filter a.hide-filter-field i {margin: 0 0 2px 3px}
+
+.compactFilterContainer.library {float: left; margin-right: 15px;}
+.compactFilterContainer.library.nom {margin-right: 0;}
+
+.filter-scopes-wrapper { overflow: hidden; clear: both; padding: 3px}
+.filter-scopes-wrapper p { margin-top: 0; float: left; }
+
+.new_filter .filter-select,
+.new_filter .filter-checkbox,
+.compactFilterContainer.new_filter .filter-select { float: left; margin-left: 10px; }
+
+.new_filter p .filter-select { float: none; }
+
+.new_filter .filter-select select,
+.compactFilterContainer.new_filter .filter-select select {  width: 150px!important; height: 24px; padding: 1px 6px 1px 4px; font-size: 14px; }
+
+/*------------------- Custom Filters -------------------*/
+.filters-wrapper {display: none; clear: both; overflow: hidden; margin-top: 10px; padding: 3px 0}
+.filters-wrapper > div {clear: both; overflow: hidden}
+.filters-wrapper a, .filters-wrapper .filters-and-connect {display:inline-block; height: 22px; border: 1px solid #C8C8C8; text-align: center; padding: 0; background-color: #fff}
+.filters-wrapper input , .filters-wrapper select {border: 1px solid #C8C8C8; border-color: #C8C8C8 !important}
+.filters-wrapper select {height: 24px; padding: 1px 6px 1px 4px; font-size: 14px}
+
+.filters-wrapper .filters-initial-area {width: 100%; display: block}
+.filters-wrapper .filters-rules-area {width: 100%; display: none}
+
+.filters-wrapper .filters-initial-area > span {float: left; display: inline-block; margin-right: 15px}
+
+.filters-wrapper .predefined-filters {max-width: 60%}
+.filters-wrapper .predefined-filters select {max-width: 100%}
+
+.filters-wrapper .filters-rules-wrapper {display: inline-block; float: left; width: 90%}
+.filters-wrapper .rule-block select, .filters-wrapper .rule-block input {margin: 0!important; display: inline-block; float: left}
+.filters-wrapper .rule-block select.rule-attribute {width: 98px !important}
+.filters-wrapper .rule-block select.rule-condition {width: 85px !important}
+.filters-wrapper .rule-block select[class*="rule-value-select"] {border-right: 1px solid;}
+.filters-wrapper .rule-block {margin-right: 5px; overflow: hidden; clear: right}
+.filters-wrapper .rule-block select {border-right: 0}
+.filters-wrapper .rule-block input {width: 135px !important}
+.filters-wrapper .rule-block span {display: none; float: left; border-left: 0}
+.filters-wrapper .rule-block span.show {display: block}
+.filters-wrapper .rule-block span a {border-left: 0}
+.filters-wrapper .rule-block span a i {margin-left: 3px; margin-top: -2px}
+
+.filters-wrapper .filters-buttons {float: right; border-right: 1px solid #c8c8c8}
+.filters-wrapper .filters-buttons > span {float: left}
+
+.filters-wrapper span.filters-delete-rules {display: none}
+
+.filters-wrapper .filters-hide-all a,
+.filters-wrapper .filters-hide-rules a,
+.filters-wrapper .filters-save-rules a,
+.filters-wrapper .filters-delete-rules a {width: 22px}
+
+.filters-wrapper .filters-and a {width: 22px}
+.filters-wrapper .filters-add-rules a {width: 22px}
+.filters-wrapper .filters-hide-all a i {margin: 0 0 2px 3px}
+.filters-wrapper .filters-hide-rules a i {margin: 0 2px 2px 1px}
+.filters-wrapper .filters-save-rules a {width: 28px; }
+.filters-wrapper .filters-save-rules a i {margin: 0 2px 2px 3px}
+.filters-wrapper .filters-delete-rules a {width: 28px;}
+.filters-wrapper .filters-delete-rules a i {margin: 0 2px 2px 3px}
+
+.filters-wrapper .filters-hide-all a,
+.filters-wrapper .filters-hide-rules a,
+.filters-wrapper .filters-save-rules a,
+.filters-wrapper .filters-delete-rules a {border-right: 0}
+
+.filters-wrapper .filters-rules-wrapper > span {display: inline-block; float: left; margin-bottom: 10px}
+.filters-wrapper .filters-rules-wrapper .filters-and-connect {width: 36px; margin-right: 5px}
+
+.filters-wrapper .rule-block select.rule-attribute {width: 120px !important}
+.filter-loading {text-align: center}
+
+.filter-add-filter, .filter-clear-filter {display: inline-block; float: right;}
+
+/*------------------- People Picker -------------------*/
+#facebox #PeoplePicker {min-width: 1000px; height: auto; max-height: none}
+
+#facebox #PeoplePicker > p > span {display: inline-block}
+#facebox #PeoplePicker p input, #facebox #PeoplePicker p select, #facebox #PeoplePicker p label {width: auto}
+#facebox #PeoplePicker p input, #facebox #PeoplePicker p select {margin-right: 5px}
+#facebox #PeoplePicker p select {max-width: 140px; padding-top: 3px}
+#facebox #PeoplePicker p input {max-width: 200px}
+#facebox #PeoplePicker p label {margin-right: 5px}
+
+#facebox #PeoplePicker .half {position: relative; width: 50%; min-height: 430px; /* overflow: auto; */}
+#facebox #PeoplePicker .half.left {float: left}
+#facebox #PeoplePicker .half.right {float: right}
+#facebox #PeoplePicker .half.right p.search-navigation {padding: 5px}
+#facebox #PeoplePicker .separate_columns {border-right: 1px solid #e2e0e0; box-sizing:border-box; -moz-box-sizing:border-box}
+
+#facebox #PeoplePicker table {width: 100%; margin: 0}
+#facebox #PeoplePicker table td {border-width: 0 0 1px 0}
+#facebox #PeoplePicker table th.title_column {width: 409px}
+#facebox #PeoplePicker .table-header table {width: 100%; border-bottom: 1px solid #e2e0e0}
+
+#facebox #PeoplePicker .search-navigation {margin-bottom: 0}
+#facebox #PeoplePicker .pp_no_people p {margin-bottom: 0}
+
+#facebox #PeoplePicker.new_picker {min-width: 980px; height: auto; max-height: none}
+#facebox #PeoplePicker.new_picker p {margin-top: 0}
+#facebox #PeoplePicker.new_picker p.search-navigation {margin-top: 5px}
+#facebox #PeoplePicker.new_picker .tabnav {display: none}
+#facebox #PeoplePicker.new_picker .tab-content {width: 50%; float: left}
+#facebox #PeoplePicker.new_picker .tab-content .half {width: 100%; float: none}
+#facebox #PeoplePicker.new_picker .tab-content .separate_columns {border-right: 0 none}
+
+@media screen and (max-width: 996px) {
+	#facebox #PeoplePicker.new_picker {min-width: 740px}
+	#facebox #PeoplePicker p select {margin: 0}
+	#facebox #PeoplePicker.new_picker p select {margin-bottom: 10px; display: inline-block}
+}
+@media screen and (min-width: 769px) {
+	#facebox #PeoplePicker.new_picker .tab-content.first {border-right: 1px solid #e2e0e0; box-sizing:border-box; -moz-box-sizing:border-box}
+}
+@media screen and (max-width: 768px) {
+	#facebox #PeoplePicker.new_picker {min-width: 0px}
+	#facebox #PeoplePicker.new_picker .tabnav {display: block}
+	#facebox #PeoplePicker.new_picker .half {min-height: 0}
+	#facebox #PeoplePicker.new_picker:not(.transfer_seats) table th:last-child {padding: 0}
+	#facebox #PeoplePicker.new_picker table th.title_column {width: auto}
+	#facebox #PeoplePicker.new_picker .tab-content {width: 100%; float: left}
+	#facebox #PeoplePicker.new_picker .tab-content.first {border-right: 0 none}
+	#facebox #PeoplePicker.new_picker .tab-content.second {display: none}
+
+	#facebox #PeoplePicker.new_picker p {display: block; clear: both}
+	#facebox #PeoplePicker.new_picker p span {display: block; float: left; width: 50%}
+	#facebox #PeoplePicker.new_picker p input,
+	#facebox #PeoplePicker.new_picker p select {max-width: 95%}
+	#facebox #PeoplePicker.new_picker p.search-navigation {margin-top: 10px}
+	#facebox #PeoplePicker.new_picker p.search-navigation a {margin: 0 5px}
+}
+
+/*------------------- Transfer seats -------------------*/
+#facebox #PeoplePicker.transfer_seats .tabs-extra-class p {margin-bottom: 0}
+#facebox #PeoplePicker.transfer_seats .tabs-extra-class p input {margin-left: 0}
+#facebox #PeoplePicker.transfer_seats .transfer_quantity select {width: 50px !important; margin-right: 0}
+@media screen and (min-width: 768px) {
+	#facebox #PeoplePicker.transfer_seats .tabs-extra-class span {display: inline-block; margin-bottom: 10px}
+}
+@media screen and (min-width: 980px) {
+	#facebox #PeoplePicker.transfer_seats {min-width: 796px}
+}
+
+/*------------------- How to Videos & Guides -------------------*/
+.videos, .guides {margin: 0 -7px -15px}
+.guides .fullColumn .guide-holder {margin:9px 4% 0 0; width:45%; display:inline-block; vertical-align:middle}
+.guides .fullColumn .guide-holder img {max-width: 100%; box-shadow:none}
+.guides .fullColumn .sideText span {display: inline-block; margin-top: 5px}
+#centreColumn .guides .fullColumn .sideText h2 {display: block}
+
+/*------------------- Dashboard -------------------*/
+#centreColumn.dashboard .leftColumn > form {margin-top: -3px}
+#centreColumn.dashboard .leftColumn > table:not(.mt10) {margin-top: 1px}
+#centreColumn.dashboard .optionsDashboardEnrolled {position: relative}
+
+/*---------------- Lesson/Module Intro ----------------*/
+.section-intro .contentBlock {width: 100%; margin-bottom: 20px; position: relative}
+.section-intro .contentBlock .sideImg img {width: 171px; height: auto; border: 1px solid #c7c7c7; vertical-align: bottom}
+.section-intro .contentBlock .sideText p.number {width: 40px; line-height: 40px; border-radius: 50%; color: #fff; text-align: center}
+.section-intro .contentBlock .sideText p span.highlight {padding: 0 5px; color: #fff}
+
+/*---------------- Assignments tweaks ----------------*/
+.custom-arrange-p-one-line p {display: inline-block; margin: 0 0 10px 0!important;}
+
+/*---------------- SIS duration label tweak ----------------*/
+.sis-duration-label { display: inline-block; width: 175px }
+a.dashboard_sis i { width: 16px }
+.sis-school-filter select { width: 150px!important; height: 24px; padding: 1px 6px 1px 4px; font-size: 14px }
+.sis-school-filter { float: right }
+
+/*---------------- Mastery rating lozenge ----------------*/
+.mastery_lozenge {padding: 0 5px !important}
+.mastery_lozenge div {width: 100%; min-width: 40px; height: 22px; border-radius: 5px}
+
+/*---------------- Job competency table ----------------*/
+.job_competency_table td {font-size: 14px}
+.job_competency_table .mastery_lozenge div {height: 19px}
+
+/*---------------- Section add layout ----------------*/
+.section-add-layout dl {overflow: hidden; clear: both; margin-bottom: 10px}
+.facebox-content.section-add-layout h2 {margin-top: 25px}
+.facebox-content.section-add-layout h2:first-child {margin-top: 0}
+
+/*---------------- Right column widget editing ----------------*/
+@media screen and (max-width: 1024px) {
+	.widget_panel_edit {display: none !important}
+}
+.widget_edit_cancel, .widget_edit_reset {margin: 0}
+.widget_edit_save {margin: -1px 0 0 7px !important}
+.widget_buttons {background: #fff; border-radius: 3px 3px 0 0; padding: 8px 15px; border-bottom: 0}
+.widget_edit {overflow: hidden}
+.widget_edit .body_overlay {background-color: rgba(26,81,124,0.5); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 11}
+.widget_edit .rightColumn, .centre_widget_edit .centre_widgets {overflow: visible}
+.widget_edit .rightColumn .widget:not(:last-child) {margin-bottom: 15px}
+.widget_edit .lift_up {z-index: 13 !important}
+.widget_edit .scrollable {overflow-y: auto; box-sizing: border-box; -webkit-overflow-scrolling: touch; padding: 15px}
+.widget_edit .widgets .widget_buttons {display: block}
+.widget_edit .widgets .scrollable {border-radius: 0 0 3px 3px; min-height: 140px}
+.widget_edit .widget {position: relative}
+.widget_edit .widget:before {content: ''; position: absolute; width: 100%; height: 100%; z-index: 3}
+.widget_edit .available_widgets {position: fixed; top: 59px; right: 311px; z-index: 13; border-radius: 3px}
+.widget_edit .available_widgets > h2 {background: #fff; padding-bottom: 10px; border-width: 0 0 1px; margin: 0}
+.widget_edit .available_widgets .message {display: none; color: #ce0011; font-size: 14px; margin-bottom: 0}
+.widget_edit .available_widgets .message strong {font-size: 15px}
+.widget_edit .available_widgets .message[style*='block'] + * > .items {background: rgba(0,0,0,.1); border-radius: 3px; min-height: 150px; width: 249px}
+.right_widget_edit .available_widgets .message, .right_widget_edit .rightColumn .widget {width: 247px}
+.right_widget_edit .available_widgets .message[style*='block'] * > .items {width: 249px}
+.centre_widget_edit .available_widgets .message, .centre_widget_edit .available_widgets .widget {width: 255px}
+.centre_widget_edit .available_widgets .message[style*='block'] * > .items {width: 257px}
+.right_widget_edit .right_widgets {z-index: 12; width: 281px; flex: 0 0 281px}
+.centre_widget_edit .centre_widgets {position: fixed; z-index: 12; top: 59px; left: 95px; right: 319px; width: auto}
+.centre_widget_edit .rightColumn {width: 287px; flex: 0 0 289px}
+.centre_widget_edit .available_widgets {z-index: 12; right: 15px}
+.centre_widget_edit .widgets .widget, .centre_widget_edit .available_widgets .widget .block {border-radius: 4px; overflow: hidden}
+.centre_widget_edit .available_widgets .widget h2 {margin-bottom: 0; font-size: 18px !important}
+
+
+/* quick edit widget */
+.no-touch .widget .quick_edit_icon, .no-touch .centre_widgets .block:not(.widget) .quick_edit_icon {opacity: 1}
+.widget .headingLinkWrap .quick_edit_icon,
+.centre_widgets .headingLinkWrap .quick_edit_icon {background-color: transparent; position: relative; top: auto; right: auto; z-index: 5}
+.widget .headingLinkWrap .quick_edit_icon:first-child {position: absolute; right: 10px; background: rgba(255,255,255,.8); padding-left: 10px}
+.widget .quick_edit_icon:hover i, .centre_widgets .block:not(.widget) .quick_edit_icon:hover i {opacity: .7}
+.widget .quick_edit_box {padding-bottom: 5px}
+.widget .quick_edit_box .arrow {right: -4px}
+.widget .quick_edit_box.open_upwards {top: auto; bottom: 30px}
+.widget .quick_edit_box.open_upwards .arrow {top: auto; bottom: -13px; transform: scaleY(-1);}
+.widget .quick_edit_box a {display: block; font-size: 15px; position: static}
+.widget:only-child.template .quick_edit_box a:nth-last-child(2) {padding-bottom: 0; border-bottom-width: 0}
+.widget .quick_edit_box a:not(:last-of-type) {padding-bottom: 5px; border-bottom: 1px solid #e8e8e8}
+.widget .quick_edit_box a:not(:first-of-type) {padding-top: 5px}
+.widget .quick_edit_box > label {margin-top: 8px !important}
+body:not(.widget_edit) .quick_edit_box, .widget .quick_edit_box {left : auto}
+.centre_widgets .quick_edit_box .group_title {font-size: 15px}
+.centre_widgets .quick_edit_box .group_span {padding-bottom: 5px}
+.centre_widgets .quick_edit_box .group_span label:not(:last-child) {margin-right: 5px !important}
+.right_widget_edit .right_widgets .items .widget .quick_edit_icon {margin-top: 11px}
+body:not(.widget_edit) .rightColumn .widgets .headingLinkWrap .quick_edit_icon,
+body:not(.widget_edit) .centre_widgets .quick_edit_icon:not(.chart),
+body:not(.widget_edit) .centre_widgets a[onclick*="delete_widget"],
+.widget_edit .widgets .quick_edit_box .time_span {display: none !important}/*local*/
+.available_widgets .headingLinkWrap .quick_edit_icon,
+.right_widget_edit .right_widgets .items .widget:only-child.template a[onclick*="delete_widget"],
+.right_widget_edit .right_widgets .items .widget:only-child:not(.template) .quick_edit_icon,
+.right_widget_edit .right_widgets .items .widget.ui-sortable-helper:not(.template) .quick_edit_icon,
+.right_widget_edit .right_widgets .headingLinkWrap > a:not(.quick_edit_icon),
+.right_widget_edit .right_widgets .headingLinkWrap > .calendar-arrows,
+.centre_widget_edit .centre_widgets .widget:only-child .quick_edit_icon,
+.centre_widget_edit .centre_widgets .widget.ui-sortable-helper .quick_edit_icon,
+.centre_widget_edit .centre_widgets .headingLinkWrap > a:not(.quick_edit_icon) {display: none !important}
+.widget_edit .widget .quick_edit_icon:hover i:after,
+.centre_widgets .quick_edit_icon:hover i:after {left: -20px}
+
+/* all widget graphs */
+.dashboard_info > *[data-highcharts-chart].custom_report_chart {margin-bottom: -5px !important}
+.dashboard_info > *[data-highcharts-chart] {margin: 0 -5px 0 -15px}
+.dashboard_info > *[data-highcharts-chart].pie {margin: 0 -10px 0 -5px}
+
+/* right column adhoc charts */
+.rightColumn .adhoc_report > div[data-highcharts-chart] {padding: 4px 11px; direction: ltr}
+
+/* bar chart widget */
+.bar_chart_widget {height: auto !important}
+.bar_chart {background: #dadada; height: 20px; margin-bottom: 10px}
+.bar_chart div {height: 100%; background: #8fd285}
+.bar_chart_info {color: #777; font-size: 11px; margin-bottom: 6px}
+
+/* centre column widgets */
+.dashboard_widgets > * {background-color: #fff}
+.dashboard_widgets .dashboard_info i {margin-top: -3px}
+.dashboard_widgets > * > a.grouped_link {display: flex; flex-direction: column; height: 100%}
+.dashboard_widgets .headingLinkWrap {position: relative; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; padding-right: 11px}
+#centreColumn .dashboard_widgets .headingLinkWrap h2 {margin-top: 0; padding: 10px 11px; color: #fff}
+.dashboard_widgets .headingLinkWrap .more i:after {left: -20px}
+.dashboard_widgets .dashboard_info {padding: 4px 11px; font-size: 15px; max-height: 158px; height: 158px; width: 100%; overflow-y: auto !important; overflow-x: hidden; box-sizing: border-box; direction: ltr}
+.dashboard_widgets .dashboard_info.loading,
+.dashboard_widgets .adhoc_report, .dashboard_widgets .html_widget {max-height: calc(158px + 39px); height: calc(158px + 39px)}
+.dashboard_widgets .dashboard_info ol {list-style: decimal; padding: 0 1px 0 17px; font-size: 13px; margin-top: -1px}
+.dashboard_widgets .dashboard_info ol li {padding: 7px 0 6px}
+.dashboard_widgets .dashboard_info ol li a {white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: inline-block; font-size: 15px; margin-top: -2px; vertical-align: top; width: 100%}
+.dashboard_widgets .dashboard_info ol i:after {left: -20px}
+.dashboard_widgets .dashboard_info ol i {margin-left: 1px}
+#centreColumn .dashboard_widgets .dashboard_info.info_list {padding: 0 11px}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li {padding: 0; margin-top: 0; border-bottom: 1px solid #f2f0f0; min-height: 52px; display: flex; align-items: center; line-height: 1.2}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li > a {display: flex; align-items: center}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li > a img {margin-right: 10px}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li:last-child {border-bottom-width: 0}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li i {margin-top: 0px; margin-right: 10px}
+#centreColumn .dashboard_widgets .dashboard_info.info_list ul li > *:nth-child(2) {flex: 1}
+.dashboard_widgets .adhoc_report > p, .dashboard_widgets .html_widget .materialStyle > p.demo_text {margin: 5px 0}
+.dashboard_widgets .dashboard_info > #ecommerce_chart {margin: 0 -15px}
+.dashboard_widgets .dashboard_info ul:not(.leaderboardSml) li:before {display: none}
+.dashboard_widgets .dashboard_info ul.leaderboardSml {margin: -4px 0 0}
+.dashboard_widgets .dashboard_info ul.leaderboardSml li {display: flex; justify-content: space-between; padding-top: 7px !important; padding-bottom: 6px !important; height: 39px}
+.dashboard_widgets .dashboard_info ul.leaderboardSml li > div:nth-child(2) {flex: 1}
+.dashboard_widgets .dashboard_info ul.leaderboardSml li > div img {margin-right: 10px !important}
+.dashboard_widgets .dashboard_info ul.leaderboardSml li .popup-player-history {cursor: pointer}
+.dashboard_widgets .dashboard_info .leaderboardCircleInfo > img {margin: 0 !important}
+.dashboard_widgets .dashboard_info .ellipsisText {margin-top: 22px}
+.dashboard_widgets .calendar-arrows {display: flex}
+.dashboard_widgets .calendar-arrows #next_small_calendar_link {display: inline-block; margin}
+.dashboard_widgets .calendar-arrows a i:after {left: -40px}
+.dashboard_widgets .calendar-arrows a:hover {opacity: .5}
+.dashboard_widgets .dashboard_calendar {height: 100%; display: flex; align-items: center; padding: 0 20px}
+.dashboard_widgets .dashboard_calendar #small_calendar_container {width: 100%}
+.dashboard_widgets .dashboard_calendar .calendar_small {border-width: 0}
+.dashboard_widgets .dashboard_calendar .calendar_small th {background-color: transparent; border-top-width: 0}
+.dashboard_widgets .dashboard_calendar .calendar_small td {white-space: nowrap}
+.dashboard_widgets .comments .comment {border-color: #f2f0f0; display: flex; align-items: center}
+.dashboard_widgets .comments .comment:last-child {border-width: 0}
+.dashboard_widgets .comments .comment > img {width: 38px; height: 38px; margin: 0 10px 0 0}
+.dashboard_widgets .comments .comment .wrapPost {padding: 0}
+.dashboard_widgets .comments .comment .wrapPost,
+.dashboard_widgets .comments .comment .wrapPost a.commentTitle {font-size: 14px}
+.dashboard_widgets .comments .comment .wrapPost .post-scope {display: flex}
+.dashboard_widgets .comments .comment .wrapPost .post-scope i ~ a {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1}
+.dashboard_widgets .dashboard_upcoming_events {padding-top: 8px}
+.dashboard_widgets .dashboard_upcoming_events p {margin: 0; font-size: 14px}
+.dashboard_widgets .dashboard_upcoming_events li {line-height: 29px !important; margin-top: 0 !important}
+.dashboard_widgets .center_info {display: flex; flex: 1; justify-content: center; align-items: center; text-align: center; min-height: 158px}
+.dashboard_widgets .center_info .plan_name {font-size: 24px}
+.dashboard_widgets .center_info > div[id] {width: 100%}
+.dashboard_widgets .rightColumnProgress, .dashboard_widgets .rightColumnMastery {margin-bottom: 0 !important}
+.dashboard_widgets .footer {display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; border-top: 1px solid #e2e0e0; min-height: 28px; margin-top: 0; padding: 5px 11px}
+.dashboard_widgets .footer .red {background-color: #d60d05; color: #fff; border-radius: 20px; padding: 5px 10px; font-size: 13px}
+.dashboard_widgets .footer a:hover {opacity: 1}
+.dashboard_widgets a.footer {cursor: pointer}
+.panel_last_update span {color: #767676; display: inline-block; margin: 10px 10px 0 0; float: right; font-size: 12px}
+.panel_last_update .optionsRibbon {display: inline-block; width: auto; float: right; margin-right: -9px}
+
+/* Kaltura embed in widget and in comment threads */
+.html_widget .kWidgetIframeContainer, .grading-thread-comment-list .kWidgetIframeContainer {height: auto!important}
+
+/*----------------*/
+@media screen and (max-width: 479px) {
+	.getting-started-help-center a {display:block; width:100% !important;}
+
+	.section-intro .contentBlock .sideImg, .section-intro .contentBlock .sideText {display: block;}
+	.section-intro .contentBlock .sideText {margin: -130px 0 0 0; padding: 0;}
+	.section-intro .contentBlock .sideText p.number {margin: 40px 0 60px 210px;}
+}
+@media screen and (min-width: 480px) {
+	#centreColumn .dashboard_blocks > div {padding-bottom: 0;}
+
+	.section-intro .contentBlock .sideText {position: relative;}
+	.section-intro .contentBlock .sideText p {vertical-align: middle; display: table-cell; margin: 0;}
+	.section-intro .contentBlock .sideText p.number {position: absolute; top: 50%; margin-top: -20px;}
+	.section-intro .contentBlock .sideText p:not(.number) {padding-left: 65px;}
+}
+@media screen and (max-width: 559px) {
+	.guides .fullColumn .guide-holder {width: 100%}
+}
+@media screen and (max-width: 680px) {
+	/* Help List*/
+	#centreColumn ul.helpList li, #centreColumn ul.helpList li:not(:nth-child(3n+1)),
+	#facebox ul.helpList li, #facebox ul.helpList li:not(:nth-child(3n+1)) {
+		width: 49%;
+		margin: 0;
+	}
+	#facebox ul.helpList li {position: relative;}
+	#centreColumn ul.helpList li:nth-child(2n+2), #facebox ul.helpList li:nth-child(2n+2) {
+		margin-left: 1px;
+	}
+	#centreColumn ul.helpList li i,	#facebox ul.helpList li i {
+		position: absolute;
+		left: 0;
+		margin: 0;
+	}
+	#centreColumn ul.helpList li a,	#facebox ul.helpList li a {
+		float: left;
+		display: inline-block;
+		margin-left: 22px;
+	}
+	.getting-started-help-center a {width: 49%;}
+}
+@media screen and (max-width: 768px) {
+	.columnBlock > div {width: 100% !important; display: block; padding-bottom: 10px}
+	.columnBlock > div.hasButton {padding-bottom: 10px}
+	.columnBlock > div div.toggleAssignment {display: block}
+	.columnBlock > div {border-width: 0 0 1px}
+	.columnBlock + hr {display:none}
+	#centreColumn .columnBlock h2 {margin: 10px 0 5px}
+	#centreColumn .columnBlock p  {margin: 3px 0}
+	#centreColumn .columnBlock ul {margin: 0}
+	#centreColumn .columnBlock .optionsRibbon {position: static; padding-bottom: 7px}
+	#centreColumn .columnBlock .optionsRibbon ul, #centreColumn .columnBlock > div:first-child .optionsRibbon ul {margin: 8px 0 0}
+	#centreColumn .columnBlock table {padding: 0}
+	.flexpaper_viewer_wrap.flexpaper_viewer_container, .flowpaper_viewer_wrap.flowpaper_viewer_container {width: 90% !important;}
+}
+@media screen and (min-width: 769px) {
+	table.moveProfileImg span.newProfileImg, table .showBelow768, table.moveLeaderboardProfileImg span.newProfileImg {display: none;}
+
+	#centreColumn .videos .twoThirds .sideText h2, #centreColumn .guides .twoThirds .sideText h2 {font-size: 25px}
+
+	.guides .twoThirds .sideText span {font-size: 21px;}
+
+	.columnBlock textarea#comment {height: 77px;}
+
+	.playerStatusDetail table {width: 49%}
+	.playerStatusDetail table:nth-of-type(2) {margin-left: 2%}
+}
+@media screen and (min-width: 980px) {
+	#wrapper, header {min-width: 965px}
+}
+@media screen and (max-width: 1024px) {
+	/* same as media query styles below, but without body class */
+	.navTrigger + .site_name + div.sectionTitle, .linkHome + .site_name + div.sectionTitle, header .mobileBar + .site_name + .sectionTitle {margin-left: 95px}
+
+	body:not(.catalog_class) .navTrigger, body:not(.catalog_class) .linkHome, nav#leftColumn ol li hr {width: 95px; text-align: center}
+	.navTrigger {width: 92px}
+	.closeNavTrigger {padding-left: 2px}
+
+	nav#leftColumn {padding: 10px}
+	header .site_name {display: none}
+	body:not(.catalog_class) #leftColumn > .img_crop_wrap {margin: -10px -10px 10px}
+	#leftColumn > img.noBorder {width: 95px; margin: -10px 0 6px -10px}
+	body:not(.catalog_class) #leftColumn .quick_edit_box {left: 50px; right: auto; width: 200px}
+	body:not(.catalog_class) #leftColumn .quick_edit_box .arrow {left: 14px}
+
+	nav#leftColumn ol.staticMainNav, nav#leftColumn ol.largeImgs {text-align: center; width: 95px; margin: 0 -10px}
+	nav#leftColumn ol.staticMainNav {padding-left: 0}
+	nav#leftColumn ol.staticMainNav > li > a {display: block}
+	nav#leftColumn ol.staticMainNav > li > a, nav#leftColumn ol.largeImgs > li > a:not(.centreIcon),
+	nav#leftColumn ol.staticMainNav > li > ul a, nav#leftColumn ol li ul.subClasses.student li a {padding: 11px 0 7px !important}
+	nav#leftColumn ol.staticMainNav > li > a span:not(.newAlert) {font-size: 13px}
+	nav#leftColumn ol.staticMainNav > li > a span:first-child,
+	nav#leftColumn ol.staticMainNav > li > ul.student a span:first-child {display: inline-block; width: 33px; height: 14px; position: relative}
+	nav#leftColumn ol.staticMainNav > li > a i, nav#leftColumn ol.staticMainNav > li > ul a i {margin: -10px 0 0 4px}
+	nav#leftColumn ol.staticMainNav > li > a.lessonItem img {width: 32px; height: 32px; margin: 0 8px 0 6px; position: static}
+	nav#leftColumn ol:not(.thinMainNav) > li > a > span:nth-child(2),
+	nav#leftColumn ol li ul.subClasses.student a span:last-child,
+	nav#leftColumn ol li ul.subClasses:not(.student) a {display: block; margin: auto; overflow: hidden; text-overflow: ellipsis; padding: 0 5px}
+	nav#leftColumn ol.staticMainNav .dropDown {text-align: left}
+	nav#leftColumn ol.staticMainNav > li > a > span:first-child, nav#leftColumn ol.staticMainNav > li > a.lessonItem img, nav#leftColumn ol.largeImgs li a img, nav#leftColumn ol.largeImgs li a svg {margin-bottom: 5px}
+
+	nav#leftColumn ol.staticMainNav:not(.mobileSubMenu) > li {min-height: 56px}
+	nav#leftColumn ol.staticMainNav > li > ul li {margin-left: -2px}
+	nav#leftColumn ol.staticMainNav > li > ul {background: #e0e0e0; padding: 0 0px 0 1px; border: 1px solid #c8c8c8; border-width: 0 1px 1px 0;}
+	nav#leftColumn ol li ul.subClasses li a {border: 1px solid #c8c8c8; border-width: 1px 1px 1px 2px !important; font-size: 11px; line-height: 14px}
+	nav#leftColumn ol li ul.subClasses li a:not(.selected):not(:hover) {border-color: transparent; margin: 0}
+	nav#leftColumn ol li ul.subClasses:not(.student) li a {padding: 8px 4px 7px !important}
+	nav#leftColumn ol li ul.subClasses.student li a span:last-child {padding: 3px 4px 0}
+
+	#leftColumn .staticMainNav li a .newAlert {position: absolute; top: 7px; right: 8px; line-height: 9px; font-size: 10px}
+
+	nav#leftColumn ol.largeImgs h3 {margin-right: 0; padding: 15px 5px 8px; font-size: 15px}
+	nav#leftColumn ol.largeImgs .centreIcon i {left: 0 !important}
+	nav#leftColumn ol.largeImgs ol {width: 100%}
+	nav#leftColumn ol.largeImgs li a span {font-size: 12px; width: auto !important}
+
+	.no-touch #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder):hover .dropDown,
+	.no-touch nav#leftColumn > ol.staticMainNav > li a.highlight + .dropDown,
+	.touch nav#leftColumn > ol.staticMainNav > li:hover .dropDown {margin-left: 96px}
+
+	.no-touch nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder):hover .dropDown {margin-top: -56px}
+}
+@media screen and (min-width: 1025px) {
+	/* same as media query styles above, but with body class */
+	.keep_tablet_nav .navTrigger + .site_name + div.sectionTitle, .keep_tablet_nav .linkHome + .site_name + div.sectionTitle, .keep_tablet_nav header .mobileBar + .site_name + .sectionTitle {margin-left: 95px}
+
+	.keep_tablet_nav:not(.catalog_class) .navTrigger, .keep_tablet_nav:not(.catalog_class) .linkHome, .keep_tablet_nav nav#leftColumn ol li hr {width: 95px; text-align: center}
+	.keep_tablet_nav .navTrigger {width: 92px}
+	.keep_tablet_nav .closeNavTrigger {padding-left: 2px}
+
+	.keep_tablet_nav:not(.catalog_class) nav#leftColumn {padding: 10px}
+	.keep_tablet_nav header .site_name {display: none}
+	body:not(.catalog_class).keep_tablet_nav #leftColumn > .img_crop_wrap {margin: -10px -10px 10px}
+	.keep_tablet_nav #leftColumn > img.noBorder {width: 95px; margin: -10px 0 6px -10px}
+	body:not(.catalog_class).keep_tablet_nav #leftColumn .quick_edit_box {left: 50px; right: auto; width: 200px}
+	body:not(.catalog_class).keep_tablet_nav #leftColumn .quick_edit_box .arrow {left: 14px}
+
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav, .keep_tablet_nav nav#leftColumn ol.largeImgs {text-align: center; width: 95px; margin: 0 -10px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav {padding-left: 0}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a {display: block}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a, .keep_tablet_nav nav#leftColumn ol.largeImgs > li > a:not(.centreIcon),
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul a, .keep_tablet_nav nav#leftColumn ol li ul.subClasses.student li a {padding: 11px 0 7px !important}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a span:not(.newAlert) {font-size: 13px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a span:first-child,
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul.student a span:first-child {display: inline-block; width: 33px; height: 14px; position: relative}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a i, .keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul a i {margin: -10px 0 0 4px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a.lessonItem img {width: 32px; height: 32px; margin: 0 8px 0 6px; position: static}
+	.keep_tablet_nav nav#leftColumn ol:not(.thinMainNav) > li > a > span:nth-child(2),
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses.student a span:last-child,
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses:not(.student) a {display: block; margin: auto; overflow: hidden; text-overflow: ellipsis; padding: 0 5px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav .dropDown, .keep_tablet_nav #leftColumn .tooltip {text-align: left}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a > span:first-child, .keep_tablet_nav nav#leftColumn ol.staticMainNav > li > a.lessonItem img, .keep_tablet_nav nav#leftColumn ol.largeImgs li a img, .keep_tablet_nav nav#leftColumn ol.largeImgs li a svg {margin-bottom: 5px}
+
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav:not(.mobileSubMenu) > li {min-height: 56px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul li {margin-left: -2px}
+	.keep_tablet_nav nav#leftColumn ol.staticMainNav > li > ul {background: #e0e0e0; padding: 0 0px 0 1px; border: 1px solid #c8c8c8; border-width: 0 1px 1px 0;}
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses li a {border: 1px solid #c8c8c8; border-width: 1px 1px 1px 2px !important; font-size: 11px; line-height: 14px}
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses li a:not(.selected):not(:hover) {border-color: transparent; margin: 0}
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses:not(.student) li a {padding: 8px 4px 7px !important}
+	.keep_tablet_nav nav#leftColumn ol li ul.subClasses.student li a span:last-child {padding: 3px 4px 0}
+
+	.keep_tablet_nav #leftColumn .staticMainNav li a .newAlert {position: absolute; top: 7px; right: 8px; line-height: 9px; font-size: 10px}
+
+	.keep_tablet_nav nav#leftColumn ol.largeImgs h3 {margin-right: 0; padding: 15px 5px 8px; font-size: 15px}
+	.keep_tablet_nav nav#leftColumn ol.largeImgs .centreIcon i {left: 0 !important}
+	.keep_tablet_nav nav#leftColumn ol.largeImgs ol {width: 100%}
+	.keep_tablet_nav nav#leftColumn ol.largeImgs li a span {font-size: 12px; width: auto !important}
+
+	.no-touch .keep_tablet_nav #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch .keep_tablet_nav #leftColumn ol.thinMainNav ~ ol > li:not(.dropDownHolder):hover .dropDown,
+	.no-touch .keep_tablet_nav nav#leftColumn > ol.staticMainNav > li a.highlight + .dropDown,
+	.touch .keep_tablet_nav nav#leftColumn > ol.staticMainNav > li:hover .dropDown {margin-left: 96px}
+
+	.no-touch .keep_tablet_nav nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder) a.highlight + .dropDown,
+	.touch .keep_tablet_nav nav#leftColumn > ol.staticMainNav > li:not(.dropDownHolder):hover .dropDown {margin-top: -56px}
+
+	/* just for this media query */
+	.keep_tablet_nav nav#leftColumn ol.thinMainNav {margin-left: -10px}
+	.keep_tablet_nav.catalog_class nav#leftColumn ol.thinMainNav {margin-left: -14px}
+
+	body:not(.keep_tablet_nav) nav#leftColumn > img:not(.noBorder) {display: block}
+	body:not(.keep_tablet_nav) nav#leftColumn > img.noBorder {width: 204px}
+
+	nav#leftColumn ol {width: 190px}
+	nav#leftColumn ol.staticMainNav {width: 189px}
+}
+@media screen and (max-width: 979px) {
+	#centreColumn .pageHeading h2, #courseToolbar .pageHeading h2 {
+		font-size: 20px;
+		height: 26px;
+	}
+	#centreColumn .pageHeading h1, #courseToolbar .pageHeading h1 {
+		font-size: 16px;
+	}
+	#centreColumn textarea {
+		margin-right:0;
+	}
+	#centreColumn .pageHeading h2, #centreColumn .pageHeading h1 {white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+	.videos .twoThirds .sideText {padding: 0;}
+
+	#leftColumn > img, body:not(.catalog_class) #leftColumn > .img_crop_wrap, #leftColumn > a.user_logo {display: none}
+
+	/* Gift store table */
+	table.giftTable {width: 100%}
+	table.giftTable tr {display: inline}
+	table.giftTable tr td {display: inline-block; height: auto; border: 0; margin-bottom: 10px}
+	table.giftTable tr td img {margin-bottom: 5px}
+
+	/* Table width reduction */
+	table.rubric th, table.rubric td {padding: 6px 4px}
+
+	/* Page Heading */
+	#centreColumn .pageHeading {box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); display: block; padding: 4px 15px 3px; margin: -15px -15px 15px}
+	#centreColumn .pageHeading h1, #courseToolbar .pageHeading h1 {
+		display: block;
+		margin-top: -5px;
+		padding: 0;
+	}
+	#centreColumn .pageHeading h1#current_month {
+		float: none;
+		margin-bottom: 0;
+		display: block;
+		line-height: 26px;
+	}
+	#centreColumn .pageHeading h2, #courseToolbar .pageHeading h2 {
+		display: block;
+		color: #484848;
+		margin: 0;
+	}
+	#centreColumn .pageHeading #fromLeft {display: block; margin-top: 3px; height: 40px}
+	#centreColumn .pageHeading #fromLeft.user_logo img {width: auto; height: 100%}
+	.no-flexbox #centreColumn .pageHeading #fromLeft {position: absolute; top: 51px; right: 7px; margin: 0}
+	.flexbox #centreColumn .pageHeading.flex {display: flex; display: -webkit-flex;}
+	.flexbox #centreColumn .pageHeading.flex > div {flex: 1; -webkit-flex: 1; min-width: 0; margin-right: 5px}
+	#centreColumn .pageHeading div#fromLeft {
+		max-width: 53px;
+		padding-bottom: 0;
+		text-align: center;
+		color: #fff;
+		line-height: 36px;
+	}
+
+	.rightColumn .leaderboardSml li > div:nth-child(2) {width: 170px}
+	.rightColumn .leaderboardSml li > div:last-child {float: right}
+
+	/* News */
+	.comment > img, .comment-reply > img {width: 36px; height: 36px;}
+	.comment .wrapPost, .comment .metadata p {padding-left: 48px;}
+	.comment-reply {margin-left: 48px;}
+	.comment_date  {display: block;}
+
+	/* Forms */
+	label, #centreColumn form p, #centreColumn input[type="text"], #centreColumn input[type="number"], #centreColumn input[type="tel"], #centreColumn input[type="url"], #centreColumn input[type="password"], #centreColumn input[type="email"], #centreColumn select {
+		max-width: 100%;
+	}
+	select#class_time_day {width: 100%}
+	#centreColumn input[type="text"].hasDatepicker ~ input[type="text"].hasDatepicker, #centreColumn select + select {margin-top: 10px;}
+
+	/* Footer */
+	footer {overflow: hidden;}
+	footer .footerLinks:first-child:last-child a {
+		margin: 0 15px 0 0;
+	}
+	footer ul#socialBlocks {
+		float: none;
+		display: inline-block;
+		width: 100%;
+		margin: 5px -5px 0;
+	}
+	footer #socialBlocks a {
+		margin: 5px;
+	}
+	footer div.footerLinks ~ ul#socialBlocks {
+		margin: 12px -5px 2px;
+	}
+}
+@media screen and (max-width: 767px) {
+	nav.mainNav, #leftColumn, header .site_name, .quickLinks, ul.largeImgs li:not(.centreIcon) div.tooltip, .navTrigger, div.sectionTitle, .linkHome {display: none}
+	#wrapper {min-width: 100%; box-sizing: border-box}
+	header {min-width: 100%}
+	header .mobileBar, header .mobileBar .middleMobileBar {margin-top: 1px}
+	header .mobileBar .rightMobileBar i {margin-top: -2px}
+
+	#leftColumn ~ #centreColumn, #leftColumn ~ #mainContent, .class_splash_page #mainContent {padding: 15px 7px}
+	.rightColumn {padding: 15px 0 0}
+	#centreColumn .pageHeading {margin: -15px -7px 15px; padding-left: 7px; padding-right: 7px}
+	#fixedSectionHeader .optionsRibbon.tabsRight, #courseToolbar .optionsRibbon.tabsRight {right: 1px}
+	.leftColumn.block + .rightColumn {padding-top: 0}
+
+	footer .footerLinks a[rel="facebox"]:not(:first-child), footer .powered_by {border: 0; padding-left: 0}
+}
+@media screen and (min-width: 980px) {
+	nav#leftColumn > img {width: 100%}
+	nav#leftColumn > img[src*='/badge_picture/'] {background-color: #fff; padding: 10px; box-sizing: border-box}
+
+	#centreColumn .pageHeading > div {display: inline-block}
+	.pageHeading.mobile_only + .optionsRight + .clearfix + ul.tabnav, .pageHeading.mobile_only + .clearfix + ul.tabnav,
+	.pageHeading.mobile_only ~ ul.tabnav,
+	.catalog_heading_desktop + .catalog_heading_mobile + .clearfix + ul.tabnav {
+		margin-top: 5px;
+	}
+	.pageHeading.mobile_only ~ h1 ~ ul.tabnav,
+	.pageHeading.mobile_only ~ h1 ~ .inline_tabs_options {
+		margin-top: 10px;
+	}
+
+	.pageHeading.mobile_only + .optionsRight + p {margin-top: 40px}
+	.pageHeading.mobile_only + .optionsRibbon.optionsRight + table {margin-top: 50px}
+
+	.videos, .guides {margin: 0 -15px -15px;}
+
+	.cc-pr {position:relative}
+	.cc-pr > .optionsRight, .cc-pr .pageHeading:not(.mobile_only) + .optionsRight {top: -2px !important}
+
+	.mobile-app .hasThinNav + footer {padding-left: 50px}
+
+	#centreColumn.dashboard .optionsDashboardEnrolled { position: absolute; right: 15px; left: auto; top: 15px; overflow: visible; display: block; }
+
+	.two-columns .dl-item {width: 50%; float: left}
+	.two-columns .dl-item dd {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.two-columns.section-add-layout dl {display: flex; flex-flow: row wrap; justify-content: space-between}
+	.two-columns.section-add-layout .dl-item {float: none; width: 49%}
+	.two-columns.section-add-layout .dl-item dd {white-space: initial}
+}
+@media screen and (max-width: 1280px) {
+	.guides .twoThirds .sideText {padding: 0;}
+}
+
+/* hide content in native app until width calculation is done */
+.mobile-app #contentWrap {visibility: hidden; overflow: hidden}
+
+.sessionsPopout {padding: 0 15px}
+.sessionsPopout form.tableForm {margin-bottom: 3px !important}
+#leftColumn .dropDown .sessionsPopout .optionsRibbon a {padding: 0 8px !important; line-height: 26px}
+#leftColumn .dropDown .sessionsPopout .optionsRibbon a i {margin-top: -5px}
+.sessionsPopout table th:nth-child(3), .sessionsPopout table td:nth-child(4) {display: none}
+.sessionsPopout table td {border:0}
+.sessionsPopout table a {line-height: 1.4 !important; padding: 0 !important}
+.sessionsPopout table a:hover {background: none !important}
+.sessionsPopout table td span {margin-top: -20px;font-size: 80%;float:left}
+.sessionsPopout table td:nth-child(2) {padding-top:8px}
+.sessionsPopout table tr.highlight td {border: none}
+.sessionsPopout table tbody.scroll {padding: 0 !important; display: block;width:420px}
+.sessionsPopout table thead {position:relative; display: block;}
+.sessionsPopout table thead tr th:nth-child(2) {width: 400px}
+.sessionsPopout table tbody tr td:nth-child(3) {width: 330px}
+.sessionsPopout table tbody tr td input[type="checkbox"]{postion:relative; top:16px}
+form#changes table, form#user_trash_popup table {position: relative}
+
+#grade_form textarea{margin-right: 0}
+div.error + .pageHeading.mobile_only + .optionsRibbon.optionsRight, div.warning + .pageHeading.mobile_only + .optionsRibbon.optionsRight, div.info + .pageHeading.mobile_only + .optionsRibbon.optionsRight,
+.cc-pr div.error + script + .pageHeading.mobile_only + .optionsRibbon.optionsRight, .cc-pr div.warning:not([style="display:none"]) + script + .pageHeading.mobile_only + .optionsRibbon.optionsRight, .cc-pr div.info + script + .pageHeading.mobile_only + .optionsRibbon.optionsRight,
+.cc-pr div.error + .pageHeading.mobile_only + .optionsRibbon.optionsRight, .cc-pr div.warning .pageHeading.mobile_only + .optionsRibbon.optionsRight, .cc-pr div.info + .pageHeading.mobile_only + .optionsRibbon.optionsRight,
+#centreColumn.dashboard div.error + .pageHeading.mobile_only + .optionsDashboardEnrolled, #centreColumn.dashboard div.warning + .pageHeading.mobile_only + .optionsDashboardEnrolled, #centreColumn.dashboard div.info + .pageHeading.mobile_only + .optionsDashboardEnrolled {
+	top: 55px
+}
+.ctr_stripe.act_configure div.warning + .pageHeading.mobile_only + .optionsRight {top: 90px}
+.completionPercentage {position: absolute;margin-top: -35px;margin-left: 80px;}
+
+/*------ Seating Chart ------*/
+.leftCol-seating-chart {width: 90px; float: left; margin: 9px 5px 0 0; border: 1px solid #c9c9c9; padding: 5px; height:600px; background: #fff; overflow-y: auto; text-align: center}
+.rightCol-seating-chart {width: 170px; float: right;margin: 9px 0 0 5px; position: relative; border-style: solid; border-width: 1px; border-color: #c9c9c9; padding: 5px; height: 600px; background: #fff; overflow-y: auto; text-align: center}
+.rightCol-seating-chart > span {display: block; margin-bottom: 6px}
+.drag_container {width: 2017px; height: 2017px; position: relative; z-index: 1; background: url('/images/seating_chart/seating_chart_cell.png')}
+.seating_chart_scroll {width: 100px; margin-top: 9px; float: left; display: inline-block; border-style: solid; border-width: 1px; height: 610px;overflow: auto}
+.draggable-student, .draggable-student-grid {border-radius: 4px;}
+.draggable-student {width: 70px; height: 70px;}
+.draggable-student-grid {position: absolute; box-shadow: 3px 3px 6px rgba(0,0,0,0.3)}
+.draggable-table, .draggable-table-grid {background: #8c8c8c url('/images/seating_chart/table-texture.png') 50% / 149px 139px; margin: 0 2px 2px 0; border-radius: 4px}
+.draggable-table, .draggable-student {display: block}
+.draggable-student, .draggable-table {margin: 5px auto;}
+.draggable-table-grid {position: absolute}
+.draggable-table.furniture0 {width: 50px; height: 50px}
+.draggable-table.furniture1 {width: 50px; height: 102px}
+.draggable-table.furniture2 {width: 102px; height: 50px}
+.draggable-table.furniture3 {width: 102px; height: 102px}
+.draggable-table.furniture4 {width: 102px; height: 152px}
+.draggable-table.furniture5 {width: 152px; height: 102px}
+.draggable-table-grid.furniture0 {width: 70px; height: 70px}
+.draggable-table-grid.furniture1 {width: 70px; height: 142px}
+.draggable-table-grid.furniture2 {width: 142px; height: 70px}
+.draggable-table-grid.furniture3 {width: 142px; height: 142px}
+.draggable-table-grid.furniture4 {width: 142px; height: 214px}
+.draggable-table-grid.furniture5 {width: 214px; height: 142px}
+.close-seating-chart {position:absolute;width:20px; height: 20px; z-index: 10; background: #B22222; top: 0; right: 0; cursor: pointer}
+.close-seating-chart i {margin-left: 2px; margin-top: -3px}
+.drag_container .hidden, #seating-chart-students .hidden {display: none}
+.drag_container .draggable {cursor: move}
+.draggable-student, .draggable-table {cursor: default}
+.seating-chart-student-image {height: 70px; width: 70px; border-radius: 4px}
+.seating-chart-student-image-big {height:80px; width: 80px; margin: 7px 30px 2px 7px; border-radius: 50%}
+.seating-chart-student-name {font-size: 12px; margin: 2px; position: absolute; right: 0; bottom: 0; left: 0;background: rgba(255,255,255,0.85);padding: 3px 4px; display: inline;border-radius: 2px; text-align: left; width: 58px;	white-space: nowrap; text-overflow: ellipsis; overflow: hidden; height: 30px}
+.seating-chart-student-name-big {font-size: 14px; margin: 10px 15px 2px 10px; height: 55px; width:120px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
+.student-info {border: 1px solid #c9c9c9; width: 140px; height: 140px; background: #fff; margin-top: 0px; position:absolute; z-index: 99;  border-radius: 4px}
+.seating-chart-student-image-big, .seating-chart-student-image {background-size: cover}
+.seating_chart_grade{width: 45px; height: 45px; top:7px; left:95px;  position:absolute}
+.seating_chart_progress_chart{width: 45px; height: 45px; top:45px; left:90px;  position:absolute}
+.seating_chart_grades_chart{width: 45px; height: 45px; top:90px; left:90px;  position:absolute}
+.saving-seating-chart-message {display: none; position: absolute; width: 100%; text-align: center}
+.seating_chart_overlay {position:absolute; z-index: 9999; background: #000; opacity: 0.4; text-align: center; height: 610px; display: none}
+.seating_chart_overlay img {margin-top: 300px}
+.seating_chart_container.readonly .leftCol-seating-chart, .seating_chart_container.readonly .rightCol-seating-chart {display: none}
+.seating_chart_container.readonly .close-seating-chart {display: none !important}
+.seating_chart_container.readonly .drag_container .draggable {cursor: default}
+.seating_chart_left-col_header, .seating_chart_right-col_header{ padding: 5px; margin: -5px 0 5px -5px; background: #EFEFEF; font-size: 18px; width: 100%; height: 24px;text-align: center}
+
+/*------ Uploader ------*/
+.uploader-uploaded-list .progress-bar {background-color: #85C3CC; width: 0; height: 30px}
+.uploader-uploaded-list .progress-bar-container {width: 100%}
+.uploader-uploaded-list .progress-bar-container {border: 1px solid #ccc; margin: 4px 0; overflow: hidden; height: 30px; position: relative}
+.uploader-uploaded-list .progress-bar-container .text {position: absolute; width: 99%; padding: 5px; top: 0}
+.uploader-uploaded-list .progress-bar-container .text a {color: #222222}
+.uploader-uploaded-list .progress-bar-container .text a:hover {text-decoration: underline}
+
+/*------ Multi Select option for Reports --- */
+a.multiSelect {
+	border: solid 1px #909090;
+	padding-right: 20px;
+	position: relative;
+	cursor: default;
+	text-decoration: none;
+	color: black;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	height: 33px;
+	width: 178px;
+	background-image:
+			linear-gradient(45deg, transparent 50%, black 50%),
+			linear-gradient(135deg, black 50%, transparent 50%);
+	background-position:
+			calc(100% - 15px) calc(0.8em + 2px),
+			calc(100% - 10px) calc(0.8em + 2px),
+			100% 0;
+	background-size:
+			5px 5px,
+			5px 5px,
+			2.5em 2.5em;
+	background-repeat: no-repeat;
+}
+a.multiSelect.hover {left: 0}
+a.multiSelect span {padding-top: 4px; padding-left: 5px; margin: 1px 0px 1px 3px; overflow: hidden; display: -moz-inline-stack; display: inline-block; white-space: nowrap}
+.multiSelectOptions {margin-top: -1px; overflow-y: auto; overflow-x: hidden; border: solid 1px #B2B2B2; background: #FFF}
+.multiSelectOptions label {padding: 0px 2px; display: block; white-space: nowrap}
+.multiSelectOptions > label {display: block !important; width: 100% !important}
+.multiSelectOptions input {vertical-align: middle}
+.proficiency a.multiSelect {width:300px}
+
+/*------ Tag manager form additions --- */
+.form-inline {margin-bottom: 30px; display: inline-block}
+.form-inline > * {vertical-align: middle}
+.form-inline .tm-tag {font-family: inherit !important; background-color: #aee0a6 !important; border-color: #8fd385 !important; margin: 5px 2px !important}
+.form-inline .tm-tag .tm-tag-remove {opacity: .6}
+.form-inline .tm-input {margin: 5px 3px !important; width: 9em !important; padding: 3px 5px; font-size: 14px; position: relative; top: -1px}
+.form-inline .tm_buttons {white-space: nowrap}
+.form-inline .tm_buttons .options_btn {margin: 5px 0}
+
+.resource-tags-block {position: relative}
+.resource-tags-block .resource-tags {padding: 10px 15px}
+.resource-tags-block .resource-tags i {margin: -4px 5px 0 0}
+.resource-tags-block .resource-tags .form-inline {margin-bottom: 0}
+.resource-tags-block .resource-tags .tm_buttons {display: block; position: absolute; top: 10px; right: 10px}
+
+@media screen and (max-width: 480px) {
+	.form-inline {width: 100%; box-sizing: border-box}
+	.form-inline .tm-input {width: 100% !important; margin: 5px 0 !important}
+	.form-inline .tm_buttons {display: inline-flex}
+	.form-inline .tm-tag ~ .tm_buttons,
+	.form-inline .tm-input ~ .tm_buttons {display: flex; justify-content: flex-end}
+	.form-inline .tm_buttons .options_btn {margin: 5px 2px}
+}
+
+/*********** Proficiency picker *******************/
+
+#facebox #ProficiencyPicker {min-width: 1000px; height: auto; max-height: none}
+
+#facebox #ProficiencyPicker > p > span {display: inline-block}
+#facebox #ProficiencyPicker p input, #facebox #ProficiencyPicker p select, #facebox #ProficiencyPicker p label {width: auto}
+#facebox #ProficiencyPicker p input, #facebox #ProficiencyPicker p select {margin-right: 0; margin-left: 5px}
+#facebox #ProficiencyPicker p select {max-width: 140px; padding-top: 3px}
+#facebox #ProficiencyPicker p input {max-width: 200px}
+#facebox #ProficiencyPicker p label {margin-right: 5px}
+
+#facebox #ProficiencyPicker .half {position: relative; width: 50%; min-height: 430px; /* overflow: auto; */}
+#facebox #ProficiencyPicker .half.left {float: left}
+#facebox #ProficiencyPicker .half.right {float: right}
+#facebox #ProficiencyPicker .half.right p.search-navigation {padding: 5px}
+#facebox #ProficiencyPicker .separate_columns {border-right: 1px solid #e2e0e0; box-sizing:border-box; -moz-box-sizing:border-box}
+
+#facebox #ProficiencyPicker table {width: 100%; margin: 0}
+#facebox #ProficiencyPicker table td {border-width: 0 0 1px 0}
+#facebox #ProficiencyPicker table th.title_column {width: 409px}
+#facebox #ProficiencyPicker .table-header table {width: 100%; border-bottom: 1px solid #e2e0e0}
+
+#facebox #ProficiencyPicker .search-navigation {margin-bottom: 0}
+#facebox #ProficiencyPicker .pp_no_proficiency p {margin-bottom: 0}
+
+#facebox #ProficiencyPicker.new_picker {min-width: 980px; height: auto; max-height: none}
+#facebox #ProficiencyPicker.new_picker p {margin-top: 0}
+#facebox #ProficiencyPicker.new_picker p.search-navigation {margin-top: 5px}
+#facebox #ProficiencyPicker.new_picker .tabnav {display: none}
+#facebox #ProficiencyPicker.new_picker .tab-content {width: 50%; float: left}
+#facebox #ProficiencyPicker.new_picker .tab-content .half {width: 100%; float: none}
+#facebox #ProficiencyPicker.new_picker .tab-content .separate_columns {border-right: 0 none}
+
+@media screen and (max-width: 996px) {
+	#facebox #ProficiencyPicker.new_picker {min-width: 740px}
+	#facebox #ProficiencyPicker p select {margin: 0}
+}
+@media screen and (min-width: 769px) {
+	#facebox #ProficiencyPicker.new_picker .tab-content.first {border-right: 1px solid #e2e0e0; box-sizing:border-box; -moz-box-sizing:border-box}
+}
+@media screen and (max-width: 768px) {
+	#facebox #ProficiencyPicker.new_picker {min-width: 0px}
+	#facebox #ProficiencyPicker.new_picker .tabnav {display: block}
+	#facebox #ProficiencyPicker.new_picker .half {min-height: 0}
+	#facebox #ProficiencyPicker.new_picker table th:last-child {padding: 0}
+	#facebox #ProficiencyPicker.new_picker table th.title_column {width: auto}
+	#facebox #ProficiencyPicker.new_picker .tab-content {width: 100%; float: left}
+	#facebox #ProficiencyPicker.new_picker .tab-content.first {border-right: 0 none}
+	#facebox #ProficiencyPicker.new_picker .tab-content.second {display: none}
+
+	#facebox #ProficiencyPicker.new_picker p {display: block; overflow: hidden; clear: both}
+	#facebox #ProficiencyPicker.new_picker p span {display: block; float: left; width: 50%}
+	#facebox #ProficiencyPicker.new_picker p input,
+	#facebox #ProficiencyPicker.new_picker p select {margin-bottom: 10px; max-width: 95%}
+	#facebox #ProficiencyPicker.new_picker p.search-navigation {margin-top: 10px}
+	#facebox #ProficiencyPicker.new_picker p.search-navigation a {margin: 0 5px}
+}
+
+/* edit subscription payment */
+#payment_form #cc_number {width: 200px}
+#payment_form #cc_exp_month {width: 40px; margin-right: 0}
+#payment_form #cc_exp_year {width: 60px}
+#payment_form #cc_cvc {width: 50px}
+
+/* hide fields in order for chrome to see those and not autocomplete user credentials*/
+.hide_extra_field {position: absolute; left: -999999px; top: -999999px}
+
+/* cometchat */
+#cometchat {position: fixed;}
+
+/* custom report tabs */
+
+.custom_report_add_button {position: relative !important; top: -2px !important; right: auto !important;}
+
+.custom_report_tab_columns input[type="checkbox"] + label {width: 33% !important; margin: 0; padding: 2px 14px 5px 26px; float: left; box-sizing: border-box; position: relative; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.custom_report_tab_columns input[type="checkbox"] + label:before {position: absolute; top: 3px; left: 3px}
+.custom_report_tab_columns .custom-report-related {margin-top: 10px}
+.custom-report-filter-select-column ~ span {display: inline-block; margin-left: 10px}
+#facebox .facebox-content .custom-report-filter-label,
+#facebox .facebox-content .custom-report-filter-text-value {width: 200px !important;}
+#facebox .facebox-content .custom-report-filter-date {width: 150px}
+#facebox .facebox-content .custom-report-filter-operator {width: 120px !important;}
+.custom_report_tab_sort button:not(.not-btn),
+.custom_report_tab_grouping button:not(.not-btn){margin: 0 0 0 10px;}
+.custom-report-filter-select-container select:not(:first-child),
+.custom-report-filter-select-container input,
+.custom_report_tab_sort .custom-report-sort-select-container select:not(:first-child),
+.custom_report_tab_sort .custom-report-sort-select-container input,
+.custom_report_tab_sort .custom-report-grouping-select-container select:not(:first-child),
+.custom_report_tab_sort .custom-report-grouping-select-container input {margin: 0 0 10px 10px;}
+.custom_report_tab_sort .custom-report-sort-group,
+.custom_report_tab_grouping .custom-report-grouping-group {margin: 10px 0}
+.custom_report_tab_grouping .custom-report-grouping-column.options_btn i,
+.custom_report_tab_sort .custom-report-sort-column.options_btn i{margin-left: 5px; margin-right: -3px}
+.custom-report-filter-user-prompt + label {margin-left: 10px}
+.custom-report-filter-label {display: none}
+.custom_report_tabs li a.disabled {color: #bbb;cursor: default;}
+.custom-report-heading {font-family: 'RobotoRegularNew', helvetica, arial, sans-serif; font-weight: normal; background: #fff}
+.custom_report_tab_scheduling label[for="job_repeats_scheduled"] {display: none}
+label[for="custom_report_scheduling_interval"] {width: 110px !important}
+.custom_report_tab_organize input[type="text"] {width: 150px}
+.custom_report_tab_organize .draggable_handle,
+.custom_report_tab_filters .draggable_handle {cursor: move}
+[dir=rtl] .custom_report_tab_columns input[type="checkbox"] + label {padding-left: 14px; padding-right: 26px; float: right}
+[dir=rtl] .custom_report_tab_grouping .custom-report-grouping-column.options_btn i,
+[dir=rtl] .custom_report_tab_filters .custom-report-filters-column.options_btn i,
+[dir=rtl] .custom_report_tab_sort .custom-report-sort-column.options_btn i {margin-left: 0; margin-right: 0}
+.custom-report-organize-table td input[type="text"] {width: 100% !important;}
+.custom_report_tab_charts .sample_chart {margin: 14px 0; border: 1px solid #e2e0e0}
+.custom_report_tab_charts .sample_chart input[type="text"] {width: 100% !important; border-color: transparent; background-color: #707070; color: #fff; padding: 5px 10px 6px; margin-bottom: 10px}
+.custom_report_tab_charts .sample_chart input[type="text"] {overflow: hidden; text-overflow: ellipsis}
+.custom_report_tab_charts .sample_chart input[type="text"]:focus {border-color: #909090}
+.custom_report_tab_charts .sample_chart .sample_chart_bottom {padding: 0 10px 9px; overflow: hidden; font-size: 15px}
+.custom_report_tab_charts .sample_chart select {width: 100% !important; margin: 7px 0; font-size: 15px; padding: 3px 6px 3px 4px; height: 31px}
+.custom_report_tab_charts .sample_chart #custom_charts_students_gender1_transpose + label {margin: 0}
+@media screen and (min-width: 769px) {
+	.custom_report_tab_charts .sample_chart {width: 408px}
+}
+
+#facebox .facebox-content .custom-report-fields p > span {display: inline-block; width: 100px; text-align: center}
+#facebox .facebox-content .custom-report-fields p > input[type="text"] {width: 300px}
+#facebox .facebox-content .custom-report-fields p > .custom-report-filter-date {width: 170px !important;}
+#facebox .facebox-content .custom-report-fields p > span.hyphen {width: auto; margin-right: 14px}
+#facebox .facebox-content.config-filter-form .custom-report-filter-date {width: 140px !important;}
+#facebox .facebox-content.config-filter-form span.hyphen {margin-left: 0; margin-right: 10px}
+#facebox .facebox-content.config-filter-form .custom-report-filter-select-column {width: 220px}
+#facebox .facebox-content .custom-report-grouping-select-granularity {display: none}
+#facebox .facebox-content label[for=granularity] {display: none; margin-right: 0; margin-left: 30px; width: 90px;}
+
+/* custom report tables */
+.custom_report_table {margin: 0; table-layout: fixed}
+.custom_report_table span.related {display: block; padding: 6px 8px}
+.custom_report_table span.related, .custom_report_table span.related * {font-size: 16px !important}
+.custom_report_table .td_table_holder {padding: 8px}
+.custom_report_table .group {background: #ffffca}
+.custom_report_table .group .empty {font-style: italic}
+.custom_report_table .group.group1 {background: #ffffe2}
+.custom_report_table .group.group2 {background: #fffff2}
+.custom_report_table .summary td {background: #eeeeee; font-weight: bold}
+
+.custom_report_table span.badge {
+	font-size: 10px !important;
+	line-height: 7px;
+	font-weight: bold !important;
+	color: #fff;
+	margin-left: 5px;
+	top: -1px;
+	background-color: #767676;
+	padding: 4px 3px;
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.custom_report_table td table th, .custom_report_table td table td {word-wrap: normal; width: 20%}
+.custom_report_table td table .string, .custom_report_table td table .text {width: 40%}
+.custom_report_table td table .integer, .custom_report_table td table .float {width: 20%}
+.custom_report_table td table .boolean {width: 10%}
+
+/* assignment ip restrictions */
+.ip_restrictions .ip_addresses {height: 150px; background: #FFF; border: 1px solid #AAA; overflow-y: auto}
+.ip_restrictions .ip_addresses .ip_element {height: 30px; float: left; margin: 2px 2px 2px 2px; background-color: #999; padding-left: 5px}
+.ip_restrictions .ip_addresses .ip_element input {width: 140px; height: 100%; text-align: left; background-color: #999; color: white; float: left; border: 0}
+.ip_restrictions .ip_addresses .ip_element input.restricted_ip_1 {width: 120px}
+.ip_restrictions .ip_addresses .ip_element div {width: 16px; padding-top: 5px; color: #fff; float: left}
+.ip_restrictions .ip_addresses .ip_element i {margin-left: -20px; margin-top: 8.5px; cursor: pointer; background: url('../../images/close_tip.gif') no-repeat;  float: left; width: 14px; height: 13px}
+.ip_restrictions .ip_addresses .ip_element i:after {background: none}
+.ip_restrictions .add_options {width: 100%; padding: 15px 0}
+.ip_restrictions .add_ip, .ip_restrictions .add_range {margin-right: 10px; cursor: pointer}
+
+/* peer reviews */
+.assign_block_content {position: relative; margin-top: 14px}
+.assign_block_content > a {position: absolute; right: 15px; top: -35px}
+.assign_block_content p {clear: both; overflow: hidden; margin-bottom: 8px}
+.assign_block_content p img {float: left;}
+.assign_block_content p:not(.alignR) a {float: left; margin-top: 7px; margin-left: 10px}
+.assign_block_content p a.assigned_peer_notify {float: right; margin-left: 0}
+.assign_block_content p a.assigned_peer_notify i {margin-right: 0}
+
+.search-highlight { background-color: #ffee95 }
+h2 .search-highlight { font-family: inherit }

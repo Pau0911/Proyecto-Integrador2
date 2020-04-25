@@ -1,0 +1,188 @@
+/* PRINT PAGE */
+
+@media print {
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+
+  body{
+    margin: 0px !important;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dadada !important;
+  }
+
+  table tr {
+    border: 1px solid #dadada !important;
+    height: 30px !important;
+  }
+
+  table thead tr{
+    border-bottom: 2px solid #dadada;
+  }
+
+  th {
+    background: #d8e8cd !important;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  td{
+    text-align: left; !important;
+  }
+
+  tr, tbody {
+    border: 1px solid #dadada !important;
+  }
+
+  tr:nth-child(even) {background: #CCC !important;}
+  tr:nth-child(odd) {background: #FFF !important;}
+
+  div.dropDown, iframe, div.resources_list, p.proficiencyList, .section_nav_holder, .section_progress, div.section_header_wrap > a, .resource-flowplayer-video, .resource-flowplayer-audio, .flexpaper_viewer, .imgCrop.defaultImg .textOffScreen, .start .textOffScreen,
+  .lightText, div.tile_color_1 > div.footer, div.tile_color_2 > div.footer, div.tile_color_3 > div.footer, div.tile_color_4 > div.footer, .completed > .textOffScreen,  /*.textOffScreen,*/
+  .quick_edit_icon .textOffScreen, .block.circleNum, .footer.fiveBlocks, .quick_edit_icon,
+  .quickLinks, .img_crop_wrap, .noBorder, .notificationsPopUpHolder, .rightMobileBar, .leftMobileBar, .footerLinks, .skipToContent, .navTrigger,
+  .pageHeading.mobile_only.flex, .warning.close_alert.alert_block, .calendar_small, div.dropDown,  .cog, .emptyLabel, .small-month-name,
+  .tabnav, .calendars-picker, .floatR.sectionLink, .floatL.sectionLink, .optionsRibbon, .optionsRibbon.optionsRibbonTable_separate, .filter-loading, .accordionLink.accordionUp, .accordionLink.accordionDown,
+  #leftColumn, #mobile_page_heading, #socialBlocks, #time_warning, #gradebook_jump_to, #announcements_section, .rightColumn, h2.no-print, #no-print, .no-print *
+  {
+    display: none !important;
+  }
+
+  header > *:not(.sectionTitle) {
+    display: none !important;
+  }
+
+  div.sectionTitle, h1{
+    font-size: 20px;
+  }
+  .catalog_boxes.catalog_student.lesson_boxes.ui-sortable.has_quick_editor { /*, .tick { */
+    display: block !important;
+    width: 1073px;
+  }
+
+  .textOffScreen.print, span .tick .textOffScreen {
+    display: block !important;
+  }
+
+  .draggable {
+    margin: 0px;
+    border: 1px solid #dadada !important;
+  }
+
+  a {
+    color: #0A0A0A;
+    text-decoration: none;
+  }
+
+  /* ---------- Attendance Tables ---------- */
+  #Table2, #TableD, #TableE, #TableF {
+    float: left;
+  }
+  #TableD, #TableE, #TableF {
+    overflow: auto;
+  }
+  #TableD, #TableE {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  #Table2 table, #TableD table, #TableE table, #TableF table, #TableD {
+    margin: 0;
+    table-layout: fixed;
+  }
+  #Table2 table {border-width: 1px 0 0 1px;}
+  #TableD table {border-width: 1px 0 0 0;}
+  #TableE table {border-width: 0 0 0 1px;}
+  #TableF table {border-width: 0;}
+  /*#TableD tr td:last-child, #TableF tr td:last-child {border-right-width: 0;}*/
+
+  #Table2 th, #Table2 td, #TableD td, #TableE td, #TableF td {
+    border: 1px solid #d6d6d6;
+    border-width: 0 1px 1px 0;
+    font-size: 15px;
+  }
+  #Table2 th {
+    padding: 4px 8px;
+  }
+  #Table2 td, #TableD td, #TableE td, #TableF td {
+    text-align: center;
+    height: 26px;
+    padding: 0;
+  }
+  #TableE {
+    clear: both;
+  }
+  #TableE td {
+    text-align: left;
+  }
+  #Table2, #TableE, #Table2 table, #TableE table {
+    width: 170px;
+  }
+  #TableD td, #TableF td {
+    width: 100px;
+  }
+  #TableE tr.odd td {
+    /* background-color: #f5f5f5; */
+  }
+  #TableE td > div {
+    padding-left: 8px;
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #TableE td > div > a {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 3px;
+    line-height: 18px;
+  }
+  /* Pre JS Settings */
+  #TableD, #TableF {
+    width: 505px;
+  }
+  #TableD table, #TableF table {
+    width: 909px;
+  }
+
+  .attendanceDatepicker input[type="text"] {width: 200px !important;}
+
+
+  /* Gradebook */
+
+  #Table, #TableB, #Table table, #TableB table {
+    float: left;
+    width: 300px !important;
+  }
+
+  #TableA, #TableA table, #TableC, #TableC table {
+    float: left !important;
+    width: 700px !important;
+  }
+
+  #Table, #TableA, #Table table, #TableA table {
+    /*  height: 170px !important; */
+  }
+
+  #TableB, #TableC {
+    height: 100% !important;
+  }
+
+  table.mobileOptimized.hideColR_2.hideColR_3 td[scope=row] {    display: none;}
+  form#organizations.tableForm th.no-print {    display: none; }
+  th.no-print, td.no-print, span.no-print   {   display: none;}
+  td.no-print img.avatar {   display: none;}
+  table.mobileOptimized td[scope=row] {    display: none;}
+  table td.bundle_list { display: none;}
+  .comment {   border: 1px solid #efefef;}
+  /*table.mobileOptimized thead tr th[scope=col] {    display: none;}*/
+  table.mobileOptimized tbody tr td.to-print, table.mobileOptimized thead tr th.to-print { width: 350px !important;}
+  table.mobileOptimized.fixColspan.assignmentsTable td.assignment { width: 350px;}
+}

@@ -1,0 +1,136 @@
+/* ===================
+  Index:
+    1. Colors
+    2. Backgrounds
+    3. Borders
+ ===================*/
+
+/*------------------- Colors -------------------*/
+.highlight  {
+  color: #000;     /* Black */
+}
+#wrapper, #loginForm .loginOptions a:hover,
+h1, h2, h4, p, ul, span, dl dd, input, select, textarea, .optionsRibbon ul li a,
+header .dropDown a, nav.mainNav .dropDownHeading, nav#leftColumn a:not(.normalLink), .rightColumn, .rightColumn ul li a + a:not(.inline_link_lrg):not(.inline_link), #facebox .footer, .facebox-content,
+table, table a:hover, table a:hover span, #TableA a:hover span, #TableB a:hover span, table span a:hover, table .highlight, .tooltip, .tooltipBot,
+nav#leftColumn ol.thinMainNav.hoverMainNav > li > a, #centreColumn .rightColumn h2, .contentBlock .sideText, a.tableLink2, a.tableLink2 *, table.plansComparisonHeader th h3,
+.centerHeading a, .centerHeading a:hover, #centreColumn .day-heading
+{
+  color: #222;  /* Dark Gray */
+}
+input.placeholder {
+  color: #989898; /* Mid gray */
+}
+.rightColumn ul li a.dueLink span:last-child, .comment .metadata .comment_date, .rightColumn .event_date, .rightColumn .leaderboardSml.no-players li, .calendar-agenda-day .event-heading span, .remainingPts, .remainingPts span, ul.playerStatusSml li.level span {
+  color: #a8a8a8;  /* Light Gray - edit the matching list in the high contrast theme too */
+}
+.grading-thread-comment-list .at {
+  color: #707070 !important
+}
+input[type="submit"], input[type="button"], button, button.button-spinner:not(.inverted) span,
+header .site_name a, nav.mainNav ol > li > a, .quickLinks a.username, footer a, footer a:hover, a.back-to-top span, footer .powered_by
+{
+  color: #fff;     /* White */
+}
+
+/*------------------- Backgrounds -------------------*/
+footer {
+  background: #5e5f5f;  /* Dark gray */
+}
+nav .icon {
+  fill: #5e5f5f
+}
+nav#leftColumn ol.thinMainNav, .quiz_match_connect:before {
+  background: #acacac;  /* Lighter dark gray */
+}
+.custom_report_table span.related {background: #d2d2d2}
+#TableB td.student .dropDownHolder > a:hover, #TableB td.student a.highlight, .quiz_match_choices.quiz_match_over
+{
+  background: #dfdfdf;  /* Lighter dark gray */
+}
+nav.mainNav .dropDown ul li:hover, .linksHolder .dropDown a:hover, .linksHolder .dropDown a:focus, nav#leftColumn .dropDown a:hover, table .dropDown a:hover, #Table .highlight, #Table .dropDownHolder > a:hover, table.rubric td.selected, .header.new_tile_header, .quiz_match_dropzone.quiz_match_over, li.ms-holder:hover
+{
+  background: #E8E8E8;  /* Lighter dark gray */
+}
+table .tableDropdown > a:hover, table .tableDropdown > a.highlight {
+  background: #efefef;  /* Mid gray */
+}
+.grey_background table .tableDropdown > a:hover, .grey_background table .tableDropdown > a.highlight {
+  background: #e0e2e4;  /* .grey_background duplicate of style above */
+}
+#Table2 table th {
+  background: none
+}
+.quiz_match_choices
+{
+  background: #f0f0f0;
+}
+.comment-reply, .tooltipContactLinks, .tooltip .arrow:after, table tr.not_current_lesson, #TableF tr.odd td, a.contentBlock:hover, a.contentBlock:focus, table.rubric td.highlight, ul.quiz_blocks li,
+.grey_background #wrapper, .grey_background #fixedSectionHeader, .grey_background #courseToolbar, .grey_background .fullColumn:nth-child(2n+2), .grey_background .dropDown .cta, .grey_background nav#leftColumn .cta a:not(.centreIcon):hover, .grey_background .profileTable td, .widget_edit .available_widgets, .widget_edit .scrollable
+{
+  background: #f5f5f5;  /* Light gray */
+}
+header .dropDown, nav#leftColumn .dropDown, table .dropDown
+{
+  background: #fcfcfc;  /* Lighter gray */
+}
+#wrapper, nav#leftColumn .highlight, nav#leftColumn .selected,
+.grey_background #Table, .grey_background #TableB, .grey_background #Table2 table th, html#popupBackground {
+  background: #fff; /* White */
+}
+.grey_background #Table table tr:first-child td, .grey_background #TableA table tr:first-child td, .grey_background #TableA td.assignment {
+  background-color: #fff !important
+}
+.difSignIn:hover, input[type="submit"]:hover, input[type="button"]:hover, button:not(.options_btn):hover, nav.mainNav .cta a:hover, nav.mainNav .cta a:focus, nav#leftColumn ol li a.centreIcon:hover, footer a:hover, .catalog_boxes .footer > a:hover, .catalog_boxes .header > a:hover i
+{
+  opacity: .7; /* Lighter shade of current color for hovers */
+}
+.catalog_boxes div.price.red, .catalog_boxes .footer div.label.box.red, .user_progress.red {
+  background: #DB0000;
+}
+.custom_report_table tr.custom_report_table_highlight_1 td {background: #c0efaf} /* light green */
+.custom_report_table tr.custom_report_table_highlight_2 td {background: #dcf5d2} /* lighter green */
+
+/*------------------- Borders -------------------*/
+nav.mainNav ol > li {
+  border: 1px solid transparent;  /* Hidden borders */
+}
+header {
+  border: 0;
+}
+.quiz_match_dropzone {
+  border: 1px solid #9c9c9c
+}
+#contentWrap.hasThinNav.hasLeftColumn:before, .quiz_match_option, .quiz_match_choice, .quiz_match_choice.ui-draggable-dragging {
+  border: 1px solid #acacac;  /* Lighter dark gray */
+}
+.hasLeftColumn:before, nav#leftColumn h3, nav#leftColumn ol li hr, nav#leftColumn ol > li > a:not(.centreIcon):hover, nav#leftColumn ol > li > ul li a:hover, nav#leftColumn a.highlight, nav#leftColumn a.selected, .dropDownHolder .dropDown, .tooltip, .tooltipBot, .tooltip .arrow:after, .tooltipBot .arrow:after, table .tableDropdown > a:hover, table .tableDropdown > a.highlight, a.contentBlock, a.tableLink2:hover
+{
+  border: 1px solid #c8c8c8;  /* Mid gray */
+}
+.grey_background .comment {
+  border-color: #d2d2d2
+}
+nav.mainNav li > .dDownShow, nav.mainNav .dropDown ul li, nav.mainNav .dropDownHeading, nav.mainNav .dropDown p, nav.mainNav .cta,
+nav.mainNav .wideDropDown, nav.mainNav .dropDownHeading, nav.mainNav .scroll, nav.mainNav .cta,
+#Table2 table, #TableD table, #TableE table, #TableF table,
+.messagesHolder.dropDownHolder .dropDown, .notificationsHolder.dropDownHolder .dropDown, .columnBlock > div,
+.user_boxes > *, .widget_edit .available_widgets, .widget_edit .available_widgets > h2, .widget_buttons, .widget_edit .widgets .scrollable
+{
+  border: 1px solid #e2e0e0;  /* Light gray */
+}
+.comment, table.plansComparisonBody tr td {
+  border: 1px solid #efefef;  /* Lighter gray */
+}
+.messagesHolder.dropDownHolder .dropDown .cta,
+.notificationsHolder.dropDownHolder .dropDown .cta, nav#leftColumn .dropDown .cta {
+  border-top: 1px solid #e2e0e0;
+}
+footer .footerLinks a[rel="facebox"]:not(:first-child), footer .powered_by {
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/*------------------- Input Placeholders -------------------*/
+input::-webkit-input-placeholder {color: #5e5f5f}
+input::-moz-placeholder {color: #5e5f5f; opacity: 1}
+input:-ms-input-placeholder {color: #5e5f5f}

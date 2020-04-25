@@ -27,6 +27,10 @@ export class DevicesService {
   sendMessageDevices(message:string){
     return this.http.post(`${this.url}/iot/sendGlobalMessage?${'message='}${message}`,message);
     }
+
+  sendMessageDevice(message:string,deviceName:string){
+    return this.http.post(`${this.url}/iot/sendPrivateMessage?${'DeviceName='}${deviceName}&&${'message='}${message}`,message);
+    }
   }
 
 
