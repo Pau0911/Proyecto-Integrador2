@@ -38,9 +38,9 @@ export class MqttComponent implements OnInit {
    }
 
   ngOnInit() {
-    //this.messages = null;
-    //this.subscribe();
-   // this.subscribed = true;
+    this.messages = null;
+    this.subscribe();
+    this.subscribed = true;
     
   }
 
